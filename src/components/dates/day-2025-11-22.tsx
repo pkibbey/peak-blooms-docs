@@ -4,7 +4,7 @@ export default function Day20251122() {
   return (
     <DateCard
       date="2025-11-22"
-      title="Project Setup & Design System"
+      title="Day 1: Project Setup & Design System"
       summary="Initialized Next.js with TypeScript, established design system foundation, and created reusable UI components."
       tasks={[
         "Initialize Next.js project with TypeScript",

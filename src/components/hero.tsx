@@ -20,9 +20,9 @@ export function Hero() {
             </span>
           </h1>
 
-          <p className="text-xl md:text-2xl text-muted-foreground font-light max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl text-muted-foreground font-light max-w-3xl mx-auto">
             A comprehensive journey documenting the design, development, and
-            deployment of a modern web platform in just a month
+            deployment of a modern web platform.
           </p>
         </div>
 
@@ -30,7 +30,7 @@ export function Hero() {
         <div className="space-y-2 pt-4">
           <p className="text-lg text-foreground/70">
             Explore progress milestones, key learnings, technical decisions, and
-            the challenges that shaped this project
+            the challenges that shaped this project.
           </p>
         </div>
 

@@ -4,7 +4,7 @@ export default function Day20251204() {
   return (
     <DateCard
       date="2025-12-04"
-      title="UI Components & Featured Collections"
+      title="Day 13: UI Components & Featured Collections"
       summary="Created reusable shipping banner and product card components, added featured collections, and fixed admin bugs."
       tasks={[
         "Add featured properties to collections pages",

@@ -4,7 +4,7 @@ export default function Day20251202() {
   return (
     <DateCard
       date="2025-12-02"
-      title="Pagination, CSV & Data Management"
+      title="Day 11: Pagination, CSV & Data Management"
       summary="Implemented pagination and filtering, created CSV seeding with upsert logic, and improved shop and inspiration pages."
       tasks={[
         "Change seed script to upsert instead of delete & create",

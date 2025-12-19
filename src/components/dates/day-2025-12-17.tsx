@@ -4,7 +4,7 @@ export default function Day20251217() {
   return (
     <DateCard
       date="2025-12-17"
-      title="Testing & Type System Unification"
+      title="Day 24: Testing & Type System Unification"
       summary="Added vitest framework, completed server action migrations, refactored types to use generated Prisma types."
       tasks={[
         "Refactor market price product support",

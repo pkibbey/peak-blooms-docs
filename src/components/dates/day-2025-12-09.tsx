@@ -4,7 +4,7 @@ export default function Day20251209() {
   return (
     <DateCard
       date="2025-12-09"
-      title="Auth & Production Optimization"
+      title="Day 16: Auth & Production Optimization"
       summary="Replaced magic link with Google auth, simplified checkout, optimized seed scripts, and added static rendering."
       tasks={[
         "Remove billing address from cart checkout",

@@ -4,7 +4,7 @@ export default function Day20251201() {
   return (
     <DateCard
       date="2025-12-01"
-      title="Auth Migration & Code Cleanup"
+      title="Day 10: Auth Migration & Code Cleanup"
       summary="Migrated from next-auth to better-auth, simplified admin layout, and removed dead code with knip."
       tasks={[
         "Update admin sidebar and simplify admin layout",

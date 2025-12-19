@@ -4,7 +4,7 @@ export default function Day20251214() {
   return (
     <DateCard
       date="2025-12-14"
-      title="Search & Data Model Refinement"
+      title="Day 21: Search & Data Model Refinement"
       summary="Implemented site search in navigation, moved phone to Address model, and added price visibility controls."
       tasks={[
         "Added site search to navigation header",

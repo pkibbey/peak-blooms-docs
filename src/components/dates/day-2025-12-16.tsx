@@ -4,7 +4,7 @@ export default function Day20251216() {
   return (
     <DateCard
       date="2025-12-16"
-      title="Server Actions & Performance Refactoring"
+      title="Day 23: Server Actions & Performance Refactoring"
       summary="Migrated to server actions for all operations, added soft-delete and order snapshots, and moved user fetching to Nav."
       tasks={[
         "Move user fetching out of layout and into Nav component",

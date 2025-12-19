@@ -4,7 +4,7 @@ export default function Day20251123() {
   return (
     <DateCard
       date="2025-11-23"
-      title="Database Schema & Content Features"
+      title="Day 2: Database Schema & Content Features"
       summary="Set up Prisma database with product, collection, and inspiration models, created seed scripts, and built dynamic content pages."
       tasks={[
         "Add Hero component",

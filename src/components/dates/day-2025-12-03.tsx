@@ -4,7 +4,7 @@ export default function Day20251203() {
   return (
     <DateCard
       date="2025-12-03"
-      title="Admin Enhancements & Data Management"
+      title="Day 12: Admin Enhancements & Data Management"
       summary="Added shop search, pagination and sortable tables, product-collection relationships, user profile editing, and mock images."
       tasks={[
         "Add search to shop",

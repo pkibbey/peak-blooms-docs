@@ -9,29 +9,41 @@ interface WeekData {
   title: string;
   description: string;
   milestones: string[];
+  dateRange: string;
 }
 
 const weeksData: WeekData[] = [
   {
     week: 1,
-    title: "Foundation & Planning",
+    title: "Foundation & Design System",
     description:
-      "Setting up the project infrastructure, design systems, and core architecture",
-    milestones: ["Project Setup", "Design System", "Component Foundation"],
+      "Setting up the project infrastructure, design systems, and core components",
+    dateRange: "Nov 22 - 28",
+    milestones: ["Project Setup", "Design System", "UI Components"],
   },
   {
     week: 2,
-    title: "Feature Development",
+    title: "Core Features & Data Layer",
     description:
-      "Building core features, integrating APIs, and implementing key functionality",
-    milestones: ["Feature Build", "Integration", "Testing"],
+      "Building core features with validation, data architecture, and authentication",
+    dateRange: "Nov 29 - Dec 5",
+    milestones: ["Validation", "Data Access Layer", "Authentication"],
   },
   {
     week: 3,
+    title: "Advanced Features & Optimization",
+    description:
+      "Implementing metrics, admin management, and performance improvements",
+    dateRange: "Dec 8 - 14",
+    milestones: ["Metrics System", "Admin Features", "Optimization"],
+  },
+  {
+    week: 4,
     title: "Polish & Launch",
     description:
-      "Refinement, optimization, deployment, and post-launch monitoring",
-    milestones: ["Optimization", "Deployment", "Monitoring"],
+      "Final refinements, build fixes, type unification, and deployment preparation",
+    dateRange: "Dec 15 - 18",
+    milestones: ["Build Fixes", "Type Unification", "Documentation"],
   },
 ];
 
@@ -42,7 +54,7 @@ export function Roadmap() {
         {/* Section Header */}
         <div className="text-center space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
-            Three-Week Journey
+            The Journey
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             A comprehensive overview of the entire project timeline, broken down
@@ -51,7 +63,7 @@ export function Roadmap() {
         </div>
 
         {/* Weeks Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {weeksData.map((week) => (
             <Card
               key={week.week}
@@ -60,10 +72,14 @@ export function Roadmap() {
               {/* Content */}
               <div className="mt-2 space-y-4">
                 <div>
-                  <h3 className="text-2xl font-bold text-foreground mb-2">
+                  <p className="flex flex-col gap-2 text-xs font-semibold text-muted-foreground mb-2 uppercase tracking-wide">
+                    <Badge variant="default">Week {week.week}</Badge>
+                    {week.dateRange}
+                  </p>
+                  <h3 className="text-lg font-bold text-foreground mb-2">
                     {week.title}
                   </h3>
-                  <p className="text-sm text-muted-foreground">
+                  <p className="text-xs text-muted-foreground">
                     {week.description}
                   </p>
                 </div>
@@ -77,16 +93,13 @@ export function Roadmap() {
                     {week.milestones.map((milestone, idx) => (
                       <li key={idx} className="flex items-start gap-2">
                         <span className="w-1.5 h-1.5 rounded-full bg-accent mt-1.5 flex-shrink-0" />
-                        <span className="text-sm text-foreground/70">
+                        <span className="text-xs text-foreground/70">
                           {milestone}
                         </span>
                       </li>
                     ))}
                   </ul>
                 </div>
-
-                {/* Week Badge */}
-                <Badge variant="default">Week {week.week}</Badge>
               </div>
             </Card>
           ))}

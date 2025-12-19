@@ -4,7 +4,7 @@ export default function Day20251208() {
   return (
     <DateCard
       date="2025-12-08"
-      title="Metrics System & Admin Management"
+      title="Day 15: Metrics System & Admin Management"
       summary="Implemented database query metrics, replaced dynamic hero with static components, and added admin product management."
       tasks={[
         "Create database query metrics system",

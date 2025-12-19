@@ -4,7 +4,7 @@ export default function Day20251215() {
   return (
     <DateCard
       date="2025-12-15"
-      title="Build Fixes & Type Unification"
+      title="Day 22: Build Fixes & Type Unification"
       summary="Fixed production build issues, unified session types across system, and updated development documentation."
       tasks={[
         "Update co-pilot instructions",

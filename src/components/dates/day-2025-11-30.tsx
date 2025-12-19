@@ -4,7 +4,7 @@ export default function Day20251130() {
   return (
     <DateCard
       date="2025-11-30"
-      title="Typography, Performance & Site Pages"
+      title="Day 9: Typography, Performance & Site Pages"
       summary="Created typography utilities, added JWT auth, implemented database indexes, color properties, and generated company/legal pages."
       tasks={[
         "Use JWT for auth to prevent database hits",

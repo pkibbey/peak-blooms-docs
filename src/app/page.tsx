@@ -71,11 +71,10 @@ export default function DatesPage() {
           {/* Section Header */}
           <div className="text-center space-y-4">
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
-              Timeline by Date
+              The Timeline
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Comprehensive breakdown of work completed each day based on commit
-              history
+              A comprehensive breakdown of work completed each day
             </p>
           </div>
 

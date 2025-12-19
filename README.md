@@ -7,6 +7,8 @@
 ![React](https://img.shields.io/badge/React-19-61dafb.svg)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178c6.svg)
 
+![Peak Blooms Homepage](public/homepage.png)
+
 ## 📖 Overview
 
 Peak Blooms is an interactive journey documenting the complete development lifecycle of a modern web application. This repository showcases the design decisions, technical implementations, challenges faced, and key learnings across a structured month-long development timeline.
