@@ -4,7 +4,7 @@ export default function Day20251125() {
   return (
     <DateCard
       date="2025-11-25"
-      title="Day 4: Server Components & UI Refactoring"
+      title="Server Components & UI Refactoring"
       summary="Refactored shop and auth to use server-side rendering, added cart page, managed content, and unified UI components."
       tasks={[
         "Refactor shop to use server rendering",

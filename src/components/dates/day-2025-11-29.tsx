@@ -4,7 +4,7 @@ export default function Day20251129() {
   return (
     <DateCard
       date="2025-11-29"
-      title="Day 8: Validation & Data Architecture"
+      title="Validation & Data Architecture"
       summary="Implemented comprehensive form validation with Zod, created unified Data Access Layer, and added price multiplier logic."
       tasks={[
         "Add price multiplier logic",

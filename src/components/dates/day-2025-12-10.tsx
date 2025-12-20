@@ -4,7 +4,7 @@ export default function Day20251210() {
   return (
     <DateCard
       date="2025-12-10"
-      title="Day 17: Performance & Type System Updates"
+      title="Performance & Type System Updates"
       summary="Optimized performance by disabling prefetch and removing logs, improved UI with toast notifications, and used generated types."
       tasks={[
         "Restrict metrics to development environment",

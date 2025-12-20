@@ -4,7 +4,7 @@ export default function Day20251128() {
   return (
     <DateCard
       date="2025-11-28"
-      title="Day 7: Media Management & Admin Features"
+      title="Media Management & Admin Features"
       summary="Implemented image uploads with validation, added bulk product filters, quantity selectors, and standardized page headers."
       tasks={[
         "Add boxlot filter for bulk products",

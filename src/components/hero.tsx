@@ -43,6 +43,7 @@ export function Hero() {
             }}
             variant="default"
             size="lg"
+            className="text-base"
           >
             View the Journey
           </Button>

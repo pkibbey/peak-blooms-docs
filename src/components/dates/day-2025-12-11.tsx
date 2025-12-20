@@ -4,7 +4,7 @@ export default function Day20251211() {
   return (
     <DateCard
       date="2025-12-11"
-      title="Day 18: Dark/Light Theme Implementation"
+      title="Dark/Light Theme Implementation"
       summary="Implemented theme system with light/dark mode toggle using CSS variables and context."
       tasks={["Add Theme support with Dark/Light toggle switch"]}
       skillsUsed={["CSS", "Context", "TypeScript", "React"]}

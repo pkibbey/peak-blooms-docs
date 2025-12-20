@@ -114,6 +114,7 @@ export function Roadmap() {
             }}
             variant="default"
             size="lg"
+            className="text-base"
           >
             View the Timeline
           </Button>

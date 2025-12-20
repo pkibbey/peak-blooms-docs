@@ -1,11 +1,13 @@
 "use client";
 
+import { differenceInDays } from "date-fns";
 import Image from "next/image";
-import { useState } from "react";
 import { ChevronDown } from "tabler-icons-react";
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { formatDateShort } from "@/lib/utils";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
 
 interface DateComponentProps {
   date: string;
@@ -30,72 +32,49 @@ export function DateCard({
   lessonsLearned,
   screenshot,
 }: DateComponentProps) {
-  const [isExpanded, setIsExpanded] = useState(false);
-
   return (
-    <Card className="p-6 border border-border/50 hover:border-border transition-colors">
-      {/* Header - Always visible */}
-      <div className="space-y-1">
-        <div className="flex flex-1 justify-between items-center gap-2">
-          <h3 className="text-xl font-bold text-foreground">{title}</h3>
-          <span className="text-sm font-semibold text-muted-foreground tracking-wide">
-            {formatDateShort(date)}
-          </span>
+    <Collapsible className="bg-white border rounded-lg border-border/50 shadow-xl hover:border-border transition-colors ring-none">
+      <CollapsibleTrigger className="flex flex-col justify-start p-6 w-full group">
+        {/* Header - Always visible */}
+        <div className="flex-col space-y-1 mb-3">
+          <h3 className="flex items-center gap-2 text-left text-xl font-bold text-foreground">
+            Day {differenceInDays(date, new Date("2025-11-21"))}: {title}
+          </h3>
+
+          <p className="text-left text-sm text-muted-foreground leading-relaxed">
+            {summary}
+          </p>
+        </div>
+        <div className="self-start bg-primary text-primary-foreground py-1 px-2 rounded-md">
+          <div className="flex items-center gap-2 font-semibold text-sm">
+            <span className="group-data-[panel-open]:hidden">Show More</span>
+            <span className="hidden group-data-[panel-open]:inline">
+              Show Less
+            </span>
+            <ChevronDown
+              size={16}
+              className="transition-transform duration-200 group-data-[panel-open]:rotate-180"
+            />
+          </div>
+        </div>
+      </CollapsibleTrigger>
+      <CollapsibleContent className="px-6 pt-6 pb-8 grid grid-cols-2 gap-6 border-t border-border/30 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:collapse">
+        {/* Tasks */}
+        <div>
+          <h4 className="font-semibold text-foreground mb-3">
+            Tasks Completed
+          </h4>
+          <ul className="space-y-2">
+            {tasks.map((task, idx) => (
+              <li key={idx} className="flex items-start gap-3">
+                <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                <span className="text-sm text-foreground/70">{task}</span>
+              </li>
+            ))}
+          </ul>
         </div>
 
-        <p className="text-sm text-muted-foreground leading-relaxed">
-          {summary}
-        </p>
-      </div>
-      <div>
-        {/* Expand Button */}
-        <Button
-          onClick={() => setIsExpanded(!isExpanded)}
-          // variant="secondary"
-          size="lg"
-          className="gap-2"
-        >
-          <span>{isExpanded ? "Show Less" : "Show More"}</span>
-          <ChevronDown
-            size={16}
-            className={`transition-transform duration-200 ${
-              isExpanded ? "rotate-180" : ""
-            }`}
-          />
-        </Button>
-      </div>
-      {isExpanded && (
-        <div className="mt-6 space-y-6 border-t border-border/30 pt-6">
-          {/* Tasks */}
-          <div>
-            <h4 className="font-semibold text-foreground mb-3">
-              Tasks Completed
-            </h4>
-            <ul className="space-y-2">
-              {tasks.map((task, idx) => (
-                <li key={idx} className="flex items-start gap-3">
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <span className="text-sm text-foreground/70">{task}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Skills Used */}
-          <div>
-            <h4 className="font-semibold text-foreground mb-3">Skills Used</h4>
-            <div className="flex flex-wrap gap-2">
-              {skillsUsed.map((skill, idx) => (
-                <span
-                  key={idx}
-                  className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-secondary text-secondary-foreground"
-                >
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </div>
-
+        <div className="space-y-6">
           {/* Screenshot */}
           {screenshot && (
             <div>
@@ -127,7 +106,7 @@ export function DateCard({
             </ul>
           </div>
         </div>
-      )}
-    </Card>
+      </CollapsibleContent>
+    </Collapsible>
   );
 }

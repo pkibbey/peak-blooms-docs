@@ -220,3 +220,25 @@
 .container-max {
   @apply max-w-6xl mx-auto;
 }
+
+/* Collapsible state styles */
+[data-slot="collapsible-trigger"] [data-state="closed"] {
+  display: inline;
+}
+
+[data-slot="collapsible-trigger"] [data-state="open"] {
+  display: none;
+}
+
+[data-slot="collapsible"] [data-state="open"] [data-state="open"] {
+  display: inline;
+}
+
+[data-slot="collapsible"] [data-state="open"] [data-state="closed"] {
+  display: none;
+}
+
+/* Rotate chevron when open */
+[data-slot="collapsible"] [data-state="open"] svg {
+  transform: rotate(180deg);
+}

@@ -4,7 +4,7 @@ export default function Day20251205() {
   return (
     <DateCard
       date="2025-12-05"
-      title="Day 14: Cart Features & Order Management"
+      title="Cart Features & Order Management"
       summary="Added quantity selectors, cart reset, reorder from history, and local database setup for development."
       tasks={[
         "Add local database to improve development speed",

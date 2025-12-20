@@ -4,7 +4,7 @@ export default function Day20251127() {
   return (
     <DateCard
       date="2025-11-27"
-      title="Day 6: Code Quality & Account Features"
+      title="Code Quality & Account Features"
       summary="Added linting and formatting, extracted reusable components, reorganized admin, and built account management pages."
       tasks={[
         "Add biome.js for linting and code formatting",

@@ -89,11 +89,14 @@ export default function DatesPage() {
 
       {/* Footer */}
       <footer className="w-full py-12 bg-muted/30 border-t border-border/50">
-        <div className="max-w-4xl mx-auto px-4 text-center">
+        <div className="grid gap-3 max-w-4xl mx-auto px-4 text-center">
           <p className="text-sm text-muted-foreground">
-            A comprehensive 3-week journey of building and launching a modern
-            web platform
+            A comprehensive journey of building and launching a modern web
+            platform
           </p>
+          <small className="text-sm text-muted-foreground">
+            Phineas Kibbey &copy; 2025
+          </small>
         </div>
       </footer>
     </main>

@@ -4,7 +4,7 @@ export default function Day20251126() {
   return (
     <DateCard
       date="2025-11-26"
-      title="Day 5: Navigation & Checkout Implementation"
+      title="Navigation & Checkout Implementation"
       summary="Created BackLink navigation component, standardized table layouts, and implemented cart checkout functionality."
       tasks={[
         "Create consistent BackLink navigation component",
