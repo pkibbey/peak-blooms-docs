@@ -53,7 +53,7 @@ export function DateCard({
           </p>
         </div>
       </div>
-      <div className="p-6 grid gap-6 border-t border-border/30 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:collapse">
+      <div className="p-6 grid grid-cols-2 gap-6 border-t border-border/30 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:collapse">
         {/* Tasks */}
         <div>
           <h4 className="font-semibold text-foreground mb-3">

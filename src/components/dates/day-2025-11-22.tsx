@@ -17,14 +17,6 @@ export default function Day20251122() {
           },
         },
         {
-          name: "Set up Tailwind CSS",
-          lesson: {
-            icon: <Bulb size={16} />,
-            description:
-              "Foundation reduces rework. A well-configured build system and styling framework eliminates technical debt before it accumulates.",
-          },
-        },
-        {
           name: "Add ShadCN to streamline workflow",
           lesson: {
             icon: <Stack size={16} />,
@@ -40,16 +32,9 @@ export default function Day20251122() {
               "Design systems maintain consistency. Clear documentation and design patterns ensure all team members build features cohesively.",
           },
         },
-        { name: "Add Navigation component" },
-        {
-          name: "Add centralized icon system",
-          lesson: {
-            icon: <Stack size={16} />,
-            description:
-              "Centralized systems reduce duplication. Managing icons in one place makes updates easier and ensures visual consistency throughout the application.",
-          },
-        },
+        { name: "Add navigation header with page links" },
       ]}
+      screenshot="/screenshots/day-1.png"
       skillsUsed={[
         "Next.js",
         "TypeScript",

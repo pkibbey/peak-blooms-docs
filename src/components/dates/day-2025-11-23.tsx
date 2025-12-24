@@ -44,6 +44,7 @@ export default function Day20251123() {
         { name: "Add product shop page" },
       ]}
       skillsUsed={["Prisma", "PostgreSQL", "Next.js", "TypeScript", "React"]}
+      screenshot="/screenshots/day-2.png"
     />
   );
 }

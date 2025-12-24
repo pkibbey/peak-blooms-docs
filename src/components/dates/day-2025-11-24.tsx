@@ -1,5 +1,5 @@
+import { AlertCircle, Flame, Lock } from "tabler-icons-react";
 import { DateCard } from "@/components/date-card";
-import { AlertCircle, Lock, Flame } from "tabler-icons-react";
 
 export default function Day20251124() {
   return (
