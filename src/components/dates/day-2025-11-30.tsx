@@ -1,51 +1,98 @@
+import { Bulb, Flame, InfoCircle } from "tabler-icons-react";
 import { DateCard } from "@/components/date-card";
-import { Flame, Bulb, InfoCircle } from "tabler-icons-react";
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardPositioner,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card";
 
 export default function Day20251130() {
+  const taskNode = (
+    <div>
+      <p className="text-base text-foreground-muted leading-relaxed">
+        Created{" "}
+        <HoverCard>
+          <HoverCardTrigger className="text-primary cursor-help underline decoration-dotted hover:text-primary/80">
+            typography utilities
+          </HoverCardTrigger>
+          <HoverCardPositioner side="right" align="start">
+            <HoverCardContent className="md:w-96">
+              <div className="flex items-start gap-3">
+                <Bulb size={16} className="flex-shrink-0 mt-0.5" />
+                <p className="text-sm text-popover-foreground">
+                  Typography systems maintain consistency. Creating reusable
+                  typography utilities ensures uniform text styling across the
+                  application and reduces duplication.
+                </p>
+              </div>
+            </HoverCardContent>
+          </HoverCardPositioner>
+        </HoverCard>
+        . Added{" "}
+        <HoverCard>
+          <HoverCardTrigger className="text-primary cursor-help underline decoration-dotted hover:text-primary/80">
+            JWT authentication
+          </HoverCardTrigger>
+          <HoverCardPositioner side="right" align="start">
+            <HoverCardContent className="md:w-96">
+              <div className="flex items-start gap-3">
+                <Flame size={16} className="flex-shrink-0 mt-0.5" />
+                <p className="text-sm text-popover-foreground">
+                  JWT tokens reduce database load. Stateless JWT authentication
+                  eliminates expensive database lookups on every request and
+                  improves performance.
+                </p>
+              </div>
+            </HoverCardContent>
+          </HoverCardPositioner>
+        </HoverCard>
+        ,{" "}
+        <HoverCard>
+          <HoverCardTrigger className="text-primary cursor-help underline decoration-dotted hover:text-primary/80">
+            database indexes
+          </HoverCardTrigger>
+          <HoverCardPositioner side="right" align="start">
+            <HoverCardContent className="md:w-96">
+              <div className="flex items-start gap-3">
+                <Flame size={16} className="flex-shrink-0 mt-0.5" />
+                <p className="text-sm text-popover-foreground">
+                  Database indexes significantly improve performance. Proper
+                  indexing on frequently queried columns dramatically speeds up
+                  database queries.
+                </p>
+              </div>
+            </HoverCardContent>
+          </HoverCardPositioner>
+        </HoverCard>
+        , and{" "}
+        <HoverCard>
+          <HoverCardTrigger className="text-primary cursor-help underline decoration-dotted hover:text-primary/80">
+            legal pages
+          </HoverCardTrigger>
+          <HoverCardPositioner side="right" align="start">
+            <HoverCardContent className="md:w-96">
+              <div className="flex items-start gap-3">
+                <InfoCircle size={16} className="flex-shrink-0 mt-0.5" />
+                <p className="text-sm text-popover-foreground">
+                  Legal pages build trust. Providing privacy policies, terms of
+                  service, and company information establishes credibility with
+                  users.
+                </p>
+              </div>
+            </HoverCardContent>
+          </HoverCardPositioner>
+        </HoverCard>
+        .
+      </p>
+    </div>
+  );
+
   return (
     <DateCard
       date="2025-11-30"
       title="Typography, Performance & Site Pages"
-      summary="Created typography utilities, added JWT auth, implemented database indexes, color properties, and generated company/legal pages."
-      tasks={[
-        {
-          name: "Use JWT for auth to prevent database hits",
-          lesson: {
-            icon: <Flame size={16} />,
-            description:
-              "JWT tokens reduce database load. Stateless JWT authentication eliminates expensive database lookups on every request and improves performance.",
-          },
-        },
-        { name: "Add type safety to queries" },
-        { name: "Add dynamic hero components" },
-        { name: "Redirect unathenticated users" },
-        { name: "Add product color properties with color picker UI for admins" },
-        { name: "Introduce cart empty state" },
-        {
-          name: "Create typography utility classes in tailwind",
-          lesson: {
-            icon: <Bulb size={16} />,
-            description:
-              "Typography systems maintain consistency. Creating reusable typography utilities ensures uniform text styling across the application and reduces duplication.",
-          },
-        },
-        {
-          name: "Add database indexes to improve performance",
-          lesson: {
-            icon: <Flame size={16} />,
-            description:
-              "Database indexes significantly improve performance. Proper indexing on frequently queried columns dramatically speeds up database queries.",
-          },
-        },
-        {
-          name: "Generate company, support, legal pages, and sitemap",
-          lesson: {
-            icon: <InfoCircle size={16} />,
-            description:
-              "Legal pages build trust. Providing privacy policies, terms of service, and company information establishes credibility with users.",
-          },
-        },
-      ]}
+      taskNode={taskNode}
       skillsUsed={["Tailwind CSS", "TypeScript", "JWT", "Optimization"]}
     />
   );

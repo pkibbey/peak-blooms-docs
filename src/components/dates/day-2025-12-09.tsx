@@ -1,33 +1,61 @@
-import { DateCard } from "@/components/date-card";
 import { Bulb, Flame } from "tabler-icons-react";
+import { DateCard } from "@/components/date-card";
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardPositioner,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card";
 
 export default function Day20251209() {
+  const taskNode = (
+    <div>
+      <p className="text-base text-foreground-muted leading-relaxed">
+        Replaced magic link with{" "}
+        <HoverCard>
+          <HoverCardTrigger className="text-primary cursor-help underline decoration-dotted hover:text-primary/80">
+            Google authentication
+          </HoverCardTrigger>
+          <HoverCardPositioner side="right" align="start">
+            <HoverCardContent className="md:w-96">
+              <div className="flex items-start gap-3">
+                <Bulb size={16} className="flex-shrink-0 mt-0.5" />
+                <p className="text-sm text-popover-foreground">
+                  Google auth simplifies user experience. OAuth providers
+                  eliminate password management friction and leverage existing
+                  user accounts.
+                </p>
+              </div>
+            </HoverCardContent>
+          </HoverCardPositioner>
+        </HoverCard>
+        . Simplified checkout, optimized seed scripts, and implemented{" "}
+        <HoverCard>
+          <HoverCardTrigger className="text-primary cursor-help underline decoration-dotted hover:text-primary/80">
+            static rendering
+          </HoverCardTrigger>
+          <HoverCardPositioner side="right" align="start">
+            <HoverCardContent className="md:w-96">
+              <div className="flex items-start gap-3">
+                <Flame size={16} className="flex-shrink-0 mt-0.5" />
+                <p className="text-sm text-popover-foreground">
+                  Static rendering improves performance. Pre-rendering static
+                  pages at build time eliminates runtime rendering overhead.
+                </p>
+              </div>
+            </HoverCardContent>
+          </HoverCardPositioner>
+        </HoverCard>
+        .
+      </p>
+    </div>
+  );
+
   return (
     <DateCard
       date="2025-12-09"
       title="Auth & Production Optimization"
-      summary="Replaced magic link with Google auth, simplified checkout, optimized seed scripts, and added static rendering."
-      tasks={[
-        { name: "Remove billing address from cart checkout" },
-        {
-          name: "Replace magic link authentication with google auth",
-          lesson: {
-            icon: <Bulb size={16} />,
-            description:
-              "Google auth simplifies user experience. OAuth providers eliminate password management friction and leverage existing user accounts.",
-          },
-        },
-        { name: "Fix seed script timeouts for production databases" },
-        { name: "Fix login url for production environment" },
-        {
-          name: "Add static rendering for pages with static content",
-          lesson: {
-            icon: <Flame size={16} />,
-            description:
-              "Static rendering improves performance. Pre-rendering static pages at build time eliminates runtime rendering overhead.",
-          },
-        },
-      ]}
+      taskNode={taskNode}
       skillsUsed={["Prisma", "TypeScript", "OAuth"]}
     />
   );

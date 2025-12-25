@@ -1,31 +1,62 @@
+import { AlertCircle, Flame } from "tabler-icons-react";
 import { DateCard } from "@/components/date-card";
-import { AlertCircle, Flame, InfoCircle } from "tabler-icons-react";
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardPositioner,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card";
 
 export default function Day20251201() {
+  const taskNode = (
+    <div>
+      <p className="text-base text-foreground-muted leading-relaxed">
+        Migrated from next-auth to{" "}
+        <HoverCard>
+          <HoverCardTrigger className="text-primary cursor-help underline decoration-dotted hover:text-primary/80">
+            better-auth
+          </HoverCardTrigger>
+          <HoverCardPositioner side="right" align="start">
+            <HoverCardContent className="md:w-96">
+              <div className="flex items-start gap-3">
+                <AlertCircle size={16} className="flex-shrink-0 mt-0.5" />
+                <p className="text-sm text-popover-foreground">
+                  Authentication library evaluation improves fit. Evaluating
+                  alternatives ensures the chosen library aligns with project
+                  requirements and architecture.
+                </p>
+              </div>
+            </HoverCardContent>
+          </HoverCardPositioner>
+        </HoverCard>
+        . Removed{" "}
+        <HoverCard>
+          <HoverCardTrigger className="text-primary cursor-help underline decoration-dotted hover:text-primary/80">
+            dead code
+          </HoverCardTrigger>
+          <HoverCardPositioner side="right" align="start">
+            <HoverCardContent className="md:w-96">
+              <div className="flex items-start gap-3">
+                <Flame size={16} className="flex-shrink-0 mt-0.5" />
+                <p className="text-sm text-popover-foreground">
+                  Dead code removal improves maintainability. Unused code
+                  increases cognitive load and makes refactoring harder, so
+                  removing it keeps the codebase clean.
+                </p>
+              </div>
+            </HoverCardContent>
+          </HoverCardPositioner>
+        </HoverCard>{" "}
+        and simplified admin layout.
+      </p>
+    </div>
+  );
+
   return (
     <DateCard
       date="2025-12-01"
       title="Auth Migration & Code Cleanup"
-      summary="Migrated from next-auth to better-auth, simplified admin layout, and removed dead code with knip."
-      tasks={[
-        { name: "Update admin sidebar and simplify admin layout" },
-        {
-          name: "Add knip and remove all dead code",
-          lesson: {
-            icon: <Flame size={16} />,
-            description:
-              "Dead code removal improves maintainability. Unused code increases cognitive load and makes refactoring harder, so removing it keeps the codebase clean.",
-          },
-        },
-        {
-          name: "Replace next-auth with better-auth",
-          lesson: {
-            icon: <AlertCircle size={16} />,
-            description:
-              "Authentication library evaluation improves fit. Evaluating alternatives ensures the chosen library aligns with project requirements and architecture.",
-          },
-        },
-      ]}
+      taskNode={taskNode}
       skillsUsed={["better-auth", "Next.js", "TypeScript", "OAuth"]}
     />
   );

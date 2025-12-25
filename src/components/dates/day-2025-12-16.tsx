@@ -1,40 +1,80 @@
+import { Bulb, Flame } from "tabler-icons-react";
 import { DateCard } from "@/components/date-card";
-import { Flame, Bulb } from "tabler-icons-react";
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardPositioner,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card";
 
 export default function Day20251216() {
+  const taskNode = (
+    <div>
+      <p className="text-base text-foreground-muted leading-relaxed">
+        Migrated to{" "}
+        <HoverCard>
+          <HoverCardTrigger className="text-primary cursor-help underline decoration-dotted hover:text-primary/80">
+            server actions
+          </HoverCardTrigger>
+          <HoverCardPositioner side="right" align="start">
+            <HoverCardContent className="md:w-96">
+              <div className="flex items-start gap-3">
+                <Flame size={16} className="flex-shrink-0 mt-0.5" />
+                <p className="text-sm text-popover-foreground">
+                  Server actions reduce latency and improve performance. Running
+                  critical operations on the server eliminates round-trip
+                  network calls.
+                </p>
+              </div>
+            </HoverCardContent>
+          </HoverCardPositioner>
+        </HoverCard>{" "}
+        for all operations. Added{" "}
+        <HoverCard>
+          <HoverCardTrigger className="text-primary cursor-help underline decoration-dotted hover:text-primary/80">
+            soft-delete
+          </HoverCardTrigger>
+          <HoverCardPositioner side="right" align="start">
+            <HoverCardContent className="md:w-96">
+              <div className="flex items-start gap-3">
+                <Bulb size={16} className="flex-shrink-0 mt-0.5" />
+                <p className="text-sm text-popover-foreground">
+                  Soft-delete preserves data integrity. Marking records as
+                  deleted rather than removing them preserves historical data
+                  and enables undo functionality.
+                </p>
+              </div>
+            </HoverCardContent>
+          </HoverCardPositioner>
+        </HoverCard>{" "}
+        and{" "}
+        <HoverCard>
+          <HoverCardTrigger className="text-primary cursor-help underline decoration-dotted hover:text-primary/80">
+            order snapshots
+          </HoverCardTrigger>
+          <HoverCardPositioner side="right" align="start">
+            <HoverCardContent className="md:w-96">
+              <div className="flex items-start gap-3">
+                <Bulb size={16} className="flex-shrink-0 mt-0.5" />
+                <p className="text-sm text-popover-foreground">
+                  Order snapshots maintain price history accuracy. Storing
+                  product prices at order time prevents price changes from
+                  affecting historical records.
+                </p>
+              </div>
+            </HoverCardContent>
+          </HoverCardPositioner>
+        </HoverCard>
+        .
+      </p>
+    </div>
+  );
+
   return (
     <DateCard
       date="2025-12-16"
       title="Server Actions & Performance Refactoring"
-      summary="Migrated to server actions for all operations, added soft-delete and order snapshots, and moved user fetching to Nav."
-      tasks={[
-        { name: "Move user fetching out of layout and into Nav component" },
-        {
-          name: "Refactor API calls to use server actions for performance improvements",
-          lesson: {
-            icon: <Flame size={16} />,
-            description:
-              "Server actions reduce latency and improve performance. Running critical operations on the server eliminates round-trip network calls.",
-          },
-        },
-        {
-          name: "Add product soft-delete functionality",
-          lesson: {
-            icon: <Bulb size={16} />,
-            description:
-              "Soft-delete preserves data integrity. Marking records as deleted rather than removing them preserves historical data and enables undo functionality.",
-          },
-        },
-        {
-          name: "Save order snapshots to preserve price history",
-          lesson: {
-            icon: <Bulb size={16} />,
-            description:
-              "Order snapshots maintain price history accuracy. Storing product prices at order time prevents price changes from affecting historical records.",
-          },
-        },
-        { name: "Refactor cart retreival to fix cart bug" },
-      ]}
+      taskNode={taskNode}
       skillsUsed={["Next.js", "TypeScript", "Server Actions", "React"]}
     />
   );

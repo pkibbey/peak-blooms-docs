@@ -1,33 +1,62 @@
+import { AlertCircle, Bulb } from "tabler-icons-react";
 import { DateCard } from "@/components/date-card";
-import { AlertCircle, Bulb, InfoCircle } from "tabler-icons-react";
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardPositioner,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card";
 
 export default function Day20251128() {
+  const taskNode = (
+    <div>
+      <p className="text-base text-foreground-muted leading-relaxed">
+        Implemented{" "}
+        <HoverCard>
+          <HoverCardTrigger className="text-primary cursor-help underline decoration-dotted hover:text-primary/80">
+            image uploads with validation
+          </HoverCardTrigger>
+          <HoverCardPositioner side="right" align="start">
+            <HoverCardContent className="md:w-96">
+              <div className="flex items-start gap-3">
+                <AlertCircle size={16} className="flex-shrink-0 mt-0.5" />
+                <p className="text-sm text-popover-foreground">
+                  Image validation prevents errors. Validating image dimensions,
+                  file sizes, and formats ensures data quality and prevents
+                  loading broken or oversized images.
+                </p>
+              </div>
+            </HoverCardContent>
+          </HoverCardPositioner>
+        </HoverCard>
+        . Added{" "}
+        <HoverCard>
+          <HoverCardTrigger className="text-primary cursor-help underline decoration-dotted hover:text-primary/80">
+            product filters
+          </HoverCardTrigger>
+          <HoverCardPositioner side="right" align="start">
+            <HoverCardContent className="md:w-96">
+              <div className="flex items-start gap-3">
+                <Bulb size={16} className="flex-shrink-0 mt-0.5" />
+                <p className="text-sm text-popover-foreground">
+                  Consistent headers improve navigation. Standardized page
+                  headers provide visual anchors and help users understand their
+                  current location in the application.
+                </p>
+              </div>
+            </HoverCardContent>
+          </HoverCardPositioner>
+        </HoverCard>
+        , quantity selectors, and standardized page headers.
+      </p>
+    </div>
+  );
+
   return (
     <DateCard
       date="2025-11-28"
       title="Media Management & Admin Features"
-      summary="Implemented image uploads with validation, added bulk product filters, quantity selectors, and standardized page headers."
-      tasks={[
-        { name: "Add boxlot filter for bulk products" },
-        { name: "Introduce Image upload to admin forms" },
-        {
-          name: "Add consisent page headers",
-          lesson: {
-            icon: <Bulb size={16} />,
-            description:
-              "Consistent headers improve navigation. Standardized page headers provide visual anchors and help users understand their current location in the application.",
-          },
-        },
-        {
-          name: "Image validation",
-          lesson: {
-            icon: <AlertCircle size={16} />,
-            description:
-              "Image validation prevents errors. Validating image dimensions, file sizes, and formats ensures data quality and prevents loading broken or oversized images.",
-          },
-        },
-        { name: "Add quantity selector to inspirations" },
-      ]}
+      taskNode={taskNode}
       skillsUsed={["React", "File Handling", "Validation", "TypeScript"]}
     />
   );

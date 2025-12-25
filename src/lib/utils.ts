@@ -5,7 +5,7 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export function formatDateShort(date: Date | string): string {
+function formatDateShort(date: Date | string): string {
   const dateObj = typeof date === "string" ? new Date(date) : date;
   const day = dateObj.getDate();
   const month = dateObj.toLocaleString("en-US", { month: "short" });

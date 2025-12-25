@@ -1,32 +1,62 @@
-import { DateCard } from "@/components/date-card";
 import { InfoCircle, Stack } from "tabler-icons-react";
+import { DateCard } from "@/components/date-card";
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardPositioner,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card";
 
 export default function Day20251126() {
+  const taskNode = (
+    <div>
+      <p className="text-base text-foreground-muted leading-relaxed">
+        Created a consistent{" "}
+        <HoverCard>
+          <HoverCardTrigger className="text-primary cursor-help underline decoration-dotted hover:text-primary/80">
+            navigation component
+          </HoverCardTrigger>
+          <HoverCardPositioner side="right" align="start">
+            <HoverCardContent className="md:w-96">
+              <div className="flex items-start gap-3">
+                <InfoCircle size={16} className="flex-shrink-0 mt-0.5" />
+                <p className="text-sm text-popover-foreground">
+                  Consistent navigation improves UX. A standardized back
+                  navigation component helps users move through the application
+                  intuitively and reduces friction.
+                </p>
+              </div>
+            </HoverCardContent>
+          </HoverCardPositioner>
+        </HoverCard>
+        . Standardized{" "}
+        <HoverCard>
+          <HoverCardTrigger className="text-primary cursor-help underline decoration-dotted hover:text-primary/80">
+            table layouts
+          </HoverCardTrigger>
+          <HoverCardPositioner side="right" align="start">
+            <HoverCardContent className="md:w-96">
+              <div className="flex items-start gap-3">
+                <Stack size={16} className="flex-shrink-0 mt-0.5" />
+                <p className="text-sm text-popover-foreground">
+                  Table layouts reduce code duplication. Creating shared table
+                  layouts and styles eliminates repetitive code and makes
+                  maintenance easier.
+                </p>
+              </div>
+            </HoverCardContent>
+          </HoverCardPositioner>
+        </HoverCard>{" "}
+        and implemented cart checkout functionality.
+      </p>
+    </div>
+  );
+
   return (
     <DateCard
       date="2025-11-26"
       title="Navigation & Checkout Implementation"
-      summary="Created BackLink navigation component, standardized table layouts, and implemented cart checkout functionality."
-      tasks={[
-        {
-          name: "Create consistent BackLink navigation component",
-          lesson: {
-            icon: <InfoCircle size={16} />,
-            description:
-              "Consistent navigation improves UX. A standardized back navigation component helps users move through the application intuitively and reduces friction.",
-          },
-        },
-        {
-          name: "Align table layouts",
-          lesson: {
-            icon: <Stack size={16} />,
-            description:
-              "Table layouts reduce code duplication. Creating shared table layouts and styles eliminates repetitive code and makes maintenance easier.",
-          },
-        },
-        { name: "Remove shop filters" },
-        { name: "Add cart checkout (witout payment processing)" },
-      ]}
+      taskNode={taskNode}
       skillsUsed={["React", "TypeScript", "Tailwind CSS", "Components"]}
     />
   );
