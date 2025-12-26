@@ -39,7 +39,7 @@ const weeksData: WeekData[] = [
   },
   {
     week: 4,
-    title: "Polish & Launch",
+    title: "Performance, Testing & Polish",
     description:
       "Final refinements, build fixes, type unification, and deployment preparation",
     dateRange: "Dec 13 - 19",
@@ -74,41 +74,22 @@ export function Roadmap() {
               }}
             >
               {/* Content */}
-              <div className="mt-2 space-y-4">
-                <div>
-                  <p className="flex flex-col gap-2 text-sm font-semibold text-muted-foreground mb-2 uppercase tracking-wide">
-                    <Badge
-                      variant="default"
-                      className="w-fit group-hover:bg-primary transition-colors"
-                    >
-                      Week {week.week}
-                    </Badge>
-                    <span className="text-xs">{week.dateRange}</span>
-                  </p>
-                  <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
-                    {week.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground">
-                    {week.description}
-                  </p>
-                </div>
-
-                {/* Milestones */}
-                <div className="space-y-2">
-                  <p className="text-sm font-semibold text-muted-foreground uppercase tracking-wide">
-                    Key Milestones
-                  </p>
-                  <ul className="space-y-2">
-                    {week.milestones.map((milestone, idx) => (
-                      <li key={idx} className="flex items-start gap-2">
-                        <span className="w-1.5 h-1.5 rounded-full bg-accent mt-1.5 flex-shrink-0" />
-                        <span className="text-sm text-foreground/70">
-                          {milestone}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+              <div className="mt-2">
+                <p className="flex flex-col gap-2 text-sm font-semibold text-muted-foreground mb-2 tracking-wide">
+                  <Badge
+                    variant="default"
+                    className="w-fit group-hover:bg-primary transition-colors"
+                  >
+                    Week {week.week}
+                  </Badge>
+                  <span className="text-xs">{week.dateRange}</span>
+                </p>
+                <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                  {week.title}
+                </h3>
+                <p className="text-base text-muted-foreground">
+                  {week.description}
+                </p>
               </div>
             </Card>
           ))}

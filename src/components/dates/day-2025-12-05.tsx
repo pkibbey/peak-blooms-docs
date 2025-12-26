@@ -64,7 +64,7 @@ export default function Day20251205() {
               </div>
             </HoverCardContent>
           </HoverCardPositioner>
-        </HoverCard>
+        </HoverCard>{" "}
         functionality.
       </p>
     </div>
@@ -76,6 +76,7 @@ export default function Day20251205() {
       title="Cart Features & Order Management"
       taskNode={taskNode}
       skillsUsed={["React", "TypeScript", "Prisma", "Validation"]}
+      screenshot="/screenshots/2025-12-05.png"
     />
   );
 }

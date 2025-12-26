@@ -58,6 +58,7 @@ export default function Day20251129() {
       title="Validation & Data Architecture"
       taskNode={taskNode}
       skillsUsed={["Zod", "TypeScript", "Data Access", "React"]}
+      screenshot="/screenshots/2025-11-29.png"
     />
   );
 }

@@ -1,8 +1,8 @@
 "use client";
 
+import { Activity, Code, Database, Users } from "tabler-icons-react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "./ui/badge";
-import { Database, Code, Activity, Users } from "tabler-icons-react";
 
 interface Lesson {
   title: string;
@@ -14,25 +14,29 @@ interface Lesson {
 const lessons: Lesson[] = [
   {
     title: "Database Fidelity",
-    description: "Use local database for development and maintain a script that can seed the data to go along with the commits, so that the schema can always be recreated to match the git history.",
+    description:
+      "Use local database for development and maintain a script that can seed the data to go along with the commits, so that the schema can always be recreated to match the git history.",
     icon: <Database size={20} />,
     tag: "Infrastructure",
   },
   {
     title: "The 'Good Enough' Trap",
-    description: "Don't let 'perfect' be the enemy of 'shipped', but don't let 'shipped' be an excuse for messy code. If a component feels like it needs a rewrite, it probably does.",
+    description:
+      "Don't let 'perfect' be the enemy of 'shipped', but don't let 'shipped' be an excuse for messy code. If a component feels like it needs a rewrite, it probably does.",
     icon: <Code size={20} />,
     tag: "Productivity",
   },
   {
     title: "Type Safety as a Safety Net",
-    description: "Type safety isn't just about catching bugs; it's about documenting intent. When you come back to code months later, the types are your best friend.",
+    description:
+      "Type safety isn't just about catching bugs; it's about documenting intent. When you come back to code months later, the types are your best friend.",
     icon: <Activity size={20} />,
     tag: "Quality",
   },
   {
     title: "Listen to the Friction",
-    description: "If a feature feels hard to implement, it's often because the underlying architecture or the design itself is flawed. Step back and re-evaluate.",
+    description:
+      "If a feature feels hard to implement, it's often because the underlying architecture or the design itself is flawed. Step back and re-evaluate.",
     icon: <Users size={20} />,
     tag: "Experience",
   },
@@ -44,14 +48,18 @@ export function Lessons() {
       <div className="max-w-4xl mx-auto px-4 space-y-12">
         {/* Section Header */}
         <div className="text-center space-y-4">
-          <Badge variant="outline" className="px-4 py-1 border-secondary/20 bg-secondary/5 text-secondary">
+          <Badge
+            variant="outline"
+            className="px-4 py-1 border-secondary/20 bg-secondary/5 text-secondary"
+          >
             Reflections
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
             Lessons Learned
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A look into the vulnerable side of development, and what I've learned from the mistakes and the wins.
+            A look into the vulnerable side of development, and what I've
+            learned from the mistakes and the wins.
           </p>
         </div>
 
@@ -67,7 +75,10 @@ export function Lessons() {
                   <div className="p-2 rounded-lg bg-secondary/80 text-secondary-foreground/80 group-hover:bg-secondary group-hover:text-secondary-foreground transition-colors">
                     {lesson.icon}
                   </div>
-                  <Badge variant="secondary" className="bg-muted text-sm font-medium">
+                  <Badge
+                    variant="secondary"
+                    className="bg-muted text-sm font-medium"
+                  >
                     {lesson.tag}
                   </Badge>
                 </div>

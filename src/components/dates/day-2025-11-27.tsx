@@ -76,7 +76,7 @@ export default function Day20251127() {
       title="Code Quality & Account Features"
       taskNode={taskNode}
       skillsUsed={["React", "TypeScript", "Refactoring", "Code Quality"]}
-      screenshot="/screenshots/day-6.png"
+      screenshot="/screenshots/2025-11-27.png"
     />
   );
 }

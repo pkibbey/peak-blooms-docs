@@ -1,4 +1,3 @@
-import { AlertCircle } from "tabler-icons-react";
 import { DateCard } from "@/components/date-card";
 import { Trigger } from "../trigger";
 import { HoverCard } from "../ui/hover-card";
@@ -26,7 +25,7 @@ export default function Day20251124() {
       title="Authentication & Product filtering"
       taskNode={taskNode}
       skillsUsed={["Prisma", "TypeScript", "Authentication", "Next.js"]}
-      screenshot="/screenshots/day-3.png"
+      screenshot="/screenshots/2025-11-24.png"
     />
   );
 }

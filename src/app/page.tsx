@@ -26,8 +26,9 @@ import {
   Day20251218,
 } from "@/components/dates";
 import { Hero } from "@/components/hero";
-import { Roadmap } from "@/components/roadmap";
 import { Lessons } from "@/components/lessons";
+import { Roadmap } from "@/components/roadmap";
+import { Badge } from "@/components/ui/badge";
 
 export default function DatesPage() {
   const week1 = [
@@ -70,25 +71,25 @@ export default function DatesPage() {
   const weeks = [
     {
       id: "week-1",
-      title: "Week 1: Foundation & Design System",
+      title: "Foundation & Design System",
       description: "Setting up project infrastructure and core components",
       dates: week1,
     },
     {
       id: "week-2",
-      title: "Week 2: Core Features & Data Layer",
+      title: "Core Features & Data Layer",
       description: "Building validation and data architecture",
       dates: week2,
     },
     {
       id: "week-3",
-      title: "Week 3: Advanced Features & Optimization",
+      title: "Advanced Features & Optimization",
       description: "Metrics system and performance improvements",
       dates: week3,
     },
     {
       id: "week-4",
-      title: "Week 4: Polish & Launch",
+      title: "Performance, Testing & Polish",
       description: "Final refinements and deployment preparation",
       dates: week4,
     },
@@ -116,9 +117,12 @@ export default function DatesPage() {
           </div>
 
           {/* Weeks sections */}
-          {weeks.map((week) => (
+          {weeks.map((week, index) => (
             <div key={week.id} id={week.id} className="space-y-12 scroll-mt-20">
-              <div className="space-y-4">
+              <div className="grid items-center space-y-2">
+                <Badge variant="default" className="justify-self-center">
+                  Week {index + 1}
+                </Badge>
                 <div className="flex items-center gap-4">
                   <div className="h-px flex-1 bg-border/50" />
                   <h3 className="text-2xl md:text-3xl font-bold tracking-tight text-center px-4">

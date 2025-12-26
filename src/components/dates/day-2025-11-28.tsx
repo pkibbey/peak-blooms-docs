@@ -58,7 +58,7 @@ export default function Day20251128() {
       title="Media Management & Admin Features"
       taskNode={taskNode}
       skillsUsed={["React", "File Handling", "Validation", "TypeScript"]}
-      screenshot="/screenshots/day-7.png"
+      screenshot="/screenshots/2025-11-28.png"
     />
   );
 }

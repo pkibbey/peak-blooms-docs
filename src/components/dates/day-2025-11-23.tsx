@@ -50,7 +50,7 @@ export default function Day20251123() {
       title="Database Schema & Content Features"
       taskNode={taskNode}
       skillsUsed={["Prisma", "PostgreSQL", "Next.js", "TypeScript", "React"]}
-      screenshot="/screenshots/day-2.png"
+      screenshot="/screenshots/2025-11-23.png"
     />
   );
 }

@@ -11,7 +11,7 @@ export default function Day20251130() {
   const taskNode = (
     <div>
       <p className="text-base text-foreground-muted leading-relaxed">
-        Created{" "}
+        Defined{" "}
         <HoverCard>
           <HoverCardTrigger className="text-primary cursor-help underline decoration-dotted hover:text-primary/80">
             typography utilities
@@ -94,6 +94,7 @@ export default function Day20251130() {
       title="Typography, Performance & Site Pages"
       taskNode={taskNode}
       skillsUsed={["Tailwind CSS", "TypeScript", "JWT", "Optimization"]}
+      screenshot="/screenshots/2025-11-30.png"
     />
   );
 }

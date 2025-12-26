@@ -130,7 +130,7 @@ export default function Day20251122() {
       date="2025-11-22"
       title="Project Setup & Design System"
       taskNode={taskNode}
-      screenshot="/screenshots/day-1.png"
+      screenshot="/screenshots/2025-11-22.png"
       skillsUsed={[
         "Next.js",
         "TypeScript",

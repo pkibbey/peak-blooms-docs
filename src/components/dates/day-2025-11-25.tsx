@@ -76,7 +76,7 @@ export default function Day20251125() {
       title="Server Components & UI Refactoring"
       taskNode={taskNode}
       skillsUsed={["Next.js", "Server Components", "Radix UI", "TypeScript"]}
-      screenshot="/screenshots/day-4.png"
+      screenshot="/screenshots/2025-11-25.png"
     />
   );
 }

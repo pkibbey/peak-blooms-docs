@@ -14,7 +14,7 @@ export default function Day20251203() {
         Added{" "}
         <HoverCard>
           <HoverCardTrigger className="text-primary cursor-help underline decoration-dotted hover:text-primary/80">
-            search
+            global search
           </HoverCardTrigger>
           <HoverCardPositioner side="right" align="start">
             <HoverCardContent className="md:w-96">
@@ -76,6 +76,7 @@ export default function Day20251203() {
       title="Admin Enhancements & Data Management"
       taskNode={taskNode}
       skillsUsed={["React", "Prisma", "Admin UI", "Search"]}
+      screenshot="/screenshots/2025-12-03.png"
     />
   );
 }

@@ -3,7 +3,12 @@
 import { differenceInDays } from "date-fns";
 import Image from "next/image";
 import type { ReactNode } from "react";
-import { Dialog, DialogContent, DialogTrigger, DialogClose } from "@/components/ui/dialog";
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 interface DateComponentProps {
   date: string;
