@@ -21,7 +21,7 @@ export function DateCard({
 }: DateComponentProps) {
   return (
     <div className="bg-white border rounded-lg border-border/50 shadow-xl hover:border-border transition-colors ring-none">
-      <div className="p-6 grid grid-cols-[auto_300px] gap-8">
+      <div className="p-6 grid md:grid-cols-[auto_300px] gap-8">
         <div className="space-y-3">
           {/* Header */}
           <h3 className="flex items-center gap-2 text-left text-xl font-bold text-foreground">
