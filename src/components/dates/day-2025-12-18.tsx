@@ -58,6 +58,7 @@ export default function Day20251218() {
       title="Test Coverage & Order Refinement"
       taskNode={taskNode}
       skillsUsed={["Testing", "TypeScript", "Prisma", "Documentation"]}
+      screenshot="/screenshots/2025-12-18.png"
     />
   );
 }
