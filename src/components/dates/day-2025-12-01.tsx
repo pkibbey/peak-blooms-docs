@@ -67,13 +67,5 @@ export default function Day20251201() {
     </div>
   );
 
-  return (
-    <DateCard
-      date="2025-12-01"
-      title="Auth Migration & Code Cleanup"
-      taskNode={taskNode}
-      skillsUsed={["better-auth", "Next.js", "TypeScript", "OAuth"]}
-      screenshot="/screenshots/2025-12-01.png"
-    />
-  );
+  return <DateCard dateKey="2025-12-01" taskNode={taskNode} />;
 }

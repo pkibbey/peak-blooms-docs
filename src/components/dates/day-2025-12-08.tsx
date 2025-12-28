@@ -67,13 +67,5 @@ export default function Day20251208() {
     </div>
   );
 
-  return (
-    <DateCard
-      date="2025-12-08"
-      title="Metrics System & Admin Management"
-      taskNode={taskNode}
-      skillsUsed={["Prisma", "Next.js", "Metrics", "TypeScript"]}
-      screenshot="/screenshots/2025-12-08.png"
-    />
-  );
+  return <DateCard dateKey="2025-12-08" taskNode={taskNode} />;
 }

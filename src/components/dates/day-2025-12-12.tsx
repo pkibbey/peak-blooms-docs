@@ -32,13 +32,5 @@ export default function Day20251212() {
     </div>
   );
 
-  return (
-    <DateCard
-      date="2025-12-12"
-      title="Terminology & Route Consolidation"
-      taskNode={taskNode}
-      skillsUsed={["Next.js", "TypeScript", "Routing"]}
-      screenshot="/screenshots/2025-12-12.png"
-    />
-  );
+  return <DateCard dateKey="2025-12-12" taskNode={taskNode} />;
 }

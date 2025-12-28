@@ -50,13 +50,5 @@ export default function Day20251128() {
     </div>
   );
 
-  return (
-    <DateCard
-      date="2025-11-28"
-      title="Media Management & Admin Features"
-      taskNode={taskNode}
-      skillsUsed={["React", "File Handling", "Validation", "TypeScript"]}
-      screenshot="/screenshots/2025-11-28.png"
-    />
-  );
+  return <DateCard dateKey="2025-11-28" taskNode={taskNode} />;
 }

@@ -32,13 +32,5 @@ export default function Day20251211() {
     </div>
   );
 
-  return (
-    <DateCard
-      date="2025-12-11"
-      title="Dark/Light Theme Implementation"
-      taskNode={taskNode}
-      skillsUsed={["CSS", "Context", "TypeScript", "React"]}
-      screenshot="/screenshots/2025-12-11.png"
-    />
-  );
+  return <DateCard dateKey="2025-12-11" taskNode={taskNode} />;
 }

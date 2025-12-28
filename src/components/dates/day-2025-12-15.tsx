@@ -66,13 +66,5 @@ export default function Day20251215() {
     </div>
   );
 
-  return (
-    <DateCard
-      date="2025-12-15"
-      title="Build Fixes & Type Unification"
-      taskNode={taskNode}
-      skillsUsed={["Build Tools", "Next.js", "TypeScript"]}
-      screenshot="/screenshots/2025-12-15.png"
-    />
-  );
+  return <DateCard dateKey="2025-12-15" taskNode={taskNode} />;
 }

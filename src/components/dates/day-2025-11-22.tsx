@@ -68,13 +68,5 @@ export default function Day20251122() {
     </div>
   );
 
-  return (
-    <DateCard
-      date="2025-11-22"
-      title="Client Interview & Project Setup"
-      taskNode={taskNode}
-      screenshot="/screenshots/2025-11-22.png"
-      skillsUsed={["Next.js", "TypeScript", "BiomeJS", "ShadCN"]}
-    />
-  );
+  return <DateCard dateKey="2025-11-22" taskNode={taskNode} />;
 }

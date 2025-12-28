@@ -3,6 +3,7 @@
 import { differenceInDays } from "date-fns";
 import Image from "next/image";
 import type { ReactNode } from "react";
+import { daysMetadata } from "@/components/dates-metadata";
 import {
   AccordionContent,
   AccordionItem,
@@ -17,22 +18,19 @@ import {
 import { Badge } from "./ui/badge";
 
 export interface DateCardProps {
-  date?: string;
-  title?: string;
-  skillsUsed?: string[];
-  screenshot?: string;
-  taskNode?: ReactNode;
+  dateKey: string;
+  taskNode: ReactNode;
   isOpen?: boolean;
   onOpenChange?: (isOpen: boolean) => void;
 }
 
-export function DateCard({
-  date,
-  title,
-  screenshot,
-  taskNode,
-  skillsUsed,
-}: DateCardProps) {
+export function DateCard({ dateKey, taskNode }: DateCardProps) {
+  const dayData = daysMetadata.find((d) => d.date === dateKey);
+
+  const date = dayData?.date;
+  const title = dayData?.title;
+  const screenshot = dayData?.screenshot;
+  const skillsUsed = dayData?.skillsUsed;
   return (
     <AccordionItem value={date} className="border-0">
       <AccordionTrigger className="p-4 relative overflow-hidden flex flex-1 justify-between items-center w-full hover:bg-gray-100 rounded-sm transition-colors text-lg font-bold [&[data-panel-open]]:bg-white [&[data-panel-open]]:shadow-xl [&[data-panel-open]]:rounded-lg">

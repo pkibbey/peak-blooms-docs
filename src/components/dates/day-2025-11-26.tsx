@@ -50,13 +50,5 @@ export default function Day20251126() {
     </div>
   );
 
-  return (
-    <DateCard
-      date="2025-11-26"
-      title="Navigation & Checkout Implementation"
-      taskNode={taskNode}
-      skillsUsed={["React", "TypeScript", "Tailwind CSS", "Components"]}
-      screenshot="/screenshots/2025-11-26.png"
-    />
-  );
+  return <DateCard dateKey="2025-11-26" taskNode={taskNode} />;
 }

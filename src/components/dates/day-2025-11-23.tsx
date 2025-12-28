@@ -42,13 +42,5 @@ export default function Day20251123() {
     </div>
   );
 
-  return (
-    <DateCard
-      date="2025-11-23"
-      title="Database Schema & Content Features"
-      taskNode={taskNode}
-      skillsUsed={["Prisma", "PostgreSQL", "Next.js", "TypeScript", "React"]}
-      screenshot="/screenshots/2025-11-23.png"
-    />
-  );
+  return <DateCard dateKey="2025-11-23" taskNode={taskNode} />;
 }

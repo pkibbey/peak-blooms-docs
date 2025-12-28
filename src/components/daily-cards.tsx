@@ -1,9 +1,7 @@
 "use client";
 
 import type { ComponentType } from "react";
-import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
-import type { DateCardProps } from "./date-card";
 import {
   Day20251122,
   Day20251123,
@@ -34,7 +32,7 @@ import {
 import { weeksMetadata } from "./dates-metadata";
 import { Accordion } from "./ui/accordion";
 
-const datesByWeek: Record<number, ComponentType<DateCardProps>[]> = {
+const datesByWeek: Record<number, ComponentType[]> = {
   1: [
     Day20251122,
     Day20251123,
@@ -70,17 +68,6 @@ const weeks = weeksMetadata.map((week) => ({
 }));
 
 export function DailyCards() {
-  const [openDate, setOpenDate] = useState<string | null>(null);
-  console.log("openDate: ", openDate);
-
-  const handleDateOpenChange = (date: string, isOpen: boolean) => {
-    if (isOpen) {
-      setOpenDate(date);
-    } else if (openDate === date) {
-      setOpenDate(null);
-    }
-  };
-
   return (
     <section id="dates" className="w-full py-20 bg-background">
       <div className="max-w-4xl mx-auto px-4 space-y-24">
@@ -116,23 +103,7 @@ export function DailyCards() {
             <div className="grid grid-cols-1 gap-4">
               <Accordion>
                 {week.dates.map((DateComponent, index) => {
-                  const dateString = DateComponent.name.replace("Day", "");
-                  const year = dateString.slice(0, 4);
-                  const month = dateString.slice(4, 6);
-                  const day = dateString.slice(6, 8);
-                  const formattedDate = `${year}-${month}-${day}`;
-
-                  return (
-                    <DateComponent
-                      key={index}
-                      isOpen={openDate === formattedDate}
-                      onOpenChange={(isOpen: boolean) => {
-                        console.log("isOpen: ", isOpen);
-
-                        handleDateOpenChange(formattedDate, isOpen);
-                      }}
-                    />
-                  );
+                  return <DateComponent key={index} />;
                 })}
               </Accordion>
             </div>

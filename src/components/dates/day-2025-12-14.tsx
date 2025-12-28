@@ -49,13 +49,5 @@ export default function Day20251214() {
     </div>
   );
 
-  return (
-    <DateCard
-      date="2025-12-14"
-      title="Search & Data Model Refinement"
-      taskNode={taskNode}
-      skillsUsed={["Prisma", "TypeScript", "Search", "React"]}
-      screenshot="/screenshots/2025-12-14.png"
-    />
-  );
+  return <DateCard dateKey="2025-12-14" taskNode={taskNode} />;
 }

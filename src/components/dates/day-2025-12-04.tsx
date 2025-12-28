@@ -67,13 +67,5 @@ export default function Day20251204() {
     </div>
   );
 
-  return (
-    <DateCard
-      date="2025-12-04"
-      title="UI Components & Featured Collections"
-      taskNode={taskNode}
-      skillsUsed={["React", "Tailwind CSS", "Components"]}
-      screenshot="/screenshots/2025-12-04.png"
-    />
-  );
+  return <DateCard dateKey="2025-12-04" taskNode={taskNode} />;
 }

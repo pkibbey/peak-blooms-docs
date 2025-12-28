@@ -50,13 +50,5 @@ export default function Day20251213() {
     </div>
   );
 
-  return (
-    <DateCard
-      date="2025-12-13"
-      title="UI Framework & Concept Consolidation"
-      taskNode={taskNode}
-      skillsUsed={["React", "Tailwind", "BaseUI", "TypeScript"]}
-      screenshot="/screenshots/2025-12-13.png"
-    />
-  );
+  return <DateCard dateKey="2025-12-13" taskNode={taskNode} />;
 }

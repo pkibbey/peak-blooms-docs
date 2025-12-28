@@ -17,13 +17,5 @@ export default function Day20251124() {
     </div>
   );
 
-  return (
-    <DateCard
-      date="2025-11-24"
-      title="Authentication & Product filtering"
-      taskNode={taskNode}
-      skillsUsed={["Prisma", "TypeScript", "Authentication", "Next.js"]}
-      screenshot="/screenshots/2025-11-24.png"
-    />
-  );
+  return <DateCard dateKey="2025-11-24" taskNode={taskNode} />;
 }

@@ -86,13 +86,5 @@ export default function Day20251130() {
     </div>
   );
 
-  return (
-    <DateCard
-      date="2025-11-30"
-      title="Typography, Performance & Site Pages"
-      taskNode={taskNode}
-      skillsUsed={["Tailwind CSS", "TypeScript", "JWT", "Optimization"]}
-      screenshot="/screenshots/2025-11-30.png"
-    />
-  );
+  return <DateCard dateKey="2025-11-30" taskNode={taskNode} />;
 }

@@ -66,13 +66,5 @@ export default function Day20251209() {
     </div>
   );
 
-  return (
-    <DateCard
-      date="2025-12-09"
-      title="Auth & Production Optimization"
-      taskNode={taskNode}
-      skillsUsed={["Prisma", "TypeScript", "OAuth"]}
-      screenshot="/screenshots/2025-12-09.png"
-    />
-  );
+  return <DateCard dateKey="2025-12-09" taskNode={taskNode} />;
 }

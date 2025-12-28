@@ -68,13 +68,5 @@ export default function Day20251202() {
     </div>
   );
 
-  return (
-    <DateCard
-      date="2025-12-02"
-      title="Pagination, CSV & Data Management"
-      taskNode={taskNode}
-      skillsUsed={["CSV", "Prisma", "Next.js", "Node.js"]}
-      screenshot="/screenshots/2025-12-02.png"
-    />
-  );
+  return <DateCard dateKey="2025-12-02" taskNode={taskNode} />;
 }

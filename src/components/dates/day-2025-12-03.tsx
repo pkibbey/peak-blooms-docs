@@ -67,13 +67,5 @@ export default function Day20251203() {
     </div>
   );
 
-  return (
-    <DateCard
-      date="2025-12-03"
-      title="Admin Enhancements & Data Management"
-      taskNode={taskNode}
-      skillsUsed={["React", "Prisma", "Admin UI", "Search"]}
-      screenshot="/screenshots/2025-12-03.png"
-    />
-  );
+  return <DateCard dateKey="2025-12-03" taskNode={taskNode} />;
 }

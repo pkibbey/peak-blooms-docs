@@ -86,13 +86,5 @@ export default function Day20251210() {
     </div>
   );
 
-  return (
-    <DateCard
-      date="2025-12-10"
-      title="Performance & Type System Updates"
-      taskNode={taskNode}
-      skillsUsed={["Next.js", "TypeScript", "Optimization"]}
-      screenshot="/screenshots/2025-12-10.png"
-    />
-  );
+  return <DateCard dateKey="2025-12-10" taskNode={taskNode} />;
 }

@@ -50,13 +50,5 @@ export default function Day20251129() {
     </div>
   );
 
-  return (
-    <DateCard
-      date="2025-11-29"
-      title="Validation & Data Architecture"
-      taskNode={taskNode}
-      skillsUsed={["Zod", "TypeScript", "Data Access", "React"]}
-      screenshot="/screenshots/2025-11-29.png"
-    />
-  );
+  return <DateCard dateKey="2025-11-29" taskNode={taskNode} />;
 }
