@@ -2,6 +2,7 @@
 
 import { Card } from "@/components/ui/card";
 import { weeksMetadata } from "./dates-metadata";
+import ImageBehindButton from "./image-behind-button";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 
@@ -54,19 +55,15 @@ export function Roadmap() {
         </div>
 
         {/* CTA */}
-        <div className="text-center pt-8">
-          <Button
-            onClick={() => {
-              const element = document.getElementById("week-1");
-              element?.scrollIntoView({ behavior: "smooth" });
-            }}
-            variant="default"
-            size="lg"
-            className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-colors"
-          >
-            View the Timeline
-          </Button>
-        </div>
+        <ImageBehindButton
+          imageSrc="/timeline.png"
+          imageAlt="Timeline preview"
+          buttonLabel="View the Timeline"
+          onClick={() => {
+            const element = document.getElementById("week-1");
+            element?.scrollIntoView({ behavior: "smooth" });
+          }}
+        />
       </div>
     </section>
   );

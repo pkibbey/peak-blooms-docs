@@ -12,8 +12,6 @@ export function CTA() {
         const element = document.getElementById("roadmap");
         element?.scrollIntoView({ behavior: "smooth" });
       }}
-      variant="default"
-      size="lg"
     />
   );
 }

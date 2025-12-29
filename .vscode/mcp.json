@@ -16,11 +16,7 @@
     "Vercel": {
       "url": "https://mcp.vercel.com",
       "type": "http"
-    },
-    "knip": {
-      "command": "npx",
-      "args": ["-y", "@knip/mcp"],
-    }, 
+    }
   },
   "inputs": []
 }

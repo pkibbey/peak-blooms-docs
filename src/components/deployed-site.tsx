@@ -18,7 +18,7 @@ export function DeployedSite() {
         <ImageBehindButton
           imageSrc="/peak-blooms.png"
           imageAlt="Peak Blooms live site preview"
-          buttonLabel="Visit Live Site"
+          buttonLabel="Visit Peak Blooms"
           href="https://peak-blooms.vercel.app/"
         />
       </div>

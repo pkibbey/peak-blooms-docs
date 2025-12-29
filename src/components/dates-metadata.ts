@@ -177,7 +177,7 @@ export const daysMetadata: DayMetadata[] = [
           {
             kind: "hover",
             trigger: "ISR",
-            body: "Server components improve performance. Moving rendering to the server reduces client-side JavaScript and enables faster initial page loads.",
+            body: "ISR was chosen early for performance and flexibility. Incremental Static Regeneration balances the performance of static pages with the freshness of dynamic content, regenerating pages on-demand and serving cached versions to users.",
             icon: "Flame",
           },
           { kind: "text", text: ", created a " },
@@ -385,7 +385,7 @@ export const daysMetadata: DayMetadata[] = [
           {
             kind: "hover",
             trigger: "Knip",
-            body: "Dead code removal improves maintainability. Unused code increases cognitive load and makes refactoring harder, so removing it keeps the codebase clean.",
+            body: "Knip finds and eliminates unused code. Rather than manually hunting for dead code, this specialized tool automatically identifies unused exports and files, making it easy to keep the codebase clean and maintainable.",
             icon: "Flame",
             side: "right",
           },
@@ -415,7 +415,7 @@ export const daysMetadata: DayMetadata[] = [
           {
             kind: "hover",
             trigger: "database seed script",
-            body: "CSV enables bulk product imports. Parsing CSV files automates bulk data imports, reducing manual entry and improving data consistency.",
+            body: "Seed scripts automate data setup. Using a CSV parser to seed the database with initial product data eliminates manual entry, provides a reproducible setup process, and ensures consistency across development environments.",
             icon: "Flame",
             side: "right",
           },
@@ -497,7 +497,7 @@ export const daysMetadata: DayMetadata[] = [
           {
             kind: "hover",
             trigger: "product card",
-            body: "Reusable components reduce code duplication. A centralized product card component ensures consistent presentation across browse, search, and collection pages.",
+            body: "The product card became the most-reused component across browse, search, and collection pages, so investing focused time in building a solid, well-structured component paid dividends throughout the entire application.",
             icon: "Stack",
             side: "right",
           },
@@ -614,7 +614,7 @@ export const daysMetadata: DayMetadata[] = [
           {
             kind: "hover",
             trigger: "server actions",
-            body: "Static rendering improves performance. Pre-rendering static pages at build time eliminates runtime rendering overhead.",
+            body: "Server actions simplify mutations and improve performance. Moving operations to the server eliminates API boilerplate, reduces client-side JavaScript, and provides direct database access without network overhead.",
             icon: "Flame",
             side: "right",
           },
@@ -649,7 +649,7 @@ export const daysMetadata: DayMetadata[] = [
           {
             kind: "hover",
             trigger: "Prisma generated types",
-            body: "Generated types stay in sync with schema. Auto-generated types from Prisma ensure type safety and prevent schema drift.",
+            body: "Schema-driven types prevent drift. Initially, static types seemed practical, but auto-generating types directly from the Prisma schema is more effective—it ensures types stay perfectly in sync and prevents the inevitable mismatches that occur with manually maintained types.",
             icon: "Bulb",
             side: "right",
           },
