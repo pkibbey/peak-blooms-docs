@@ -61,7 +61,7 @@ export const daysMetadata: DayMetadata[] = [
     date: "2025-11-22",
     title: "Client Interview & Project Setup",
     screenshot: "/screenshots/2025-11-22.png",
-    skillsUsed: ["Next.js", "TypeScript", "BiomeJS", "ShadCN"],
+    skillsUsed: ["Site Architecture", "Type Safety", "Code Quality"],
     tasks: [
       {
         type: "paragraph",
@@ -117,7 +117,7 @@ export const daysMetadata: DayMetadata[] = [
     date: "2025-11-23",
     title: "Database Schema & Design System",
     screenshot: "/screenshots/2025-11-23.png",
-    skillsUsed: ["Prisma", "PostgreSQL", "Next.js", "TypeScript", "React"],
+    skillsUsed: ["Database Design", "UI Components"],
     tasks: [
       {
         type: "paragraph",
@@ -141,7 +141,7 @@ export const daysMetadata: DayMetadata[] = [
     date: "2025-11-24",
     title: "Authentication",
     screenshot: "/screenshots/2025-11-24.png",
-    skillsUsed: ["Prisma", "TypeScript", "Authentication", "Next.js"],
+    skillsUsed: ["Authentication", "React"],
     tasks: [
       {
         type: "paragraph",
@@ -168,7 +168,7 @@ export const daysMetadata: DayMetadata[] = [
     date: "2025-11-25",
     title: "Shopping Cart",
     screenshot: "/screenshots/2025-11-25.png",
-    skillsUsed: ["Next.js", "React", "Server Components", "TypeScript"],
+    skillsUsed: ["Server-side Rendering", "E-commerce"],
     tasks: [
       {
         type: "paragraph",
@@ -200,7 +200,7 @@ export const daysMetadata: DayMetadata[] = [
     date: "2025-11-26",
     title: "Navigation & Layouts",
     screenshot: "/screenshots/2025-11-26.png",
-    skillsUsed: ["React", "TypeScript", "Next.js", "UI Design"],
+    skillsUsed: ["UI Design", "Consistency"],
     tasks: [
       {
         type: "paragraph",
@@ -228,7 +228,7 @@ export const daysMetadata: DayMetadata[] = [
     date: "2025-11-27",
     title: "Order History & Code Quality",
     screenshot: "/screenshots/2025-11-27.png",
-    skillsUsed: ["BiomeJS", "React", "TypeScript", "Code Quality"],
+    skillsUsed: ["Code Quality", "Refactoring"],
     tasks: [
       {
         type: "paragraph",
@@ -258,7 +258,7 @@ export const daysMetadata: DayMetadata[] = [
     date: "2025-11-28",
     title: "Image Upload & Product Features",
     screenshot: "/screenshots/2025-11-28.png",
-    skillsUsed: ["Next.js", "TypeScript", "File Upload", "Validation"],
+    skillsUsed: ["File Upload", "Data Validation", "UI Design"],
     tasks: [
       {
         type: "paragraph",
@@ -294,7 +294,7 @@ export const daysMetadata: DayMetadata[] = [
     date: "2025-11-29",
     title: "Client Review & Form Validation",
     screenshot: "/screenshots/2025-11-29.png",
-    skillsUsed: ["Prisma", "Zod", "TypeScript", "Data Architecture"],
+    skillsUsed: ["Client Facing", "Schema Validation", "Data Architecture"],
     tasks: [
       {
         type: "paragraph",
@@ -319,7 +319,7 @@ export const daysMetadata: DayMetadata[] = [
     date: "2025-11-30",
     title: "Performance Improvements",
     screenshot: "/screenshots/2025-11-30.png",
-    skillsUsed: ["JWT", "Database Design", "Typography", "Next.js"],
+    skillsUsed: ["Authentication", "Database Design", "Typography"],
     tasks: [
       {
         type: "paragraph",
@@ -368,7 +368,7 @@ export const daysMetadata: DayMetadata[] = [
     date: "2025-12-01",
     title: "Auth Migration",
     screenshot: "/screenshots/2025-12-01.png",
-    skillsUsed: ["better-auth", "Next.js", "TypeScript", "OAuth"],
+    skillsUsed: ["OAuth", "Code Quality", "Admin UI"],
     tasks: [
       {
         type: "paragraph",
@@ -406,7 +406,7 @@ export const daysMetadata: DayMetadata[] = [
     date: "2025-12-02",
     title: "Pagination & Data Import",
     screenshot: "/screenshots/2025-12-02.png",
-    skillsUsed: ["CSV", "Prisma", "Next.js", "Node.js"],
+    skillsUsed: ["Data Import", "Pagination", "UI Design"],
     tasks: [
       {
         type: "paragraph",
@@ -439,7 +439,7 @@ export const daysMetadata: DayMetadata[] = [
     date: "2025-12-03",
     title: "Admin Enhancements",
     screenshot: "/screenshots/2025-12-03.png",
-    skillsUsed: ["React", "Prisma", "Admin UI", "Search"],
+    skillsUsed: ["Search Functionality", "Database Design"],
     tasks: [
       {
         type: "paragraph",
@@ -480,7 +480,7 @@ export const daysMetadata: DayMetadata[] = [
     date: "2025-12-04",
     title: "UI clean up",
     screenshot: "/screenshots/2025-12-04.png",
-    skillsUsed: ["React", "Tailwind CSS", "Components"],
+    skillsUsed: ["Styling", "Component Composition"],
     tasks: [
       {
         type: "paragraph",
@@ -510,7 +510,7 @@ export const daysMetadata: DayMetadata[] = [
     date: "2025-12-05",
     title: "Ordering System Tweaks",
     screenshot: "/screenshots/2025-12-05.png",
-    skillsUsed: ["React", "TypeScript", "Prisma", "Validation"],
+    skillsUsed: ["UI Components", "Database Design", "Marketing"],
     tasks: [
       {
         type: "paragraph",
@@ -548,7 +548,7 @@ export const daysMetadata: DayMetadata[] = [
     date: "2025-12-08",
     title: "Metrics & Admin Management",
     screenshot: "/screenshots/2025-12-08.png",
-    skillsUsed: ["Prisma", "Next.js", "Metrics", "TypeScript"],
+    skillsUsed: ["Site Architecture", "Performance Monitoring"],
     tasks: [
       {
         type: "paragraph",
@@ -586,7 +586,7 @@ export const daysMetadata: DayMetadata[] = [
     date: "2025-12-09",
     title: "Production Optimization",
     screenshot: "/screenshots/2025-12-09.png",
-    skillsUsed: ["Prisma", "TypeScript", "OAuth"],
+    skillsUsed: ["Database Design", "Authentication", "Server Actions"],
     tasks: [
       {
         type: "paragraph",
@@ -627,7 +627,7 @@ export const daysMetadata: DayMetadata[] = [
     date: "2025-12-10",
     title: "Performance Improvements",
     screenshot: "/screenshots/2025-12-10.png",
-    skillsUsed: ["Next.js", "TypeScript", "Optimization"],
+    skillsUsed: ["Performance Optimization", "User Feedback"],
     tasks: [
       {
         type: "paragraph",
@@ -662,7 +662,7 @@ export const daysMetadata: DayMetadata[] = [
     date: "2025-12-11",
     title: "Theme Implementation",
     screenshot: "/screenshots/2025-12-11.png",
-    skillsUsed: ["CSS", "Context", "TypeScript", "React"],
+    skillsUsed: ["Styling", "Complexity Analysis"],
     tasks: [
       {
         type: "paragraph",
@@ -687,7 +687,7 @@ export const daysMetadata: DayMetadata[] = [
     date: "2025-12-12",
     title: "Client review",
     screenshot: "/screenshots/2025-12-12.png",
-    skillsUsed: ["Next.js", "TypeScript", "Routing"],
+    skillsUsed: ["Site Architecture", "Documentation"],
     tasks: [
       {
         type: "paragraph",
@@ -712,7 +712,7 @@ export const daysMetadata: DayMetadata[] = [
     date: "2025-12-13",
     title: "Replace UI Framework",
     screenshot: "/screenshots/2025-12-13.png",
-    skillsUsed: ["React", "Tailwind", "BaseUI", "TypeScript"],
+    skillsUsed: ["Component Library", "Type Safety"],
     tasks: [
       {
         type: "paragraph",
@@ -742,7 +742,7 @@ export const daysMetadata: DayMetadata[] = [
     date: "2025-12-14",
     title: "Add Global Search",
     screenshot: "/screenshots/2025-12-14.png",
-    skillsUsed: ["Prisma", "TypeScript", "Search", "React"],
+    skillsUsed: ["Search Functionality", "UI Components"],
     tasks: [
       {
         type: "paragraph",
@@ -772,7 +772,7 @@ export const daysMetadata: DayMetadata[] = [
     date: "2025-12-15",
     title: "Build Fixes & Type Consistency",
     screenshot: "/screenshots/2025-12-15.png",
-    skillsUsed: ["Build Tools", "Next.js", "TypeScript"],
+    skillsUsed: ["CI/CD", "Type Safety", "Documentation"],
     tasks: [
       {
         type: "paragraph",
@@ -810,7 +810,7 @@ export const daysMetadata: DayMetadata[] = [
     date: "2025-12-16",
     title: "Performance Gains using Server Actions",
     screenshot: "/screenshots/2025-12-16.png",
-    skillsUsed: ["Next.js", "TypeScript", "Server Actions", "React"],
+    skillsUsed: ["Site Architecture", "Server Actions"],
     tasks: [
       {
         type: "paragraph",
@@ -848,7 +848,7 @@ export const daysMetadata: DayMetadata[] = [
     date: "2025-12-17",
     title: "Setup Test Framework",
     screenshot: "/screenshots/2025-12-17.png",
-    skillsUsed: ["Testing", "TypeScript", "Prisma", "Server Actions"],
+    skillsUsed: ["Server Actions", "Testing Framework"],
     tasks: [
       {
         type: "paragraph",
@@ -873,7 +873,7 @@ export const daysMetadata: DayMetadata[] = [
     date: "2025-12-18",
     title: "Achieved 80% Test Coverage",
     screenshot: "/screenshots/2025-12-18.png",
-    skillsUsed: ["Testing", "TypeScript", "Prisma", "Documentation"],
+    skillsUsed: ["Code Coverage", "Database Design", "Documentation"],
     tasks: [
       {
         type: "paragraph",

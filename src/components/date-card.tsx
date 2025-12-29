@@ -67,19 +67,12 @@ export function DateCard({ dateKey }: DateCardProps) {
           ref={triggerRef}
           className="p-4 relative overflow-hidden flex flex-1 justify-between items-center w-full hover:bg-white group-open:bg-white transition-colors text-lg font-bold [&[data-panel-open]]:rounded-lg "
         >
-          {date && title && (
-            <h3 className="text-xl font-semibold text-foreground relative z-10">
-              Day {differenceInDays(date, new Date("2025-11-21"))}: {title}
-            </h3>
-          )}
-        </AccordionTrigger>
-
-        {/* Accordion Content */}
-        <AccordionContent className="bg-white px-4 pb-5 grid md:grid-cols-[auto_300px] gap-8">
-          <div className="grid text-lg text-foreground-muted leading-relaxed space-y-6">
-            {/* Tasks */}
-            <TaskRenderer tasks={dayData?.tasks} />
-
+          <div className="flex flex-col md:flex-row flex-1 md:justify-between md:items-center gap-2">
+            {date && title && (
+              <h3 className="text-lg md:text-xl font-semibold text-foreground relative z-10">
+                Day {differenceInDays(date, new Date("2025-11-21"))}: {title}
+              </h3>
+            )}
             <div className="flex gap-1">
               {skillsUsed?.map((skill) => (
                 <Badge
@@ -91,6 +84,14 @@ export function DateCard({ dateKey }: DateCardProps) {
                 </Badge>
               ))}
             </div>
+          </div>
+        </AccordionTrigger>
+
+        {/* Accordion Content */}
+        <AccordionContent className="bg-white px-4 pb-5 grid md:grid-cols-[auto_300px] gap-8">
+          <div className="text-lg text-foreground-muted leading-relaxed">
+            {/* Tasks */}
+            <TaskRenderer tasks={dayData?.tasks} />
           </div>
 
           {/* Screenshot */}
