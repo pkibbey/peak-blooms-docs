@@ -1,13 +1,6 @@
 "use client";
 
-import Image from "next/image";
-import {
-  HoverCard,
-  HoverCardContent,
-  HoverCardPositioner,
-  HoverCardTrigger,
-} from "@/components/ui/hover-card";
-import { Button } from "./ui/button";
+import ImageBehindButton from "./image-behind-button";
 
 export function DeployedSite() {
   return (
@@ -22,50 +15,12 @@ export function DeployedSite() {
           </p>
         </div>
 
-        <div className="relative mb-4 overflow-visible z-10 flex flex-col items-center rounded-sm">
-          {/* CTA */}
-          <div className="absolute z-10 -bottom-7">
-            <div className="pt-4">
-              <HoverCard>
-                <HoverCardTrigger
-                  target="_blank"
-                  href="https://peak-blooms.vercel.app/"
-                  className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-colors"
-                >
-                  Visit Live Site
-                </HoverCardTrigger>
-                <HoverCardPositioner side="top">
-                  <HoverCardContent className="mb-4 p-0 border-0 bg-transparent shadow-none">
-                    <a
-                      href="https://peak-blooms.vercel.app/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block cursor-pointer hover:opacity-90 transition-opacity"
-                    >
-                      <Image
-                        width={2248}
-                        height={1298}
-                        src="/peak-blooms.png"
-                        alt="Peak Blooms live site preview"
-                        className="w-80 rounded-lg shadow-lg"
-                      />
-                    </a>
-                  </HoverCardContent>
-                </HoverCardPositioner>
-              </HoverCard>
-            </div>
-          </div>
-          <div>
-            <Image
-              width={2248}
-              height={1298}
-              src="/peak-blooms.png"
-              alt="Peak Blooms live site preview"
-              className="w-60"
-            />
-            <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-background via-background/70 to-transparent" />
-          </div>
-        </div>
+        <ImageBehindButton
+          imageSrc="/peak-blooms.png"
+          imageAlt="Peak Blooms live site preview"
+          buttonLabel="Visit Live Site"
+          href="https://peak-blooms.vercel.app/"
+        />
       </div>
     </section>
   );

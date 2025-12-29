@@ -124,15 +124,8 @@ export const daysMetadata: DayMetadata[] = [
         segments: [
           {
             kind: "text",
-            text: "Created foundational UI components, generated ",
+            text: "Created foundational UI components, and a ",
           },
-          {
-            kind: "hover",
-            trigger: "placeholder images",
-            body: "Used a vision enabled LLM to generate placeholder images for site content.",
-            icon: "Bulb",
-          },
-          { kind: "text", text: " using an LLM, and created a " },
           {
             kind: "hover",
             trigger: "schema-defined database",
@@ -165,7 +158,7 @@ export const daysMetadata: DayMetadata[] = [
           },
           {
             kind: "text",
-            text: " and added product filters to the shop page.",
+            text: ", and added more UI components.",
           },
         ],
       },
@@ -180,30 +173,24 @@ export const daysMetadata: DayMetadata[] = [
       {
         type: "paragraph",
         segments: [
-          { kind: "text", text: "Refactored pages to use " },
+          { kind: "text", text: "Configured dynamic pages to use " },
           {
             kind: "hover",
             trigger: "ISR",
             body: "Server components improve performance. Moving rendering to the server reduces client-side JavaScript and enables faster initial page loads.",
             icon: "Flame",
           },
-          { kind: "text", text: ". Created a " },
+          { kind: "text", text: ", created a " },
           {
             kind: "hover",
             trigger: "shopping cart",
             body: "Cart functionality is essential for e-commerce. A smooth shopping cart experience reduces friction and increases conversion rates.",
             icon: "InfoCircle",
           },
-          { kind: "text", text: " workflow and replaced HTML elements with " },
-          {
-            kind: "hover",
-            trigger: "UI components",
-            body: "UI components standardize interfaces. Replacing raw HTML with components ensures consistent styling, accessibility, and behavior across the application.",
-            icon: "Stack",
-          },
+          { kind: "text", text: " workflow using SSR" },
           {
             kind: "text",
-            text: ". Also added content management for admin users.",
+            text: ", and added content management for admin users.",
           },
         ],
       },
@@ -218,15 +205,10 @@ export const daysMetadata: DayMetadata[] = [
       {
         type: "paragraph",
         segments: [
-          { kind: "text", text: "Created a consistent " },
           {
-            kind: "hover",
-            trigger: "navigation component",
-            body: "Consistent navigation improves UX. A standardized back navigation component helps users move through the application intuitively and reduces friction.",
-            icon: "InfoCircle",
-            side: "right",
+            kind: "text",
+            text: "Created a consistent navigation, standardized ",
           },
-          { kind: "text", text: ". Standardized " },
           {
             kind: "hover",
             trigger: "table layouts",
@@ -236,7 +218,7 @@ export const daysMetadata: DayMetadata[] = [
           },
           {
             kind: "text",
-            text: " and implemented cart checkout functionality.",
+            text: ", and implemented cart checkout functionality.",
           },
         ],
       },
@@ -244,7 +226,7 @@ export const daysMetadata: DayMetadata[] = [
   },
   {
     date: "2025-11-27",
-    title: "Code Quality",
+    title: "Order History & Code Quality",
     screenshot: "/screenshots/2025-11-27.png",
     skillsUsed: ["BiomeJS", "React", "TypeScript", "Code Quality"],
     tasks: [
@@ -259,14 +241,15 @@ export const daysMetadata: DayMetadata[] = [
             icon: "InfoCircle",
             side: "right",
           },
-          { kind: "text", text: ", and refactored the larger " },
+          { kind: "text", text: ", and " },
           {
             kind: "hover",
-            trigger: "components into smaller files",
+            trigger: "refactored the largest",
             body: "Component extraction reduces duplication. Breaking large components into smaller, focused pieces makes them reusable and easier to test and maintain.",
             icon: "Flame",
             side: "right",
           },
+          { kind: "text", text: " files into smaller components." },
         ],
       },
     ],
@@ -294,7 +277,7 @@ export const daysMetadata: DayMetadata[] = [
           },
           {
             kind: "hover",
-            trigger: "standardized page headers",
+            trigger: "consisitent page headers",
             body: "Consistent headers improve navigation. Standardized page headers provide visual anchors and help users understand their current location in the application.",
             icon: "Bulb",
             side: "right",
@@ -309,22 +292,25 @@ export const daysMetadata: DayMetadata[] = [
   },
   {
     date: "2025-11-29",
-    title: "Form Validation",
+    title: "Client Review & Form Validation",
     screenshot: "/screenshots/2025-11-29.png",
     skillsUsed: ["Prisma", "Zod", "TypeScript", "Data Architecture"],
     tasks: [
       {
         type: "paragraph",
         segments: [
-          { kind: "text", text: "Implemented " },
+          {
+            kind: "text",
+            text: "Reviewed site progress with the client, and implemented ",
+          },
           {
             kind: "hover",
-            trigger: "form validation with Zod",
+            trigger: "Zod form validation",
             body: "Early validation enhances user experience. Validating form input on the client side before submission reduces server load and provides immediate feedback to users.",
             icon: "Bulb",
             side: "right",
           },
-          { kind: "text", text: " and added business logic." },
+          { kind: "text", text: "." },
         ],
       },
     ],
@@ -348,7 +334,7 @@ export const daysMetadata: DayMetadata[] = [
           },
           {
             kind: "text",
-            text: " to reduce db overhead. Configured auth with ",
+            text: ", configured auth with ",
           },
           {
             kind: "hover",
@@ -357,7 +343,7 @@ export const daysMetadata: DayMetadata[] = [
             icon: "Flame",
             side: "right",
           },
-          { kind: "text", text: ". Defined " },
+          { kind: "text", text: ", defined " },
           {
             kind: "hover",
             trigger: "typography utilities",
@@ -395,7 +381,7 @@ export const daysMetadata: DayMetadata[] = [
             icon: "AlertCircle",
             side: "right",
           },
-          { kind: "text", text: ". Removed dead code using " },
+          { kind: "text", text: ",  removed dead code using " },
           {
             kind: "hover",
             trigger: "Knip",
@@ -403,7 +389,7 @@ export const daysMetadata: DayMetadata[] = [
             icon: "Flame",
             side: "right",
           },
-          { kind: "text", text: ". Consolidated " },
+          { kind: "text", text: ", and consolidated " },
           {
             kind: "hover",
             trigger: "admin dashboard",
@@ -433,7 +419,7 @@ export const daysMetadata: DayMetadata[] = [
             icon: "Flame",
             side: "right",
           },
-          { kind: "text", text: ". Added shop " },
+          { kind: "text", text: ", added shop " },
           {
             kind: "hover",
             trigger: "pagination",
@@ -443,7 +429,7 @@ export const daysMetadata: DayMetadata[] = [
           },
           {
             kind: "text",
-            text: " and improved some page layouts.",
+            text: ", and improved page layouts.",
           },
         ],
       },
@@ -474,7 +460,10 @@ export const daysMetadata: DayMetadata[] = [
             icon: "Bulb",
             side: "right",
           },
-          { kind: "text", text: ", and enabled collections to have " },
+          {
+            kind: "text",
+            text: ", and enabled collections and products to have ",
+          },
           {
             kind: "hover",
             trigger: "many-to-many relationships",
@@ -482,7 +471,7 @@ export const daysMetadata: DayMetadata[] = [
             icon: "Stack",
             side: "right",
           },
-          { kind: "text", text: " with products." },
+          { kind: "text", text: "." },
         ],
       },
     ],
@@ -534,7 +523,7 @@ export const daysMetadata: DayMetadata[] = [
             icon: "Flame",
             side: "right",
           },
-          { kind: "text", text: ". Added product " },
+          { kind: "text", text: ", added product " },
           {
             kind: "hover",
             trigger: "quantity selectors",
@@ -542,7 +531,7 @@ export const daysMetadata: DayMetadata[] = [
             icon: "Bulb",
             side: "right",
           },
-          { kind: "text", text: ", cart reset, and " },
+          { kind: "text", text: ", and " },
           {
             kind: "hover",
             trigger: "reorder from history",
@@ -567,12 +556,12 @@ export const daysMetadata: DayMetadata[] = [
           { kind: "text", text: "Implemented a " },
           {
             kind: "hover",
-            trigger: "database query metrics system",
+            trigger: "database metrics system",
             body: "Metrics reveal performance bottlenecks. Tracking database queries helps identify slow operations and optimize hot paths.",
             icon: "Flame",
             side: "right",
           },
-          { kind: "text", text: ". Replaced dynamic hero with " },
+          { kind: "text", text: ", replaced dynamic heros with " },
           {
             kind: "hover",
             trigger: "static components",
@@ -580,7 +569,7 @@ export const daysMetadata: DayMetadata[] = [
             icon: "Bulb",
             side: "right",
           },
-          { kind: "text", text: " and enabled admins to manage " },
+          { kind: "text", text: ", and enabled admins to manage " },
           {
             kind: "hover",
             trigger: "collection products",
@@ -643,15 +632,11 @@ export const daysMetadata: DayMetadata[] = [
       {
         type: "paragraph",
         segments: [
-          { kind: "text", text: "Reduced database overhead by " },
           {
-            kind: "hover",
-            trigger: "disabling prefetch",
-            body: "Disabling prefetch prevents unnecessary requests. Prefetching speculation can waste bandwidth, so disabling it saves data for users.",
-            icon: "Flame",
-            side: "right",
+            kind: "text",
+            text: "Disabled link prefetching",
           },
-          { kind: "text", text: ". Added consisitent " },
+          { kind: "text", text: ", added consisitent " },
           {
             kind: "hover",
             trigger: "toast notifications",
@@ -659,15 +644,8 @@ export const daysMetadata: DayMetadata[] = [
             icon: "Bulb",
             side: "right",
           },
-          { kind: "text", text: ". Removed product variants for being " },
-          {
-            kind: "hover",
-            trigger: "overly complicated",
-            body: "I opted for a simpler solution, where I forced one variant per product, and added multiple products to describe the variants.",
-            icon: "Bulb",
-            side: "right",
-          },
-          { kind: "text", text: ". Replace static types with " },
+          { kind: "text", text: ", removed complicated product variants " },
+          { kind: "text", text: ", and replaced static types with " },
           {
             kind: "hover",
             trigger: "Prisma generated types",
@@ -699,7 +677,7 @@ export const daysMetadata: DayMetadata[] = [
           },
           {
             kind: "text",
-            text: ", which respected the user's browser preferences. And after mocking up a crude example, I realized that it would not provide enough value, so opted to remove this feature.",
+            text: ", which defaulted to the user's browser preferences, but after exploring this idea, I realized that it would not provide enough value, so opted to remove it.",
           },
         ],
       },
@@ -716,7 +694,7 @@ export const daysMetadata: DayMetadata[] = [
         segments: [
           {
             kind: "text",
-            text: "Reviewed the app with the client, and we agreed on an approach for shipping. The ",
+            text: "Reviewed the app with the client, and we agreed on a new approach for shipping. The ",
           },
           {
             kind: "hover",
@@ -747,7 +725,7 @@ export const daysMetadata: DayMetadata[] = [
             icon: "Flame",
             side: "right",
           },
-          { kind: "text", text: ". Migrated UI from Radix to " },
+          { kind: "text", text: ", and migrated UI from RadixUI to " },
           {
             kind: "hover",
             trigger: "BaseUI",
@@ -777,7 +755,7 @@ export const daysMetadata: DayMetadata[] = [
             icon: "Flame",
             side: "right",
           },
-          { kind: "text", text: " to navigation and implemented " },
+          { kind: "text", text: " to navigation, and implemented " },
           {
             kind: "hover",
             trigger: "price visibility controls",
@@ -807,7 +785,7 @@ export const daysMetadata: DayMetadata[] = [
             icon: "AlertCircle",
             side: "right",
           },
-          { kind: "text", text: ". Unified " },
+          { kind: "text", text: ", unified " },
           {
             kind: "hover",
             trigger: "session types",
@@ -815,7 +793,7 @@ export const daysMetadata: DayMetadata[] = [
             icon: "Bulb",
             side: "right",
           },
-          { kind: "text", text: " and updated " },
+          { kind: "text", text: ", and updated " },
           {
             kind: "hover",
             trigger: "documentation",
@@ -845,7 +823,7 @@ export const daysMetadata: DayMetadata[] = [
             icon: "Flame",
             side: "right",
           },
-          { kind: "text", text: " for all operations. Added " },
+          { kind: "text", text: " for all operations, added " },
           {
             kind: "hover",
             trigger: "soft-delete",
@@ -853,7 +831,7 @@ export const daysMetadata: DayMetadata[] = [
             icon: "Bulb",
             side: "right",
           },
-          { kind: "text", text: " and " },
+          { kind: "text", text: ", and " },
           {
             kind: "hover",
             trigger: "order snapshots",
@@ -877,16 +855,8 @@ export const daysMetadata: DayMetadata[] = [
         segments: [
           {
             kind: "text",
-            text: "Completed server action migrations and refactored types to use ",
+            text: "Completed server action migrations, and added ",
           },
-          {
-            kind: "hover",
-            trigger: "generated Prisma types",
-            body: "Generated types stay synchronized with schema. Auto-generating types from Prisma ensures schemas and types never drift apart.",
-            icon: "Bulb",
-            side: "right",
-          },
-          { kind: "text", text: ". Added " },
           {
             kind: "hover",
             trigger: "vitest framework",

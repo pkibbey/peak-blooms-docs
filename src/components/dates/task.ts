@@ -1,5 +1,5 @@
-export type InlineText = { kind: "text"; text: string };
-export type InlineHover = {
+type InlineText = { kind: "text"; text: string };
+type InlineHover = {
   kind: "hover";
   trigger: string;
   body: string;
@@ -7,13 +7,13 @@ export type InlineHover = {
   triggerClass?: string;
   side?: "top" | "right" | "left" | "bottom";
 };
-export type InlineLink = {
+type InlineLink = {
   kind: "link";
   href: string;
   text: string;
   blank?: boolean;
 };
-export type InlineFormat = { kind: "em" | "strong"; segments: InlineSegment[] };
+type InlineFormat = { kind: "em" | "strong"; segments: InlineSegment[] };
 export type InlineSegment =
   | InlineText
   | InlineHover
