@@ -139,10 +139,15 @@ export function ExecutiveSummary() {
                       {nonFeature.title}
                     </h4>
                   </div>
-                  "
                   <p className="text-sm text-muted-foreground">
                     {nonFeature.rationale}
                   </p>
+                  <div className="pt-2 border-t border-border/30">
+                    <p className="text-xs font-medium text-primary">Impact</p>
+                    <p className="text-xs text-muted-foreground pt-1">
+                      {nonFeature.impact}
+                    </p>
+                  </div>
                 </div>
               </Card>
             ))}

@@ -33,24 +33,6 @@ function renderTasks(tasks) {
     .join("\n\n");
 }
 
-// Helper function to escape markdown special characters
-function escapeMD(text) {
-  if (!text) return "";
-  return text
-    .replace(/\\/g, "\\\\")
-    .replace(/\[/g, "\\[")
-    .replace(/\]/g, "\\]")
-    .replace(/\(/g, "\\(")
-    .replace(/\)/g, "\\)")
-    .replace(/#/g, "\\#")
-    .replace(/\*/g, "\\*")
-    .replace(/_/g, "\\_")
-    .replace(/-/g, "\\-")
-    .replace(/\./g, "\\.")
-    .replace(/!/g, "\\!")
-    .replace(/`/g, "\\`");
-}
-
 // Main generation function
 async function generateMarkdown() {
   try {
@@ -68,6 +50,10 @@ async function generateMarkdown() {
     // Table of Contents
     markdown += `## Table of Contents\n\n`;
     markdown += `- [Overview](#overview)\n`;
+    markdown += `- [Architect's Note](#architects-note)\n`;
+    markdown += `- [Dev Notes](#dev-notes)\n`;
+    markdown += `- [System Health](#system-health)\n`;
+    markdown += `- [Design System](#design-system)\n`;
     markdown += `- [The Journey](#the-journey)\n`;
     markdown += `- [Weekly Summaries](#weekly-summaries)\n`;
     markdown += `- [Daily Commits](#daily-commits)\n`;
@@ -76,13 +62,15 @@ async function generateMarkdown() {
     // Overview section
     markdown += `## Overview\n\n`;
     markdown += `This document captures the complete development journey of Peak Blooms, a modern e-commerce platform built with Next.js, TypeScript, and modern web technologies.\n\n`;
+    markdown += `**Architect’s Note:** A 30-day architectural sprint applying React 19 Server Components, SSR/ISR, CI practices, and AI-assisted workflows to validate high-velocity, production-grade delivery.\n\n`;
     markdown += `**Technologies Used:**\n`;
     markdown += `- Next.js with TypeScript\n`;
     markdown += `- BiomeJS for linting and formatting\n`;
     markdown += `- ShadCN/BaseUI for components\n`;
     markdown += `- Prisma for database management\n`;
     markdown += `- Better-Auth for authentication\n`;
-    markdown += `- Vitest for unit testing\n\n`;
+    markdown += `- Vitest for unit testing\n`;
+    markdown += `- Claude / Ollama (AI-assisted development)\n\n`;
 
     // The Journey section with weekly summaries
     markdown += `## The Journey\n\n`;
@@ -125,6 +113,22 @@ async function generateMarkdown() {
 
       markdown += `---\n\n`;
     }
+
+    // Architect's Note
+    markdown += `## Architect's Note\n\n`;
+    markdown += `A 30-day architectural sprint applying React 19 Server Components, SSR/ISR, CI practices, and AI-assisted workflows to validate high-velocity, production-grade delivery.\n\n`;
+
+    // Dev Notes
+    markdown += `## Dev Notes\n\n`;
+    markdown += `This section summarizes how AI tools were used to accelerate work: boilerplate and component scaffolding, unit test generation, refactors, parsing CSV product data into mock datasets for the catalog, and generating asset prototypes for layouts and testing.\n\n`;
+
+    // System Health
+    markdown += `## System Health\n\n`;
+    markdown += `High-level notes about SSR/ISR choices, Server Actions usage, and performance considerations. Placeholders for Lighthouse snapshots or CI reports can be embedded here in the future.\n\n`;
+
+    // Design System
+    markdown += `## Design System\n\n`;
+    markdown += `A concise gallery of primary UI components and decisions around tokens, Tailwind usage, and BaseUI choices. See the /design-system route for an interactive showcase.\n\n`;
 
     // Lessons Learned section
     markdown += `## Lessons Learned\n\n`;

@@ -21,6 +21,6 @@ export type InlineSegment =
   | InlineFormat;
 
 export type Task =
-  | { type: "paragraph"; segments: InlineSegment[] }
+  | { type: "paragraph"; text: string }
   | { type: "list"; ordered?: boolean; items: Task[] }
   | { type: "raw"; jsx: string };

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { Button, buttonVariants } from "./ui/button";
 
@@ -68,7 +69,17 @@ function ImageBehindButton({
         </div>
       </div>
 
-      <button type="button" className="relative" onClick={onClick}>
+      <button
+        type="button"
+        className="relative"
+        onClick={
+          href
+            ? () => {
+                window.open(href, "_blank");
+              }
+            : onClick
+        }
+      >
         <Image
           width={2248}
           height={1298}

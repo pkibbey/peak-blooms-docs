@@ -1,6 +1,6 @@
 "use client";
 
-import { Activity, Code, Database, Users } from "tabler-icons-react";
+import { Code, Database, Users } from "tabler-icons-react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "./ui/badge";
 

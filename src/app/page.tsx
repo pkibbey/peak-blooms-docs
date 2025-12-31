@@ -21,11 +21,11 @@ export default function DatesPage() {
       {/* Lessons Section */}
       <Lessons />
 
-      {/* Source Code Section */}
-      <SourceCode />
-
       {/* Deployed Site Section */}
       <DeployedSite />
+
+      {/* Source Code Section */}
+      <SourceCode />
 
       {/* Footer */}
       <footer className="w-full py-12 bg-muted">

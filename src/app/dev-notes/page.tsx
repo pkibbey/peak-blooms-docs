@@ -16,9 +16,17 @@ export default function DevNotesPage() {
         <ul className="list-disc pl-5 text-muted-foreground">
           <li>Boilerplate generation for components and pages</li>
           <li>Unit test scaffolding and mutation suggestions</li>
-          <li>Refactors and extraction of helpers to improve component reusability</li>
-          <li>Parsing CSV product data into realistic mock datasets used by the site</li>
-          <li>Generating product and site feature images (asset prototypes) for layout and testing</li>
+          <li>
+            Refactors and extraction of helpers to improve component reusability
+          </li>
+          <li>
+            Parsing CSV product data into realistic mock datasets used by the
+            site
+          </li>
+          <li>
+            Generating product and site feature images (asset prototypes) for
+            layout and testing
+          </li>
         </ul>
       </section>
 
@@ -34,9 +42,17 @@ export default function DevNotesPage() {
       <section className="mb-6">
         <h2 className="text-xl font-semibold mb-2">Tradeoffs & Notes</h2>
         <ul className="list-disc pl-5 text-muted-foreground">
-          <li>AI accelerates repetitive tasks but requires guardrails for correctness</li>
-          <li>Tests and CI are essential to verify suggested changes quickly</li>
-          <li>Not all suggestions were accepted; the Architect prioritized long-term maintenance</li>
+          <li>
+            AI accelerates repetitive tasks but requires guardrails for
+            correctness
+          </li>
+          <li>
+            Tests and CI are essential to verify suggested changes quickly
+          </li>
+          <li>
+            Not all suggestions were accepted; the Architect prioritized
+            long-term maintenance
+          </li>
         </ul>
       </section>
 
