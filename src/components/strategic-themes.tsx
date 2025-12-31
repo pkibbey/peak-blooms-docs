@@ -1,36 +1,8 @@
 "use client";
 
 import { CheckCircle, Clock, Database, GitBranch, Zap } from "lucide-react";
-import type { ComponentType } from "react";
 import { Badge } from "@/components/ui/badge";
 import DateCardDense from "./date-card-dense";
-import {
-  Day20251122,
-  Day20251123,
-  Day20251124,
-  Day20251125,
-  Day20251126,
-  Day20251127,
-  Day20251128,
-  Day20251129,
-  Day20251130,
-  Day20251201,
-  Day20251202,
-  Day20251203,
-  Day20251204,
-  Day20251205,
-  Day20251208,
-  Day20251209,
-  Day20251210,
-  Day20251211,
-  Day20251212,
-  Day20251213,
-  Day20251214,
-  Day20251215,
-  Day20251216,
-  Day20251217,
-  Day20251218,
-} from "./dates";
 import { daysMetadata } from "./dates-metadata";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 
@@ -87,13 +59,6 @@ const themeConfigs: ThemeConfig[] = [
 ];
 
 export function StrategicThemes() {
-  const triggerColorMap: Record<string, string> = {
-    foundation: "text-blue-700",
-    "core-features": "text-emerald-700",
-    "data-architecture": "text-purple-700",
-    "performance-quality": "text-orange-700",
-  };
-
   return (
     <section id="strategic-themes" className="w-full py-20 bg-white/80">
       <div className="max-w-6xl mx-auto px-4 space-y-24">
@@ -112,7 +77,7 @@ export function StrategicThemes() {
           defaultValue={themeConfigs[0]?.id}
           className="flex items-center gap-0"
         >
-          <TabsList className="rounded-b-none rounded-t-lg border-0">
+          <TabsList className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4  md:flex-row h-auto m:h-9 w-full md:w-auto rounded-b-none rounded-t-lg border-0">
             {themeConfigs.map((themeConfig) => (
               <TabsTrigger
                 key={themeConfig.id}

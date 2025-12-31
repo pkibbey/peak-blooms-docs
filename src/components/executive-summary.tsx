@@ -86,7 +86,7 @@ export function ExecutiveSummary() {
             </h3>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {executiveSummaryData.architecturalDecisions.map(
               (decision, idx) => (
                 <Card
@@ -95,7 +95,7 @@ export function ExecutiveSummary() {
                 >
                   <div className="space-y-3">
                     <div className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                      {/* <CheckCircle2 className="w-5 h-5 text-primary mt-1 flex-shrink-0" /> */}
                       <h4 className="font-semibold text-foreground">
                         {decision.title}
                       </h4>

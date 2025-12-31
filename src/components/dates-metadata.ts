@@ -350,45 +350,6 @@ export const daysMetadata: DayMetadata[] = [
     ],
   },
   {
-    date: "2025-12-01",
-    title: "Auth Migration",
-    screenshot: "/screenshots/2025-12-01.png",
-    skillsUsed: ["OAuth", "Code Quality", "Admin UI"],
-    theme: "core-features",
-    tasks: [
-      {
-        type: "paragraph",
-        segments: [
-          { kind: "text", text: "Migrated from next-auth to " },
-          {
-            kind: "hover",
-            trigger: "better-auth",
-            body: "Next-auth felt overengineered for our needs—too many abstraction layers and unclear future direction. Better-auth offered a cleaner, more TypeScript-first approach with better plugin architecture. The migration simplified the auth layer significantly and aligned better with Next.js server actions.",
-            icon: "AlertCircle",
-            side: "right",
-          },
-          { kind: "text", text: ",  removed dead code using " },
-          {
-            kind: "hover",
-            trigger: "Knip",
-            body: "Knip finds and eliminates unused code. Rather than manually hunting for dead code, this specialized tool automatically identifies unused exports and files, making it easy to keep the codebase clean and maintainable.",
-            icon: "Flame",
-            side: "right",
-          },
-          { kind: "text", text: ", and consolidated " },
-          {
-            kind: "hover",
-            trigger: "admin dashboard",
-            body: "Simplified admin dashboard layout. A clean, intuitive layout enhances user experience and makes navigation easier.",
-            icon: "Flame",
-            side: "right",
-          },
-          { kind: "text", text: " layouts." },
-        ],
-      },
-    ],
-  },
-  {
     date: "2025-12-02",
     title: "Pagination & Data Import",
     screenshot: "/screenshots/2025-12-02.png",
