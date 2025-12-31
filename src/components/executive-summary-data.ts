@@ -104,7 +104,7 @@ export const executiveSummaryData: ExecutiveSummaryData = {
       dayDecided: "December 2",
     },
     {
-      title: "Multiple Payment Gateway Integrations",
+      title: "Payment Gateway Integration",
       rationale:
         "Designed architecture to support future payment providers, but implemented single Stripe integration for launch. Sufficient for MVP; payment method expansion can be added without rearchitecting.",
       dayDecided: "December 8",

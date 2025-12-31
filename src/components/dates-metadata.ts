@@ -206,37 +206,8 @@ export const daysMetadata: DayMetadata[] = [
     ],
   },
   {
-    date: "2025-11-26",
-    title: "Navigation & Layouts",
-    screenshot: "/screenshots/2025-11-26.png",
-    skillsUsed: ["UI Design", "Consistency"],
-    theme: "core-features",
-    tasks: [
-      {
-        type: "paragraph",
-        segments: [
-          {
-            kind: "text",
-            text: "Created a consistent navigation, standardized ",
-          },
-          {
-            kind: "hover",
-            trigger: "table layouts",
-            body: "Table layouts reduce code duplication. Creating shared table layouts and styles eliminates repetitive code and makes maintenance easier.",
-            icon: "Stack",
-            side: "right",
-          },
-          {
-            kind: "text",
-            text: ", and implemented cart checkout functionality.",
-          },
-        ],
-      },
-    ],
-  },
-  {
     date: "2025-11-27",
-    title: "Order History & Code Quality",
+    title: "Order History",
     screenshot: "/screenshots/2025-11-27.png",
     skillsUsed: ["Code Quality", "Refactoring"],
     theme: "core-features",
@@ -333,7 +304,7 @@ export const daysMetadata: DayMetadata[] = [
     title: "Performance Improvements",
     screenshot: "/screenshots/2025-11-30.png",
     skillsUsed: ["Authentication", "Database Design", "Typography"],
-    theme: "core-features",
+    theme: "performance-quality",
     tasks: [
       {
         type: "paragraph",
@@ -494,42 +465,11 @@ export const daysMetadata: DayMetadata[] = [
     ],
   },
   {
-    date: "2025-12-04",
-    title: "UI clean up",
-    screenshot: "/screenshots/2025-12-04.png",
-    skillsUsed: ["Styling", "Component Composition"],
-    theme: "core-features",
-    tasks: [
-      {
-        type: "paragraph",
-        segments: [
-          { kind: "text", text: "Added featured collections, " },
-          {
-            kind: "hover",
-            trigger: "shipping banner",
-            body: "Shipping messaging builds customer confidence. Clear shipping information reassures customers and reduces purchase anxiety.",
-            icon: "InfoCircle",
-            side: "right",
-          },
-          { kind: "text", text: " and " },
-          {
-            kind: "hover",
-            trigger: "product card",
-            body: "The product card became the most-reused component across browse, search, and collection pages, so investing focused time in building a solid, well-structured component paid dividends throughout the entire application.",
-            icon: "Stack",
-            side: "right",
-          },
-          { kind: "text", text: " components." },
-        ],
-      },
-    ],
-  },
-  {
     date: "2025-12-05",
     title: "Ordering System Tweaks",
     screenshot: "/screenshots/2025-12-05.png",
     skillsUsed: ["UI Components", "Database Design", "Marketing"],
-    theme: "core-features",
+    theme: "performance-quality",
     tasks: [
       {
         type: "paragraph",
@@ -559,6 +499,39 @@ export const daysMetadata: DayMetadata[] = [
             side: "right",
           },
           { kind: "text", text: " functionality." },
+        ],
+      },
+    ],
+  },
+  {
+    date: "2025-12-06",
+    title: "Accessibile UI Components",
+    screenshot: "/screenshots/2025-12-06.png",
+    skillsUsed: ["Component Library", "Accessibility", "Developer Experience"],
+    theme: "core-features",
+    tasks: [
+      {
+        type: "paragraph",
+        segments: [
+          {
+            kind: "text",
+            text: "Built a lightweight component library of accessible primitives to speed up UI work and keep consistency across the site. ",
+          },
+          {
+            kind: "hover",
+            trigger: "accessible UI primitives",
+            body: "Components were built with keyboard navigation, semantic markup, proper ARIA attributes, and sensible focus styles so new screens could be assembled quickly without sacrificing accessibility.",
+            icon: "Bulb",
+          },
+          { kind: "text", text: " " },
+          {
+            kind: "hover",
+            trigger: "developer DX",
+            body: "A small, composable set of primitives reduced repetition and enabled rapid iteration — developers could assemble pages from tested building blocks instead of rewriting UI for each screen.",
+            icon: "Stack",
+            side: "right",
+          },
+          { kind: "text", text: "." },
         ],
       },
     ],

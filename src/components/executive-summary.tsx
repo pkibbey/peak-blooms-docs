@@ -1,6 +1,7 @@
 "use client";
 
 import { AlertCircle, CheckCircle2, Lightbulb } from "lucide-react";
+import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { executiveSummaryData } from "./executive-summary-data";
@@ -15,38 +16,53 @@ export function ExecutiveSummary() {
         {/* Section Header */}
         <div className="text-center space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
-            Executive Summary
+            Project Summary
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Strategic decisions, architectural choices, and key outcomes from
-            building Peak Blooms
+            Strategic decisions, architectural choices, and key outcomes
           </p>
         </div>
 
         {/* Project Overview */}
-        <div className="grid md:grid-cols-2 gap-6">
-          <Card className="p-6 border-border/50">
-            <h3 className="text-lg font-semibold mb-4">Project Overview</h3>
-            <div className="space-y-3 text-sm text-muted-foreground">
+        <div className="grid md:grid-cols-[auto_300px] lg:grid-cols-[auto_350px] gap-6">
+          <Card className="p-6 border-border/50 hover:shadow-lg transition-shadow">
+            <h3 className="text-lg font-semibold">
+              Peak Blooms Project Overview
+            </h3>
+            <div className="grid lg:grid-cols-[200px_auto] gap-6 text-sm text-muted-foreground">
               <div>
-                <p className="font-medium text-foreground">Platform</p>
-                <p>{executiveSummaryData.scope.platform}</p>
-              </div>
-              <div>
-                <p className="font-medium text-foreground">Timeline</p>
-                <p>
-                  {executiveSummaryData.timeline.startDate} —{" "}
-                  {executiveSummaryData.timeline.endDate} (
-                  {executiveSummaryData.timeline.durationDays} days)
+                <Image
+                  width={2084}
+                  height={1250}
+                  src="/peak-blooms-2.png"
+                  alt="GitHub profile preview"
+                  className="w-60 rounded-lg shadow-lg mb-2"
+                />
+                <p className="font-medium text-foreground">
+                  Sceenshot of home page
                 </p>
+              </div>
+              <div className="space-y-3">
+                <div>
+                  <p className="font-medium text-foreground">Platform</p>
+                  <p>{executiveSummaryData.scope.platform}</p>
+                </div>
+                <div>
+                  <p className="font-medium text-foreground">Timeline</p>
+                  <p>
+                    {executiveSummaryData.timeline.startDate} —{" "}
+                    {executiveSummaryData.timeline.endDate} (
+                    {executiveSummaryData.timeline.durationDays} days)
+                  </p>
+                </div>
               </div>
             </div>
           </Card>
 
           {/* Key Metrics */}
-          <Card className="p-6 border-border/50">
+          <Card className="p-6 border-border/50 hover:shadow-lg transition-shadow">
             <h3 className="text-lg font-semibold mb-4">Key Metrics</h3>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-2">
               {executiveSummaryData.keyMetrics.map((metric, idx) => (
                 <div key={idx} className="space-y-1">
                   <p className="text-sm font-medium text-primary">
@@ -66,7 +82,7 @@ export function ExecutiveSummary() {
           <div className="flex items-center gap-3">
             <Lightbulb className="w-6 h-6 text-primary" />
             <h3 className="text-2xl md:text-3xl font-bold tracking-tight">
-              Key Architectural Decisions
+              Architectural Decisions
             </h3>
           </div>
 
@@ -105,7 +121,7 @@ export function ExecutiveSummary() {
           <div className="flex items-center gap-3">
             <AlertCircle className="w-6 h-6 text-amber-500" />
             <h3 className="text-2xl md:text-3xl font-bold tracking-tight">
-              Strategic Choices Not Implemented
+              Strategic Choices Decided Against
             </h3>
           </div>
 
@@ -115,11 +131,11 @@ export function ExecutiveSummary() {
             analysis and MVP scope:
           </p>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {executiveSummaryData.nonFeatures.map((nonFeature, idx) => (
               <Card
                 key={idx}
-                className="p-6 border-amber-200/50 bg-amber-50/30 hover:shadow-lg transition-shadow"
+                className="p-6 border-amber-200/50 bg-white hover:shadow-lg transition-shadow"
               >
                 <div className="space-y-3">
                   <div className="flex items-start justify-between gap-3">

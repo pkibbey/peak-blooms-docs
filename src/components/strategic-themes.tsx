@@ -1,8 +1,9 @@
 "use client";
 
-import { CheckCircle, Database, GitBranch, Zap } from "lucide-react";
+import { CheckCircle, Clock, Database, GitBranch, Zap } from "lucide-react";
 import type { ComponentType } from "react";
 import { Badge } from "@/components/ui/badge";
+import DateCardDense from "./date-card-dense";
 import {
   Day20251122,
   Day20251123,
@@ -31,7 +32,7 @@ import {
   Day20251218,
 } from "./dates";
 import { daysMetadata } from "./dates-metadata";
-import { Accordion } from "./ui/accordion";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 
 interface ThemeConfig {
   id: string;
@@ -50,7 +51,7 @@ const themeConfigs: ThemeConfig[] = [
   {
     id: "theme-foundation",
     key: "foundation",
-    title: "Foundation & Infrastructure",
+    title: "Foundation",
     description:
       "Setting up the project infrastructure, design systems, database schema, and core authentication",
     icon: GitBranch,
@@ -59,7 +60,7 @@ const themeConfigs: ThemeConfig[] = [
   {
     id: "theme-core-features",
     key: "core-features",
-    title: "E-Commerce Core Features",
+    title: "Core Features",
     description:
       "Building shopping cart, checkout, product catalog, pagination, admin management, and user-facing features",
     icon: CheckCircle,
@@ -68,7 +69,7 @@ const themeConfigs: ThemeConfig[] = [
   {
     id: "theme-data-architecture",
     key: "data-architecture",
-    title: "Data Architecture & Optimization",
+    title: "Data Architecture",
     description:
       "Implementing metrics system, database indexes, admin enhancements, and performance optimizations",
     icon: Database,
@@ -77,7 +78,7 @@ const themeConfigs: ThemeConfig[] = [
   {
     id: "theme-performance-quality",
     key: "performance-quality",
-    title: "Performance & Quality Engineering",
+    title: "Performance Quality",
     description:
       "Server actions migration, build optimization, type unification, and comprehensive testing (80% coverage)",
     icon: Zap,
@@ -85,100 +86,93 @@ const themeConfigs: ThemeConfig[] = [
   },
 ];
 
-// Mapping of dates to day components
-const dateComponentMap: Record<string, ComponentType> = {
-  "2025-11-22": Day20251122,
-  "2025-11-23": Day20251123,
-  "2025-11-24": Day20251124,
-  "2025-11-25": Day20251125,
-  "2025-11-26": Day20251126,
-  "2025-11-27": Day20251127,
-  "2025-11-28": Day20251128,
-  "2025-11-29": Day20251129,
-  "2025-11-30": Day20251130,
-  "2025-12-01": Day20251201,
-  "2025-12-02": Day20251202,
-  "2025-12-03": Day20251203,
-  "2025-12-04": Day20251204,
-  "2025-12-05": Day20251205,
-  "2025-12-08": Day20251208,
-  "2025-12-09": Day20251209,
-  "2025-12-10": Day20251210,
-  "2025-12-11": Day20251211,
-  "2025-12-12": Day20251212,
-  "2025-12-13": Day20251213,
-  "2025-12-14": Day20251214,
-  "2025-12-15": Day20251215,
-  "2025-12-16": Day20251216,
-  "2025-12-17": Day20251217,
-  "2025-12-18": Day20251218,
-};
-
 export function StrategicThemes() {
+  const triggerColorMap: Record<string, string> = {
+    foundation: "text-blue-700",
+    "core-features": "text-emerald-700",
+    "data-architecture": "text-purple-700",
+    "performance-quality": "text-orange-700",
+  };
+
   return (
     <section id="strategic-themes" className="w-full py-20 bg-white/80">
       <div className="max-w-6xl mx-auto px-4 space-y-24">
         {/* Section Header */}
         <div className="text-center space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
-            Strategic Implementation
+            Implementation
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             A detailed breakdown of work organized by architectural themes
           </p>
         </div>
 
-        {/* Themes sections */}
-        {themeConfigs.map((themeConfig) => {
-          // Get all days for this theme
-          const themeDays = daysMetadata.filter(
-            (day) => day.theme === themeConfig.key,
-          );
+        {/* Themes as Tabs */}
+        <Tabs
+          defaultValue={themeConfigs[0]?.id}
+          className="flex items-center gap-0"
+        >
+          <TabsList className="rounded-b-none rounded-t-lg border-0">
+            {themeConfigs.map((themeConfig) => (
+              <TabsTrigger
+                key={themeConfig.id}
+                value={themeConfig.id}
+                className={`px-4 py-4`}
+              >
+                <themeConfig.icon className={`w-4 h-4 text-primary`} />
+                <span className="text-sm font-medium">{themeConfig.title}</span>
+              </TabsTrigger>
+            ))}
+          </TabsList>
 
-          // Get day components in order
-          const dayComponents = themeDays
-            .map((day) => dateComponentMap[day.date])
-            .filter(Boolean);
+          {themeConfigs.map((themeConfig) => {
+            const themeDays = daysMetadata.filter(
+              (day) => day.theme === themeConfig.key,
+            );
 
-          return (
-            <div
-              key={themeConfig.id}
-              id={themeConfig.id}
-              className={`space-y-8 scroll-mt-20 bg-gradient-to-br ${themeConfig.accentColor} rounded-lg p-8 md:p-12 border border-border/50`}
-            >
-              {/* Theme Header */}
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <themeConfig.icon className="w-6 h-6 text-primary" />
-                  <Badge variant="outline" className="text-xs">
-                    {themeConfig.key
-                      .split("-")
-                      .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
-                      .join(" ")}
-                  </Badge>
+            return (
+              <TabsContent key={themeConfig.id} value={themeConfig.id}>
+                <div
+                  id={themeConfig.id}
+                  className={`space-y-8 scroll-mt-20 bg-muted rounded-lg p-6 md:p-10 border-0`}
+                >
+                  {/* Theme Header */}
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-3">
+                      <themeConfig.icon className="w-6 h-6 text-primary" />
+                      <Badge variant="outline" className="text-xs">
+                        {themeConfig.key
+                          .split("-")
+                          .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+                          .join(" ")}
+                      </Badge>
+                    </div>
+                    <h3 className="text-2xl md:text-3xl font-bold tracking-tight">
+                      {themeConfig.title}
+                    </h3>
+                    <p className="text-muted-foreground max-w-3xl">
+                      {themeConfig.description}
+                    </p>
+                    <div className="text-sm text-muted-foreground font-medium pt-2 flex items-center gap-2">
+                      <Clock className="w-4 h-4 text-muted-foreground" />
+                      <span>
+                        {themeDays.length} day
+                        {themeDays.length !== 1 ? "s" : ""}
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Dense day cards grid */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {themeDays.map((day) => (
+                      <DateCardDense key={day.date} dateKey={day.date} />
+                    ))}
+                  </div>
                 </div>
-                <h3 className="text-2xl md:text-3xl font-bold tracking-tight">
-                  {themeConfig.title}
-                </h3>
-                <p className="text-muted-foreground max-w-3xl">
-                  {themeConfig.description}
-                </p>
-                <div className="text-sm text-muted-foreground font-medium pt-2">
-                  {themeDays.length} day{themeDays.length !== 1 ? "s" : ""}
-                </div>
-              </div>
-
-              {/* Days Cards */}
-              <div className="grid grid-cols-1 gap-4">
-                <Accordion>
-                  {dayComponents.map((DayComponent, index) => (
-                    <DayComponent key={index} />
-                  ))}
-                </Accordion>
-              </div>
-            </div>
-          );
-        })}
+              </TabsContent>
+            );
+          })}
+        </Tabs>
       </div>
     </section>
   );

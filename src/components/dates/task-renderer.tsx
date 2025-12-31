@@ -19,7 +19,7 @@ export default function TaskRenderer({ tasks }: { tasks?: Task[] }) {
           return (
             <p
               key={idx}
-              className="text-lg text-foreground-muted leading-relaxed px-2"
+              className="text-sm text-foreground-muted leading-relaxed"
             >
               {renderSegments(task.segments)}
             </p>
