@@ -2,7 +2,7 @@
 
 import { CheckCircle, Clock, Database, GitBranch, Zap } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import DateCardDense from "./date-card-dense";
+import { DateCardDense } from "./date-card-dense";
 import { daysMetadata } from "./dates-metadata";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 

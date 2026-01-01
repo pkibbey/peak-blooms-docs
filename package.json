@@ -24,7 +24,6 @@
     "@base-ui/react": "^1.0.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "date-fns": "^4.1.0",
     "dotenv": "^17.2.3",
     "lucide-react": "^0.562.0",
     "next": "16.1.1",
@@ -38,15 +37,10 @@
   "devDependencies": {
     "@biomejs/biome": "2.3.10",
     "@tailwindcss/postcss": "^4.1.18",
-    "@testing-library/jest-dom": "^6.9.1",
-    "@testing-library/react": "^16.3.1",
     "@types/node": "^24.10.4",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react": "^5.1.2",
     "babel-plugin-react-compiler": "1.0.0",
-    "happy-dom": "^20.0.11",
-    "jsdom": "^27.4.0",
     "knip": "^5.78.0",
     "tailwindcss": "^4.1.18",
     "typescript": "^5.9.3"

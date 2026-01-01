@@ -7,35 +7,27 @@ export default function DevNotesPage() {
 
       <p className="text-muted-foreground mb-6">
         This project tested whether pairing modern front-end primitives with
-        disciplined engineering practices and targeted AI assistance could
+        disciplined engineering practices and AI-assisted workflows could
         materially increase delivery velocity without sacrificing quality.
       </p>
 
       <section className="mb-6">
-        <h2 className="text-xl font-semibold mb-2">How AI was used</h2>
+        <h2 className="text-xl font-semibold mb-2">AI-assisted workflows</h2>
         <ul className="list-disc pl-5 text-muted-foreground">
-          <li>Boilerplate generation for components and pages</li>
-          <li>Unit test scaffolding and mutation suggestions</li>
-          <li>
-            Refactors and extraction of helpers to improve component reusability
-          </li>
-          <li>
-            Parsing CSV product data into realistic mock datasets used by the
-            site
-          </li>
-          <li>
-            Generating product and site feature images (asset prototypes) for
-            layout and testing
-          </li>
+          <li>Accelerated boilerplate and component scaffolding</li>
+          <li>Generated unit test scaffolds and suggested mutations</li>
+          <li>Proposed refactors and helper extraction to improve reusability</li>
+          <li>Transformed CSV data into realistic mock datasets for testing</li>
+          <li>Produced provisional asset prototypes for layout and validation</li>
         </ul>
       </section>
 
       <section className="mb-6">
         <h2 className="text-xl font-semibold mb-2">Architect’s oversight</h2>
         <p className="text-muted-foreground">
-          AI-generated suggestions were curated, validated, and integrated under
-          Architect-level judgment to ensure stability, maintainability, and
-          consistent design decisions.
+          AI-assisted outputs were curated and validated under Architect-level
+          judgment to preserve stability, maintainability, and consistent
+          design decisions.
         </p>
       </section>
 

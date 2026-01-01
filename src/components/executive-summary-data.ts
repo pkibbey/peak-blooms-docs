@@ -1,16 +1,16 @@
-export interface ArchitecturalDecision {
+interface ArchitecturalDecision {
   title: string;
   description: string;
   impact: string;
 }
 
-export interface NonFeature {
+interface NonFeature {
   title: string;
   rationale: string;
   impact: string;
 }
 
-export interface ExecutiveSummaryData {
+interface ExecutiveSummaryData {
   projectName: string;
   tagline: string;
   timeline: {

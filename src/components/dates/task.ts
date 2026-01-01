@@ -14,11 +14,7 @@ type InlineLink = {
   blank?: boolean;
 };
 type InlineFormat = { kind: "em" | "strong"; segments: InlineSegment[] };
-export type InlineSegment =
-  | InlineText
-  | InlineHover
-  | InlineLink
-  | InlineFormat;
+type InlineSegment = InlineText | InlineHover | InlineLink | InlineFormat;
 
 export type Task =
   | { type: "paragraph"; text: string }

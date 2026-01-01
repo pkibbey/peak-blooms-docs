@@ -4,7 +4,7 @@ import TaskRenderer from "@/components/dates/task-renderer";
 import { daysMetadata } from "@/components/dates-metadata";
 import { Card } from "@/components/ui/card";
 
-export interface DateCardDenseProps {
+interface DateCardDenseProps {
   dateKey: string;
 }
 
@@ -38,5 +38,3 @@ export function DateCardDense({ dateKey }: DateCardDenseProps) {
     </Card>
   );
 }
-
-export default DateCardDense;
