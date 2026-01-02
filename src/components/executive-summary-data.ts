@@ -1,13 +1,13 @@
+import type { ReactNode } from "react";
+
 interface ArchitecturalDecision {
   title: string;
-  description: string;
-  impact: string;
+  description: ReactNode;
 }
 
 interface NonFeature {
   title: string;
-  rationale: string;
-  impact: string;
+  details: string;
 }
 
 interface ExecutiveSummaryData {
@@ -51,88 +51,74 @@ export const executiveSummaryData: ExecutiveSummaryData = {
       "Database indexing and optimization",
     ],
   },
-  architecturalDecisions: [
-    {
-      title: "Next.js 16 & React Server Actions",
-      description:
-        "Adopted Next.js 16 and React 19; migrated mutations to React Server Actions to simplify data flow and remove API request overhead.",
-      impact:
-        "Reduced client JS and network overhead, improved type safety, and a simpler, more maintainable codebase.",
-    },
-    {
-      title: "Prisma ORM with Schema-Driven Type Generation",
-      description:
-        "Centralized database schema in Prisma for type-safe database access and automatic TypeScript client generation.",
-      impact:
-        "Eliminates manual type definitions, reduces runtime errors, and accelerates development velocity",
-    },
-
-    {
-      title: "CI/CD + Preview Deploys",
-      description:
-        "Configured CI to run production-like builds and enabled preview deployments for every pull request to catch build/regression issues early.",
-      impact:
-        "Faster feedback for PRs, fewer production surprises, and smoother collaboration between design and engineering.",
-    },
-
-    {
-      title: "BaseUI + TailwindCSS 4 for Component Library",
-      description:
-        "Transitioned from RadixUI to BaseUI for improved design consistency and built on TailwindCSS 4 for styling.",
-      impact:
-        "Faster component development, consistent design language across 40+ components",
-    },
-    {
-      title: "Comprehensive Testing with Vitest (80% Coverage)",
-      description:
-        "Implemented Vitest testing framework late in development with push to 80% code coverage.",
-      impact:
-        "Improved code reliability, caught edge cases, documented critical paths through test cases",
-    },
-  ],
   nonFeatures: [
     {
-      title: "Theme Toggle / Dark Mode",
-      rationale:
-        "Evaluated but deprioritized due to limited user value. Single light theme provides better visual consistency and reduces maintenance burden. Can be added later with CSS variables if demand emerges.",
-      impact:
-        "Low user impact for MVP; adds maintenance and testing surface. Can be introduced later if demand increases.",
+      title: "Theme Toggle",
+      details:
+        "Deferred in favor of a single light theme to provide visual consistency and reduce maintenance and testing burden. Dark mode can be added later via CSS variables if user demand increases.",
     },
     {
-      title: "Complex Product Variants System",
-      rationale:
-        "Initially scoped for multiple SKUs per product (size, color, etc.), but simplified to core product attributes. Users can define products with basic properties, reducing schema complexity and admin overhead while meeting MVP requirements.",
-      impact:
-        "Significant schema and admin complexity for marginal early benefit; deferring reduces implementation time and cognitive load.",
+      title: "Product Variants",
+      details:
+        "Simplified to core product attributes rather than full multi-SKU variants to reduce schema complexity and admin overhead. This meets MVP needs while keeping the system easier to manage and iterate on.",
     },
     {
-      title: "Payment Gateway Integration",
-      rationale:
-        "Designed architecture to support future payment providers, but implemented single Stripe integration for launch. Sufficient for MVP; payment method expansion can be added without rearchitecting.",
-      impact:
-        "Stripe covers MVP transaction needs; delaying other gateways reduces compliance and integration work while retaining extensibility.",
+      title: "Payment Processing",
+      details:
+        "Postponed full payment gateway integration to avoid adding complexity to the checkout workflow. Market-priced products will use an admin approval and pricing workflow until a more robust payments flow is required.",
     },
     {
-      title: "Real-time Inventory Syncing",
-      rationale:
-        "Determined that webhook-based inventory updates (for external sources) weren't required for initial launch. Manual inventory management and batch updates sufficient for current scale.",
-      impact:
-        "Avoids building and operating streaming infra; acceptable for current scale but may require investment if real-time sync becomes necessary.",
+      title: "Inventory Syncing",
+      details:
+        "Deferred webhook-based real-time inventory syncing because manual and batch updates satisfy current operational needs. Avoiding streaming infrastructure reduces launch complexity and can be revisited as scale demands it.",
     },
     {
-      title: "Multi-tenant Admin Capabilities",
-      rationale:
-        "Single-tenant admin panel sufficient for initial deployment. Multi-tenant support deferred to future iteration if needed for scaling to multiple store operators.",
-      impact:
-        "Reduces initial auth and data isolation complexity; multi-tenant support can be slotted in later when customer demand justifies it.",
+      title: "Company Management",
+      details:
+        "To reduce launch complexity, each company's orders are managed by a single user account. Company-level, multi-user sign-in and role-based access will be introduced later if customer demand requires shared or delegated access.",
+    },
+  ],
+  architecturalDecisions: [
+    {
+      title: "Next.js 16 + Server Functions",
+      description:
+        "Next.js gives us routing and performance at a modest cost. Server Functions reduce network round trips making the application feel more responsive.",
+    },
+    {
+      title: "BaseUI + TailwindCSS",
+      description:
+        "Standardized on BaseUI for consistent, accessible components. TailwindCSS provides a utility-driven system for rapid, consistent styling.",
+    },
+    {
+      title: "Prisma ORM + TypeScript",
+      description:
+        "Prisma simplified database access and migrations. Its generated types provide robust compile-time safety across the stack. Local database runs with Docker with automatic seed scripts, so that dev work is fast and deterministic.",
+    },
+    {
+      title: "AI + MCP",
+      description:
+        "Used AI (with project scoped MCP servers) to generate test scaffolds and boilerplate code while applying human architectural judgment to ensure correctness and maintainability.",
+    },
+    {
+      title: "GitHub Actions + Vercel",
+      description:
+        "Combining Vercel with GitHub Actions makes it easy to run fully tested builds on every push and validate production-like builds early.",
+    },
+    {
+      title: "Vitest + Jest",
+      description:
+        "Jest provides readable test patterns and Vitest's fast mocks speed test runs, enabling rapid iteration and high coverage.",
+    },
+    {
+      title: "Automatic Clean Code",
+      description:
+        "Enforced consistent code style and removed dead code using Biome (linting/formatting) and Knip (unused-export detection), reducing diffs, editor friction, and long-term maintenance overhead.",
     },
   ],
   keyMetrics: [
-    { label: "Total Development Time", value: "27 days" },
+    { label: "Development Time", value: "27 days" },
     { label: "Test Coverage", value: "80%" },
-    { label: "Components Built", value: "40+" },
     { label: "Pages / Routes", value: "15+" },
-    { label: "Database Tables", value: "9" },
     { label: "Type-Safe APIs", value: "100%" },
   ],
 };

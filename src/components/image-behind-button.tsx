@@ -29,7 +29,7 @@ function ImageBehindButton({
   rel = "noopener noreferrer",
   onClick,
   overlayClassName,
-  buttonOffsetClass = "-bottom-3",
+  buttonOffsetClass = "-bottom-5",
   rounded = true,
 }: Props) {
   const borderRadius =
@@ -64,14 +64,12 @@ function ImageBehindButton({
   return (
     <div className="relative mb-4 overflow-visible z-10 flex flex-col items-center rounded-sm group">
       <div className={cn("absolute z-10", buttonOffsetClass)}>
-        <div className="pt-4">
-          <ButtonTrigger />
-        </div>
+        <ButtonTrigger />
       </div>
 
       <button
         type="button"
-        className="relative"
+        className="relative cursor-pointer"
         onClick={
           href
             ? () => {

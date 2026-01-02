@@ -1,62 +1,10 @@
 "use client";
 
-import { CheckCircle, Clock, Database, GitBranch, Zap } from "lucide-react";
+import { Clock } from "tabler-icons-react";
 import { Badge } from "@/components/ui/badge";
 import { DateCardDense } from "./date-card-dense";
-import { daysMetadata } from "./dates-metadata";
+import { daysMetadata, themeConfigs } from "./dates-metadata";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
-
-interface ThemeConfig {
-  id: string;
-  key:
-    | "foundation"
-    | "core-features"
-    | "data-architecture"
-    | "performance-quality";
-  title: string;
-  description: string;
-  icon: React.ComponentType<{ className?: string }>;
-  accentColor: string;
-}
-
-const themeConfigs: ThemeConfig[] = [
-  {
-    id: "theme-foundation",
-    key: "foundation",
-    title: "Foundation",
-    description:
-      "Setting up the project infrastructure, design systems, database schema, and core authentication",
-    icon: GitBranch,
-    accentColor: "from-blue-50 to-blue-50/30",
-  },
-  {
-    id: "theme-core-features",
-    key: "core-features",
-    title: "Core Features",
-    description:
-      "Building shopping cart, checkout, product catalog, pagination, admin management, and user-facing features",
-    icon: CheckCircle,
-    accentColor: "from-emerald-50 to-emerald-50/30",
-  },
-  {
-    id: "theme-data-architecture",
-    key: "data-architecture",
-    title: "Data Architecture",
-    description:
-      "Implementing metrics system, database indexes, admin enhancements, and performance optimizations",
-    icon: Database,
-    accentColor: "from-purple-50 to-purple-50/30",
-  },
-  {
-    id: "theme-performance-quality",
-    key: "performance-quality",
-    title: "Performance Quality",
-    description:
-      "Server actions migration, build optimization, type unification, and comprehensive testing (80% coverage)",
-    icon: Zap,
-    accentColor: "from-orange-50 to-orange-50/30",
-  },
-];
 
 export function StrategicThemes() {
   return (

@@ -1,3 +1,4 @@
+import { CheckCircle, Database, GitBranch, Zap } from "lucide-react";
 import type { Task } from "./dates/task";
 
 interface DayMetadata {
@@ -21,12 +22,10 @@ export const daysMetadata: DayMetadata[] = [
     screenshot: "/screenshots/2025-11-22.png",
     skillsUsed: ["Site Architecture", "Type Safety", "Code Quality"],
     theme: "foundation",
-    impact:
-      "Aligned scope and established scaffold to reduce rework and accelerate development.",
     tasks: [
       {
         type: "paragraph",
-        text: "Gather client requirements; scaffold Next.js+TypeScript app; create style guide.",
+        text: "Gathered client requirements, scaffolded a Next.js+TypeScript app, and created a style guide to reduce rework.",
       },
     ],
   },
@@ -36,12 +35,10 @@ export const daysMetadata: DayMetadata[] = [
     screenshot: "/screenshots/2025-11-23.png",
     skillsUsed: ["Database Design", "UI Components"],
     theme: "foundation",
-    impact:
-      "Defined schema and components to enable type-safe data access and consistent UI patterns.",
     tasks: [
       {
         type: "paragraph",
-        text: "Define Prisma schema for type-safe DB client; scaffold base UI components.",
+        text: "Defined a Prisma schema and scaffolded base UI components to ensure type-safe data access and consistent UI.",
       },
     ],
   },
@@ -51,12 +48,10 @@ export const daysMetadata: DayMetadata[] = [
     screenshot: "/screenshots/2025-11-24.png",
     skillsUsed: ["Authentication", "React"],
     theme: "foundation",
-    impact:
-      "Implemented robust auth to secure early flows and reduce support overhead.",
     tasks: [
       {
         type: "paragraph",
-        text: "Implement session auth (magic-link); add auth UI and gating.",
+        text: "Implemented session-based magic-link authentication and gated UI to secure user flows and reduce support burden.",
       },
     ],
   },
@@ -66,12 +61,10 @@ export const daysMetadata: DayMetadata[] = [
     screenshot: "/screenshots/2025-11-25.png",
     skillsUsed: ["Server-side Rendering", "E-commerce"],
     theme: "core-features",
-    impact:
-      "Delivered core commerce flow enabling end-to-end purchase scenarios for MVP.",
     tasks: [
       {
         type: "paragraph",
-        text: "Implement shopping cart flow; add SSR pages and basic admin content management.",
+        text: "Implemented the shopping cart flow, added SSR pages, and built basic admin content management to validate purchases.",
       },
     ],
   },
@@ -81,12 +74,10 @@ export const daysMetadata: DayMetadata[] = [
     screenshot: "/screenshots/2025-11-27.png",
     skillsUsed: ["Code Quality", "Refactoring"],
     theme: "core-features",
-    impact:
-      "Improved customer UX and maintainability by introducing historical views and smaller components.",
     tasks: [
       {
         type: "paragraph",
-        text: "Add order history pages; refactor large files into reusable components.",
+        text: "Added order-history pages and refactored large files into reusable components to improve UX and maintainability.",
       },
     ],
   },
@@ -96,12 +87,10 @@ export const daysMetadata: DayMetadata[] = [
     screenshot: "/screenshots/2025-11-28.png",
     skillsUsed: ["File Upload", "Data Validation", "UI Design"],
     theme: "core-features",
-    impact:
-      "Added validation and product controls to reduce bad data and improve admin workflows.",
     tasks: [
       {
         type: "paragraph",
-        text: "Add image upload validation; implement product filters and quantity selectors.",
+        text: "Added image-upload validation, product filters, and quantity selectors to reduce bad data and streamline admin workflows.",
       },
     ],
   },
@@ -110,13 +99,11 @@ export const daysMetadata: DayMetadata[] = [
     title: "Client Review & Form Validation",
     screenshot: "/screenshots/2025-11-29.png",
     skillsUsed: ["Client Facing", "Schema Validation", "Data Architecture"],
-    theme: "core-features",
-    impact:
-      "Aligned with client expectations and reduced runtime errors with schema validation.",
+    theme: "data-architecture",
     tasks: [
       {
         type: "paragraph",
-        text: "Client review; add Zod form validation for better UX and contracts.",
+        text: "Conducted client review and added Zod form validation to align expectations and reduce runtime errors.",
       },
     ],
   },
@@ -126,12 +113,10 @@ export const daysMetadata: DayMetadata[] = [
     screenshot: "/screenshots/2025-11-30.png",
     skillsUsed: ["Authentication", "Database Design", "Typography"],
     theme: "performance-quality",
-    impact:
-      "Improved query performance and scalability through targeted indexing and auth changes.",
     tasks: [
       {
         type: "paragraph",
-        text: "Add targeted DB indexes; switch to JWT auth; define typography utilities.",
+        text: "Added targeted DB indexes, switched to JWT auth, and defined typography utilities to improve performance and scalability.",
       },
     ],
   },
@@ -140,13 +125,11 @@ export const daysMetadata: DayMetadata[] = [
     title: "Auth Migration",
     screenshot: "/screenshots/2025-12-01.png",
     skillsUsed: ["OAuth", "Code Quality", "Admin UI"],
-    theme: "core-features",
-    impact:
-      "Simplified auth stack and reduced technical debt, improving developer productivity.",
+    theme: "foundation",
     tasks: [
       {
         type: "paragraph",
-        text: "Migrate to TypeScript-first auth; remove dead code; consolidate admin layout.",
+        text: "Migrated to TypeScript-first auth, removed dead code, and consolidated admin layout to reduce technical debt.",
       },
     ],
   },
@@ -156,12 +139,10 @@ export const daysMetadata: DayMetadata[] = [
     screenshot: "/screenshots/2025-12-02.png",
     skillsUsed: ["Data Import", "Pagination", "UI Design"],
     theme: "core-features",
-    impact:
-      "Seed scripts and pagination improved reproducibility and UX for large data sets.",
     tasks: [
       {
         type: "paragraph",
-        text: "Add CSV seed scripts for reproducible data; implement pagination; improve layouts.",
+        text: "Added CSV seed scripts, implemented pagination, and improved layouts to make large datasets reproducible and navigable.",
       },
     ],
   },
@@ -171,12 +152,10 @@ export const daysMetadata: DayMetadata[] = [
     screenshot: "/screenshots/2025-12-03.png",
     skillsUsed: ["Search Functionality", "Database Design"],
     theme: "core-features",
-    impact:
-      "Search and sortable tables increased admin efficiency and data discoverability.",
     tasks: [
       {
         type: "paragraph",
-        text: "Implement product search; add sortable admin tables; model many-to-many relationships.",
+        text: "Implemented product search, added sortable admin tables, and modeled many-to-many relationships to boost admin efficiency.",
       },
     ],
   },
@@ -186,12 +165,10 @@ export const daysMetadata: DayMetadata[] = [
     screenshot: "/screenshots/2025-12-05.png",
     skillsUsed: ["UI Components", "Database Design", "Marketing"],
     theme: "performance-quality",
-    impact:
-      "Local dev DB reduced iteration time and surfaced environment-specific issues earlier.",
     tasks: [
       {
         type: "paragraph",
-        text: "Switch to local development DB to reduce latency and speed iteration.",
+        text: "Switched to a local development database to reduce latency and speed iteration, catching environment-specific issues earlier.",
       },
     ],
   },
@@ -201,12 +178,10 @@ export const daysMetadata: DayMetadata[] = [
     screenshot: "/screenshots/2025-12-06.png",
     skillsUsed: ["Component Library", "Accessibility", "Developer Experience"],
     theme: "core-features",
-    impact:
-      "Accessible primitives improved inclusivity and reduced rework on UI components.",
     tasks: [
       {
         type: "paragraph",
-        text: "Build accessible primitives with ARIA and keyboard support; improve DX.",
+        text: "Built accessible primitives with ARIA and keyboard support to improve inclusivity and reduce future UI rework.",
       },
     ],
   },
@@ -216,12 +191,10 @@ export const daysMetadata: DayMetadata[] = [
     screenshot: "/screenshots/2025-12-08.png",
     skillsUsed: ["Site Architecture", "Performance Monitoring"],
     theme: "data-architecture",
-    impact:
-      "Metrics identified bottlenecks and enabled targeted optimizations for stability.",
     tasks: [
       {
         type: "paragraph",
-        text: "Implement metrics to identify bottlenecks; enable admin product management.",
+        text: "Implemented metrics to identify bottlenecks and enable admin product management, guiding targeted stability optimizations.",
       },
     ],
   },
@@ -231,12 +204,10 @@ export const daysMetadata: DayMetadata[] = [
     screenshot: "/screenshots/2025-12-09.png",
     skillsUsed: ["Database Design", "Authentication", "Server Actions"],
     theme: "data-architecture",
-    impact:
-      "Optimizations and server actions reduced client JS and simplified data flows.",
     tasks: [
       {
         type: "paragraph",
-        text: "Replace magic-link with Google OAuth; simplify checkout; convert endpoints to server actions.",
+        text: "Replaced magic-link with Google OAuth, simplified checkout, and converted endpoints to server actions to reduce client-side JS.",
       },
     ],
   },
@@ -245,13 +216,11 @@ export const daysMetadata: DayMetadata[] = [
     title: "Performance Improvements",
     screenshot: "/screenshots/2025-12-10.png",
     skillsUsed: ["Performance Optimization", "User Feedback"],
-    theme: "data-architecture",
-    impact:
-      "Small UX and performance tweaks reduced unnecessary requests and simplified flows.",
+    theme: "foundation",
     tasks: [
       {
         type: "paragraph",
-        text: "Disable unnecessary link prefetching; add consistent toasts; adopt Prisma-generated types.",
+        text: "Disabled unnecessary link prefetching, added consistent toasts, and adopted Prisma-generated types to cut redundant requests.",
       },
     ],
   },
@@ -260,13 +229,11 @@ export const daysMetadata: DayMetadata[] = [
     title: "Theme Implementation",
     screenshot: "/screenshots/2025-12-11.png",
     skillsUsed: ["Styling", "Complexity Analysis"],
-    theme: "data-architecture",
-    impact:
-      "Decided against theme toggle to protect visual hierarchy and reduce maintenance.",
+    theme: "foundation",
     tasks: [
       {
         type: "paragraph",
-        text: "Evaluate theme toggle and decide against it to protect visual hierarchy.",
+        text: "Evaluated a theme toggle and decided against it to preserve visual hierarchy and avoid extra maintenance.",
       },
     ],
   },
@@ -276,12 +243,10 @@ export const daysMetadata: DayMetadata[] = [
     screenshot: "/screenshots/2025-12-12.png",
     skillsUsed: ["Site Architecture", "Documentation"],
     theme: "data-architecture",
-    impact:
-      "Standardized terminology to reduce confusion and improve documentation quality.",
     tasks: [
       {
         type: "paragraph",
-        text: "Standardize shipping terminology with client to reduce confusion.",
+        text: "Standardized shipping terminology with the client to reduce confusion and clarify documentation.",
       },
     ],
   },
@@ -291,12 +256,10 @@ export const daysMetadata: DayMetadata[] = [
     screenshot: "/screenshots/2025-12-13.png",
     skillsUsed: ["Component Library", "Type Safety"],
     theme: "performance-quality",
-    impact:
-      "Switched frameworks to reduce custom styling and improve default theming.",
     tasks: [
       {
         type: "paragraph",
-        text: "Migrate component library from RadixUI to BaseUI for better theming.",
+        text: "Migrated the component library from RadixUI to BaseUI to improve theming and reduce custom styles.",
       },
     ],
   },
@@ -305,13 +268,11 @@ export const daysMetadata: DayMetadata[] = [
     title: "Add Global Search",
     screenshot: "/screenshots/2025-12-14.png",
     skillsUsed: ["Search Functionality", "UI Components"],
-    theme: "performance-quality",
-    impact:
-      "Global search improved product discovery and reduced user friction.",
+    theme: "core-features",
     tasks: [
       {
         type: "paragraph",
-        text: "Add global search for product discovery; implement price visibility controls.",
+        text: "Added global search and price-visibility controls to improve product discovery and reduce user friction.",
       },
     ],
   },
@@ -321,12 +282,10 @@ export const daysMetadata: DayMetadata[] = [
     screenshot: "/screenshots/2025-12-15.png",
     skillsUsed: ["CI/CD", "Type Safety", "Documentation"],
     theme: "performance-quality",
-    impact:
-      "Resolved build and type issues to increase reliability and CI confidence.",
     tasks: [
       {
         type: "paragraph",
-        text: "Fix production build issues; add CI scripts and production-like tests; update docs.",
+        text: "Fixed production build issues, added CI scripts and production-like tests, and updated docs to raise reliability.",
       },
     ],
   },
@@ -336,12 +295,10 @@ export const daysMetadata: DayMetadata[] = [
     screenshot: "/screenshots/2025-12-16.png",
     skillsUsed: ["Site Architecture", "Server Actions"],
     theme: "performance-quality",
-    impact:
-      "Server actions reduced network overhead and tightened end-to-end type safety.",
     tasks: [
       {
         type: "paragraph",
-        text: "Migrate mutations to server actions; add soft-delete and order snapshots.",
+        text: "Migrated mutations to server actions and added soft-delete plus order snapshots to reduce network overhead and strengthen type safety.",
       },
     ],
   },
@@ -351,12 +308,10 @@ export const daysMetadata: DayMetadata[] = [
     screenshot: "/screenshots/2025-12-17.png",
     skillsUsed: ["Server Actions", "Testing Framework"],
     theme: "performance-quality",
-    impact:
-      "Integrated Vitest to catch regressions early and improve confidence for refactors.",
     tasks: [
       {
         type: "paragraph",
-        text: "Integrate Vitest and add unit tests to catch regressions early.",
+        text: "Integrated Vitest and added unit tests to catch regressions early and increase refactor confidence.",
       },
     ],
   },
@@ -366,13 +321,63 @@ export const daysMetadata: DayMetadata[] = [
     screenshot: "/screenshots/2025-12-18.png",
     skillsUsed: ["Code Coverage", "Database Design", "Documentation"],
     theme: "performance-quality",
-    impact:
-      "High test coverage reduced bug surface area and increased refactor safety.",
     tasks: [
       {
         type: "paragraph",
-        text: "Write unit tests to reach 80% coverage; simplify order-number logic; clean up docs.",
+        text: "Wrote unit tests to reach 80% coverage, simplified order-number logic, and cleaned docs to reduce bugs.",
       },
     ],
+  },
+];
+
+interface ThemeConfig {
+  id: string;
+  key:
+    | "foundation"
+    | "core-features"
+    | "data-architecture"
+    | "performance-quality";
+  title: string;
+  description: string;
+  icon: React.ComponentType<{ className?: string }>;
+  accentColor: string;
+}
+
+export const themeConfigs: ThemeConfig[] = [
+  {
+    id: "theme-foundation",
+    key: "foundation",
+    title: "Foundation",
+    description:
+      "Setting up the project infrastructure, design systems, database schema, and core authentication",
+    icon: GitBranch,
+    accentColor: "from-blue-50 to-blue-50/30",
+  },
+  {
+    id: "theme-core-features",
+    key: "core-features",
+    title: "Core Features",
+    description:
+      "Building shopping cart, checkout, product catalog, pagination, admin management, and user-facing features",
+    icon: CheckCircle,
+    accentColor: "from-emerald-50 to-emerald-50/30",
+  },
+  {
+    id: "theme-data-architecture",
+    key: "data-architecture",
+    title: "Data Architecture",
+    description:
+      "Implementing metrics system, database indexes, admin enhancements, and performance optimizations",
+    icon: Database,
+    accentColor: "from-purple-50 to-purple-50/30",
+  },
+  {
+    id: "theme-performance-quality",
+    key: "performance-quality",
+    title: "Performance Quality",
+    description:
+      "Server actions migration, build optimization, type unification, and comprehensive testing (80% coverage)",
+    icon: Zap,
+    accentColor: "from-orange-50 to-orange-50/30",
   },
 ];

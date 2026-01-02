@@ -3,78 +3,76 @@
 import { AlertCircle, Lightbulb } from "lucide-react";
 import Image from "next/image";
 import { Card } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
 import { executiveSummaryData } from "./executive-summary-data";
+import { Button, buttonVariants } from "./ui/button";
 
 export function ExecutiveSummary() {
+  const buttonClass = cn(buttonVariants({ variant: "default", size: "lg" }));
+
   return (
-    <section
-      id="executive-summary"
-      className="w-full py-20 bg-gradient-to-b from-white/80 to-white/60"
-    >
-      <div className="max-w-6xl mx-auto px-4 space-y-16">
-        {/* Section Header */}
-        <div className="text-center space-y-4">
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
-            Project Summary
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Strategic decisions, architectural choices, and key outcomes
-          </p>
-        </div>
+    <>
+      {/* Project Summary */}
+      <section
+        id="executive-summary"
+        className="w-full flex flex-col items-center justify-center min-h-screen py-20 bg-gradient-to-b from-white/80 to-white/60"
+      >
+        <div className="max-w-6xl mx-auto px-4 space-y-16">
+          {/* Section Header */}
+          <div className="text-center space-y-4">
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+              Project Summary
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              {executiveSummaryData.scope.platform}
+            </p>
+          </div>
 
-        {/* Project Overview */}
-        <div className="grid md:grid-cols-[auto_300px] lg:grid-cols-[auto_350px] gap-6">
-          <Card className="p-6 border-border/50 hover:shadow-lg transition-shadow">
-            <h3 className="text-lg font-semibold">
-              Peak Blooms Project Overview
-            </h3>
-            <div className="grid lg:grid-cols-[200px_auto] gap-6 text-sm text-muted-foreground">
-              <div>
-                <Image
-                  width={2084}
-                  height={1250}
-                  src="/peak-blooms.png"
-                  alt="GitHub profile preview"
-                  className="w-60 rounded-lg shadow-lg mb-2"
-                />
-              </div>
-              <div className="space-y-3">
-                <div>
-                  <p className="font-medium text-foreground">Platform</p>
-                  <p>{executiveSummaryData.scope.platform}</p>
-                </div>
-                <div>
-                  <p className="font-medium text-foreground">Timeline</p>
-                  <p>
-                    {executiveSummaryData.timeline.startDate} —{" "}
-                    {executiveSummaryData.timeline.endDate} (
-                    {executiveSummaryData.timeline.durationDays} days)
-                  </p>
-                </div>
-              </div>
-            </div>
-          </Card>
-
-          {/* Key Metrics */}
-          <Card className="p-6 border-border/50 hover:shadow-lg transition-shadow">
-            <h3 className="text-lg font-semibold mb-4">Key Metrics</h3>
-            <div className="grid grid-cols-2 gap-2">
+          {/* Project Overview */}
+          <div className="flex flex-col items-center gap-16 text-sm text-muted-foreground">
+            <div className="flex gap-8 text-base text-muted-foreground">
               {executiveSummaryData.keyMetrics.map((metric, idx) => (
-                <div key={idx} className="space-y-1">
-                  <p className="text-sm font-medium text-primary">
-                    {metric.value}
-                  </p>
-                  <p className="text-xs text-muted-foreground">
-                    {metric.label}
-                  </p>
+                <div key={idx} className="flex gap-1.5 space-y-0.5">
+                  <p className="font-medium text-primary">{metric.value}</p>
+                  <p className="text-muted-foreground">{metric.label}</p>
                 </div>
               ))}
             </div>
-          </Card>
-        </div>
 
-        {/* Architectural Decisions */}
-        <div className="space-y-6">
+            <Image
+              width={2084}
+              height={1250}
+              src="/peak-blooms.png"
+              alt="GitHub profile preview"
+              className="w-60 rounded-lg shadow-lg"
+            />
+
+            <Button
+              onClick={() => {
+                const element = document.getElementById(
+                  "architectural-decisions",
+                );
+                element?.scrollIntoView({ behavior: "smooth" });
+              }}
+              variant="default"
+              size="lg"
+              className={cn(
+                buttonClass,
+                "outline-white outline-[0.5px] outline-solid group-hover:outline-1",
+              )}
+            >
+              View the Architecture
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Architectural Decisions */}
+      <section
+        id="architectural-decisions"
+        className="w-full bg-muted px-8 py-16"
+      >
+        <div className="max-w-6xl mx-auto space-y-6">
           <div className="flex items-center gap-3">
             <Lightbulb className="w-6 h-6 text-primary" />
             <h3 className="text-2xl md:text-3xl font-bold tracking-tight">
@@ -99,21 +97,17 @@ export function ExecutiveSummary() {
                     <p className="text-sm text-muted-foreground">
                       {decision.description}
                     </p>
-                    <div className="pt-2 border-t border-border/30">
-                      <p className="text-xs font-medium text-primary">Impact</p>
-                      <p className="text-xs text-muted-foreground pt-1">
-                        {decision.impact}
-                      </p>
-                    </div>
                   </div>
                 </Card>
               ),
             )}
           </div>
         </div>
+      </section>
 
-        {/* Strategic Choices Not Implemented */}
-        <div className="space-y-6">
+      {/* Strategic Choices Not Implemented */}
+      <section className="px-8 py-16">
+        <div className="max-w-6xl mx-auto space-y-6">
           <div className="flex items-center gap-3">
             <AlertCircle className="w-6 h-6 text-amber-500" />
             <h3 className="text-2xl md:text-3xl font-bold tracking-tight">
@@ -122,7 +116,6 @@ export function ExecutiveSummary() {
           </div>
 
           <p className="text-muted-foreground max-w-3xl">
-            High-level editorial judgment means making deliberate trade-offs.
             The following features were evaluated but deprioritized based on ROI
             analysis and MVP scope:
           </p>
@@ -131,7 +124,7 @@ export function ExecutiveSummary() {
             {executiveSummaryData.nonFeatures.map((nonFeature, idx) => (
               <Card
                 key={idx}
-                className="p-6 border-amber-200/50 bg-white hover:shadow-lg transition-shadow"
+                className="p-6 border-amber-200/50 bg-white hover:shadow-lg transition-shadow overflow-visible"
               >
                 <div className="space-y-3">
                   <div className="flex items-start gap-3">
@@ -140,20 +133,14 @@ export function ExecutiveSummary() {
                     </h4>
                   </div>
                   <p className="text-sm text-muted-foreground">
-                    {nonFeature.rationale}
+                    {nonFeature.details}
                   </p>
-                  <div className="pt-2 border-t border-border/30">
-                    <p className="text-xs font-medium text-primary">Impact</p>
-                    <p className="text-xs text-muted-foreground pt-1">
-                      {nonFeature.impact}
-                    </p>
-                  </div>
                 </div>
               </Card>
             ))}
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
