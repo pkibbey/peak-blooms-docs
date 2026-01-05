@@ -31,9 +31,9 @@ export function Hero() {
           </h1>
 
           <p className="text-xl md:text-2xl leading-8 text-muted-foreground font-light max-w-3xl mx-auto">
-            A 30‑day architectural sprint applying React 19 Server Components,
-            SSR/ISR, CI practices, and AI‑assisted workflows to build a
-            production ready web application.
+            Achieved enterprise-grade delivery speed by integrating AI
+            workflows, resulting in a 90% test coverage, and 100% type-safe
+            system, delivered within 27 days.
             <a
               href="/dev-notes"
               className="text-sm ml-2 underline text-primary hover:text-primary/80"

@@ -9,7 +9,6 @@ interface DateCardDenseProps {
 }
 
 export function DateCardDense({ day }: DateCardDenseProps) {
-  console.log("day: ", day);
   const title = day.title;
 
   return (

@@ -27,13 +27,29 @@ export function ExecutiveSummary() {
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               {executiveSummaryData.scope.platform}
             </p>
-            <Image
-              width={2084}
-              height={1250}
-              src="/peak-blooms.png"
-              alt="GitHub profile preview"
-              className="w-60 rounded-lg shadow-lg"
-            />
+            <div className="relative mt-6">
+              <Image
+                width={2144}
+                height={1298}
+                src="/peak-blooms.png"
+                alt="Peak Blooms homepage preview"
+                className="relative z-10 w-60 rounded-sm shadow-xl"
+              />
+              <Image
+                width={2144}
+                height={1298}
+                src="/admin.png"
+                alt="Admin dashboard preview"
+                className="absolute -right-40 top-4 w-50 rounded-sm shadow-xl"
+              />
+              <Image
+                width={2144}
+                height={1298}
+                src="/inspirations.png"
+                alt="Inspirations page preview"
+                className="absolute -left-40 top-4 w-50 rounded-sm shadow-xl"
+              />
+            </div>
           </div>
 
           {/* Project Overview */}

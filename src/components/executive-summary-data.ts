@@ -51,7 +51,7 @@ export const executiveSummaryData: ExecutiveSummaryData = {
   },
   scope: {
     platform:
-      "An e-commerce platform that demonstrates combining durable, old-school architectural choices (schema-first modeling, server-side orchestration, and robust CI/CD) with modern AI-assisted development practices (generative AI, planning, documentation, MCP servers, and agents). Includes custom CMS, user authentication, shopping cart, and ordering system built to client specifications.",
+      "An indepedant wholesale flower startup needed a custom e-commerce platform to get their new business up and running. I promised them that in 30 days, they would have a durable web app based on old-school architectural choices built with modern AI-assisted development practices.",
     features: [
       "Product catalog with filtering, pagination, and global search",
       "Shopping cart and checkout workflow",
@@ -96,9 +96,9 @@ export const executiveSummaryData: ExecutiveSummaryData = {
   ],
   architecturalDecisions: [
     {
-      title: "Next.js 16 + Server Functions",
+      title: "Next.js 16 + Server Actions",
       description:
-        "Centralized AI orchestration in Next.js 16 Server Functions to simplify credentials and context, reduce round trips, and make model interactions safe and testable; rejected client-side inference due to latency and security trade-offs.",
+        "Significantly streamlined the development workflow by integrating data mutations and UI updates into a more efficient, single roundtrip mechanism, reducing the manual effort and number of code-level calls required by the developer.",
     },
     {
       title: "BaseUI + TailwindCSS",
@@ -106,7 +106,7 @@ export const executiveSummaryData: ExecutiveSummaryData = {
         "Used BaseUI for accessible primitives and Tailwind for consistent, testable styling—making AI-generated scaffolds easier to validate and integrate.",
     },
     {
-      title: "Prisma ORM + TypeScript",
+      title: "100% Typescript",
       description:
         "Prefer schema-first, type-safe models so AI-generated data and tests surface contract issues early, not at runtime.",
     },
