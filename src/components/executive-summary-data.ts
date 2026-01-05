@@ -104,8 +104,6 @@ export const executiveSummaryData: ExecutiveSummaryData = {
       title: "BaseUI + TailwindCSS",
       description:
         "Used BaseUI for accessible primitives and Tailwind for consistent, testable styling—making AI-generated scaffolds easier to validate and integrate.",
-      baselineTimeMinutes: 360,
-      aiTimeMinutes: 120,
     },
     {
       title: "Prisma ORM + TypeScript",
@@ -116,29 +114,26 @@ export const executiveSummaryData: ExecutiveSummaryData = {
       title: "Use AI to bootstrap work",
       description:
         "Used project-scoped MCP servers to let AI scaffold deterministic mocks and tests, with humans curating changes; limited AI to scaffolding to avoid unreviewed autonomous changes.",
-      baselineTimeMinutes: 480,
-      aiTimeMinutes: 180,
+      baselineTimeMinutes: 60 * 24,
+      aiTimeMinutes: 60 * 2,
     },
     {
       title: "GitHub Actions + Vercel",
       description:
-        "Enforced AI-suggested changes through GitHub Actions and Vercel builds so tests and Lighthouse checks run on every PR before human approval.",
-      baselineTimeMinutes: 300,
-      aiTimeMinutes: 120,
+        "Leveraged GitHub Actions and Vercel builds so tests and Lighthouse checks run on every PR before human approval.",
     },
     {
       title: "Design for observability and validation",
       description:
         "Paired readable Jest patterns with Vitest's fast iteration to quickly verify AI-suggested tests while preserving maintainability.",
-      baselineTimeMinutes: 480,
-      aiTimeMinutes: 180,
+      baselineTimeMinutes: 60 * 40,
+      aiTimeMinutes: 60 * 6,
     },
     {
       title: "Automatic Clean Up",
       description:
         "Integrated Biome and Knip for automated formatting and dead-code detection, reducing review burden while avoiding aggressive auto-removal for experiments.",
-      baselineTimeMinutes: 120,
-      aiTimeMinutes: 60,
+      baselineTimeMinutes: 60 * 8,
     },
   ],
   // Key insights distilled from my generative AI sabbatical. These directly informed the architectural choices above.

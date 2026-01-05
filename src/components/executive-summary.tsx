@@ -113,6 +113,11 @@ export function ExecutiveSummary() {
               ),
             )}
           </div>
+
+          <p className="text-muted-foreground">
+            A total of 64 hours (8 days) were saved whilst still maintaining the
+            target goal.
+          </p>
         </div>
       </section>
 
