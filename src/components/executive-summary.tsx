@@ -4,6 +4,7 @@ import { AlertCircle, Lightbulb } from "lucide-react";
 import Image from "next/image";
 import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
+import ArchitecturalDecisionChart from "./architectural-decision-chart";
 import { executiveSummaryData } from "./executive-summary-data";
 import { Button, buttonVariants } from "./ui/button";
 
@@ -19,13 +20,20 @@ export function ExecutiveSummary() {
       >
         <div className="max-w-6xl mx-auto px-4 space-y-16">
           {/* Section Header */}
-          <div className="text-center space-y-4">
+          <div className="flex flex-col items-center text-center space-y-4">
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
-              Project Summary
+              Peak Blooms
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               {executiveSummaryData.scope.platform}
             </p>
+            <Image
+              width={2084}
+              height={1250}
+              src="/peak-blooms.png"
+              alt="GitHub profile preview"
+              className="w-60 rounded-lg shadow-lg"
+            />
           </div>
 
           {/* Project Overview */}
@@ -38,14 +46,6 @@ export function ExecutiveSummary() {
                 </div>
               ))}
             </div>
-
-            <Image
-              width={2084}
-              height={1250}
-              src="/peak-blooms.png"
-              alt="GitHub profile preview"
-              className="w-60 rounded-lg shadow-lg"
-            />
 
             <Button
               onClick={() => {
@@ -80,24 +80,35 @@ export function ExecutiveSummary() {
             </h3>
           </div>
 
+          <p className="text-muted-foreground">
+            The following features were evaluated and chosen for their ROI and
+            MVP scope:
+          </p>
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {executiveSummaryData.architecturalDecisions.map(
               (decision, idx) => (
                 <Card
                   key={idx}
-                  className="p-6 border-border/50 hover:shadow-lg transition-shadow"
+                  className="p-6 border-border/50 hover:shadow-lg transition-shadow space-y-1"
                 >
-                  <div className="space-y-3">
-                    <div className="flex items-start gap-3">
-                      {/* <CheckCircle2 className="w-5 h-5 text-primary mt-1 flex-shrink-0" /> */}
-                      <h4 className="font-semibold text-foreground">
-                        {decision.title}
-                      </h4>
-                    </div>
+                  <div className="flex flex-col items-start gap-3">
+                    {/* <CheckCircle2 className="w-5 h-5 text-primary mt-1 flex-shrink-0" /> */}
+                    <h4 className="font-semibold text-foreground">
+                      {decision.title}
+                    </h4>
                     <p className="text-sm text-muted-foreground">
                       {decision.description}
                     </p>
                   </div>
+                  {(decision.baselineTimeMinutes !== undefined ||
+                    decision.aiTimeMinutes !== undefined) && (
+                    <ArchitecturalDecisionChart
+                      baselineTimeMinutes={decision.baselineTimeMinutes}
+                      aiTimeMinutes={decision.aiTimeMinutes}
+                      title={decision.title}
+                    />
+                  )}
                 </Card>
               ),
             )}
@@ -121,24 +132,35 @@ export function ExecutiveSummary() {
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {executiveSummaryData.nonFeatures.map((nonFeature, idx) => (
-              <Card
-                key={idx}
-                className="p-6 border-amber-200/50 bg-white hover:shadow-lg transition-shadow overflow-visible"
-              >
-                <div className="space-y-3">
-                  <div className="flex items-start gap-3">
+            {executiveSummaryData.architecturalDecisionsAgainst.map(
+              (decision, idx) => (
+                <Card
+                  key={idx}
+                  className="p-6 border-amber-200/50 bg-white hover:shadow-lg transition-shadow overflow-visible"
+                >
+                  <div className="flex flex-col items-start gap-3">
                     <h4 className="font-semibold text-foreground">
-                      {nonFeature.title}
+                      {decision.title}
                     </h4>
+                    <p className="text-sm text-muted-foreground">
+                      {decision.description}
+                    </p>
                   </div>
-                  <p className="text-sm text-muted-foreground">
-                    {nonFeature.details}
-                  </p>
-                </div>
-              </Card>
-            ))}
+                  {decision.baselineTimeMinutes !== undefined && (
+                    <ArchitecturalDecisionChart
+                      baselineTimeMinutes={decision.baselineTimeMinutes}
+                      title={decision.title}
+                    />
+                  )}
+                </Card>
+              ),
+            )}
           </div>
+
+          <p className="text-muted-foreground">
+            A total of 104 hours (2 working weeks) were saved whilst still
+            maintaining the target goal.
+          </p>
         </div>
       </section>
     </>

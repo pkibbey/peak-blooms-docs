@@ -31,55 +31,16 @@ export function Hero() {
           </h1>
 
           <p className="text-xl md:text-2xl leading-8 text-muted-foreground font-light max-w-3xl mx-auto">
-            A detailed journey documenting how I designed, developed, and
-            deployed a modern web platform, by{" "}
-            <HoverCard>
-              <HoverCardTrigger
-                target="_blank"
-                href="https://github.com/pkibbey"
-                className="text-primary cursor-help underline decoration-dotted hover:text-primary/80"
-              >
-                Phineas Kibbey
-              </HoverCardTrigger>
-              <HoverCardPositioner side="top">
-                <HoverCardContent className="mb-4 p-0 border-0 bg-transparent shadow-none">
-                  <a
-                    href="https://github.com/pkibbey"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block cursor-pointer hover:opacity-90 transition-opacity"
-                  >
-                    <Image
-                      width={2248}
-                      height={1298}
-                      src="/github.png"
-                      alt="GitHub profile preview"
-                      className="w-80 rounded-lg shadow-lg"
-                    />
-                  </a>
-                </HoverCardContent>
-              </HoverCardPositioner>
-            </HoverCard>
-            .
-          </p>
-
-          <div className="mt-2">
-            <p
-              id="architect-note"
-              className="text-sm text-muted-foreground max-w-2xl mx-auto"
+            A 30‑day architectural sprint applying React 19 Server Components,
+            SSR/ISR, CI practices, and AI‑assisted workflows to build a
+            production ready web application.
+            <a
+              href="/dev-notes"
+              className="text-sm ml-2 underline text-primary hover:text-primary/80"
             >
-              <strong className="font-medium">Architect’s Note:</strong> A
-              30‑day architectural sprint applying React 19 Server Components,
-              SSR/ISR, CI practices, and AI‑assisted workflows to validate
-              high‑velocity, production‑grade delivery.
-              <a
-                href="/dev-notes"
-                className="ml-2 underline text-primary hover:text-primary/80"
-              >
-                Learn more
-              </a>
-            </p>
-          </div>
+              Learn more
+            </a>
+          </p>
         </div>
         {/* CTA Section */}
         <CTA />

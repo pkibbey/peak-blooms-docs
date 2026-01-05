@@ -1,13 +1,23 @@
 import type { ReactNode } from "react";
 
+/**
+ * Architectural decision entry.
+ *
+ * baselineTimeMinutes?: Estimated time (minutes) to implement without AI.
+ * aiTimeMinutes?: Estimated time (minutes) to implement with AI assistance.
+ * Times are optional and used to render a compact comparison chart.
+ */
 interface ArchitecturalDecision {
   title: string;
   description: ReactNode;
+  baselineTimeMinutes?: number;
+  aiTimeMinutes?: number;
 }
 
-interface NonFeature {
+interface ArchitecturalDecisionAgainst {
   title: string;
-  details: string;
+  description: string;
+  baselineTimeMinutes?: number;
 }
 
 interface ExecutiveSummaryData {
@@ -23,7 +33,8 @@ interface ExecutiveSummaryData {
     features: string[];
   };
   architecturalDecisions: ArchitecturalDecision[];
-  nonFeatures: NonFeature[];
+  architecturalDecisionsAgainst: ArchitecturalDecisionAgainst[];
+  sabbaticalInsights: string[];
   keyMetrics: {
     label: string;
     value: string;
@@ -40,7 +51,7 @@ export const executiveSummaryData: ExecutiveSummaryData = {
   },
   scope: {
     platform:
-      "Full-stack e-commerce application with admin dashboard, product catalog, shopping cart, and order management",
+      "An e-commerce platform that demonstrates combining durable, old-school architectural choices (schema-first modeling, server-side orchestration, and robust CI/CD) with modern AI-assisted development practices (generative AI, planning, documentation, MCP servers, and agents). Includes custom CMS, user authentication, shopping cart, and ordering system built to client specifications.",
     features: [
       "Product catalog with filtering, pagination, and global search",
       "Shopping cart and checkout workflow",
@@ -51,72 +62,95 @@ export const executiveSummaryData: ExecutiveSummaryData = {
       "Database indexing and optimization",
     ],
   },
-  nonFeatures: [
+  architecturalDecisionsAgainst: [
     {
       title: "Theme Toggle",
-      details:
+      description:
         "A single light theme was prioritized to ensure visual consistency and reduce the maintenance and testing burden for the MVP.",
+      baselineTimeMinutes: 16 * 60,
     },
     {
       title: "Product Variants",
-      details:
+      description:
         "The data model was simplified to core attributes instead of full multi-SKU variants to reduce schema complexity and admin overhead.",
+      baselineTimeMinutes: 8 * 60,
     },
     {
       title: "Payment Processing",
-      details:
+      description:
         "Full payment gateway integration was postponed to avoid introducing significant complexity into the initial checkout workflow.",
+      baselineTimeMinutes: 16 * 60,
     },
     {
       title: "Inventory Syncing",
-      details:
+      description:
         "Real-time, webhook-based inventory syncing was deferred, as manual and batch updates were sufficient for initial operational needs.",
+      baselineTimeMinutes: 60 * 5 * 8,
     },
     {
       title: "Multi-user Sign-in",
-      details:
+      description:
         "Single-account, role-based access was deemed sufficient for the MVP, avoiding the complexity of company-level permissions.",
+      baselineTimeMinutes: 24 * 60,
     },
   ],
   architecturalDecisions: [
     {
       title: "Next.js 16 + Server Functions",
       description:
-        "Next.js gives us routing and performance at a modest cost. Server Functions reduce network round trips making the application feel more responsive.",
+        "Centralized AI orchestration in Next.js 16 Server Functions to simplify credentials and context, reduce round trips, and make model interactions safe and testable; rejected client-side inference due to latency and security trade-offs.",
     },
     {
       title: "BaseUI + TailwindCSS",
       description:
-        "Standardized on BaseUI for consistent, accessible components. TailwindCSS provides a utility-driven system for rapid, consistent styling.",
+        "Used BaseUI for accessible primitives and Tailwind for consistent, testable styling—making AI-generated scaffolds easier to validate and integrate.",
+      baselineTimeMinutes: 360,
+      aiTimeMinutes: 120,
     },
     {
       title: "Prisma ORM + TypeScript",
       description:
-        "Prisma simplified database access and migrations. Its generated types provide robust compile-time safety across the stack. Local database runs with Docker with automatic seed scripts, so that dev work is fast and deterministic.",
+        "Prefer schema-first, type-safe models so AI-generated data and tests surface contract issues early, not at runtime.",
     },
     {
-      title: "AI + MCP",
+      title: "Use AI to bootstrap work",
       description:
-        "Used AI (with project scoped MCP servers) to generate test scaffolds and boilerplate code while applying human architectural judgment to ensure correctness and maintainability.",
+        "Used project-scoped MCP servers to let AI scaffold deterministic mocks and tests, with humans curating changes; limited AI to scaffolding to avoid unreviewed autonomous changes.",
+      baselineTimeMinutes: 480,
+      aiTimeMinutes: 180,
     },
     {
       title: "GitHub Actions + Vercel",
       description:
-        "Combining Vercel with GitHub Actions makes it easy to run fully tested builds on every push and validate production-like builds early.",
+        "Enforced AI-suggested changes through GitHub Actions and Vercel builds so tests and Lighthouse checks run on every PR before human approval.",
+      baselineTimeMinutes: 300,
+      aiTimeMinutes: 120,
     },
     {
-      title: "Vitest + Jest",
+      title: "Design for observability and validation",
       description:
-        "Jest provides readable test patterns and Vitest's fast mocks speed test runs, enabling rapid iteration and high coverage.",
+        "Paired readable Jest patterns with Vitest's fast iteration to quickly verify AI-suggested tests while preserving maintainability.",
+      baselineTimeMinutes: 480,
+      aiTimeMinutes: 180,
     },
     {
       title: "Automatic Clean Up",
       description:
-        "Thanks to Biome and Knip, linting, code formatting, and dead code removal are handled automatically. This lightens the load on the developer and the codebase stays clean and consistent.",
+        "Integrated Biome and Knip for automated formatting and dead-code detection, reducing review burden while avoiding aggressive auto-removal for experiments.",
+      baselineTimeMinutes: 120,
+      aiTimeMinutes: 60,
     },
   ],
+  // Key insights distilled from my generative AI sabbatical. These directly informed the architectural choices above.
+  sabbaticalInsights: [
+    "Use AI to bootstrap work—boilerplate, tests, and mock datasets—but keep humans in the loop for correctness and long-term design.",
+    "Design for observability and validation: CI, test harnesses, and performance checks are essential to verify AI-suggested changes quickly.",
+    "Centralize LLM orchestration server-side (Server Functions/Server Components) to simplify context, security, and latency management.",
+    "Prefer schema-first, type-safe models so AI-generated data and tests surface contract issues early, not at runtime.",
+    "Isolate model experiments in reproducible MCP environments to make AI-assisted work auditable and repeatable.",
+  ],
   keyMetrics: [
-    { label: "Pages / Routes", value: "50+" },
+    { label: "Pages/Routes", value: "50+" },
     { label: "Type-Safe APIs", value: "100%" },
     { label: "Test Coverage", value: "90%" },
     { label: "Development Time", value: "27 days" },

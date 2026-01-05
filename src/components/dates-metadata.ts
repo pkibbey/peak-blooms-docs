@@ -1,4 +1,5 @@
 import { CheckCircle, Database, GitBranch, Zap } from "lucide-react";
+import { v4 as uuid } from "uuid";
 import type { Task } from "./dates/task";
 
 export interface DayMetadata {
@@ -72,7 +73,7 @@ export const daysMetadata: DayMetadata[] = [
     theme: "foundation",
     tasks: [
       {
-        text: "Started with magic-link authentication session, but moved to an OAuth JWT solution to streamline the sign-in process.",
+        text: "Setup an OAuth JWT solution to streamline the sign-in process.",
       },
     ],
   },
@@ -85,6 +86,18 @@ export const daysMetadata: DayMetadata[] = [
     tasks: [
       {
         text: "Implemented the shopping cart flow, added SSR pages, and built basic admin content management to validate purchases.",
+      },
+    ],
+  },
+  {
+    id: uuid(),
+    date: "2025-11-25",
+    title: "E-Commerce Store",
+    screenshot: "/screenshots/2025-11-25.png",
+    theme: "core-features",
+    tasks: [
+      {
+        text: "Provided an accessible store front that allowed users to search and browse products to add to a shopping cart.",
       },
     ],
   },
@@ -115,7 +128,7 @@ export const daysMetadata: DayMetadata[] = [
   {
     id: "e4d1f2a3-7c4b-4b55-8a1f-2be4d5f6c7a8",
     date: "2025-11-28",
-    title: "Product Features",
+    title: "Consistent Product UI",
     screenshot: "/screenshots/2025-11-28.png",
     theme: "core-features",
     tasks: [
@@ -165,7 +178,7 @@ export const daysMetadata: DayMetadata[] = [
     date: "2025-11-30",
     title: "Typography",
     screenshot: "/screenshots/2025-11-30.png",
-    theme: "performance-quality",
+    theme: "foundation",
     tasks: [
       {
         text: "Defined typography utilities and optimized font loading to reduce layout shift and improve rendering.",
@@ -245,18 +258,6 @@ export const daysMetadata: DayMetadata[] = [
     ],
   },
   {
-    id: "d5e6f7a8-1b2c-4d3e-9f0a-1a2b3c4d5e6f",
-    date: "2025-12-10",
-    title: "Consistent UI Feedback",
-    screenshot: "/screenshots/2025-12-10.png",
-    theme: "core-features",
-    tasks: [
-      {
-        text: "Added consistent toasts and feedback patterns to prevent duplicate actions and improve UX.",
-      },
-    ],
-  },
-  {
     id: "e7f6d5c4-b3a2-4c1d-9e0f-2a1b3c4d5e6f",
     date: "2025-12-10",
     title: "Type Safety",
@@ -283,7 +284,7 @@ export const daysMetadata: DayMetadata[] = [
   {
     id: "f90d4135-40a1-43b9-bc12-14ee17877f71",
     date: "2025-12-16",
-    title: "Performance Gains using Server Actions",
+    title: "Server Actions",
     screenshot: "/screenshots/2025-12-16.png",
     theme: "performance-quality",
     tasks: [

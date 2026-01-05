@@ -33,6 +33,13 @@ You mention partnering with UX and building Design Systems at Level Home and Liv
 
 Your resume mentions the Strategic Sabbatical as the source of this project's insight.
 
+* **Key insights from the sabbatical:**
+  - Use AI to bootstrap repetitive work (boilerplate, tests, mock data) but keep human review and architectural judgment as the final gate.
+  - Design for observability and validation: invest in CI, test harnesses, and performance checks to verify AI-suggested changes quickly.
+  - Centralize LLM orchestration server-side (Server Functions / Server Components) to simplify context, security, and latency management.
+  - Prefer schema-first, type-safe models so AI-generated data and tests surface contract issues early, not at runtime.
+  - Isolate model experiments in reproducible MCP environments so AI-assisted work remains auditable and repeatable.
+
 * **Suggestion:** In an "About" or "Reflections" section, link the project back to that year of research.
 * **Narrative:** *"After 15 years in enterprise architecture, I took a sabbatical to explore how Generative AI could industrialize the development cycle. Peak Blooms is the first production result of that research."*
 
