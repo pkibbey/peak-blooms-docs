@@ -114,7 +114,7 @@ const prompt = `You will be given commits data in JSON form. For each day repres
   schema,
   null,
   2,
-)}\n\nInput commits data:\n${JSON.stringify(filteredData, null, 2)}\n\nConstraints:\n- Return only a single JSON array of DayMetadata objects (no explanation or extra output).\n- Each DayMetadata must include at least \`id\` and \`date\`.\n- \`screenshot\` should be /screenshots/{date}.png when applicable.\n- \`title\` should be concise (3-6 words) and derived from the commits.\n- \`tasks\` should be an array of objects with a single \`text\` property.\n- \`skillsUsed\` should be short tags like Testing, UI, Database.\n- \`theme\` should be one of: foundation, core-features, data-architecture, performance-quality.\n- Return valid JSON only.`;
+)}\n\nInput commits data:\n${JSON.stringify(filteredData, null, 2)}\n\nConstraints:\n- Return only a single JSON array of DayMetadata objects (no explanation or extra output).\n- Each DayMetadata must include at least \`id\` and \`date\`.\n- \`screenshot\` should be /screenshots/{date}.png when applicable.\n- \`title\` should be concise (3-6 words) and derived from the commits.\n- \`tasks\` should be an array of objects with a single \`text\` property.\n- \`skillsUsed\` should be short tags like Testing, UI, Database.\n- \`theme\` should be one of: foundation, core-features, data-architecture, performance.\n- Return valid JSON only.`;
 
 try {
   const res = await generateText({

@@ -98,7 +98,7 @@
         "text": "Added account signup and pending approval flow."
       }
     ],
-    "theme": "performance-quality"
+    "theme": "performance"
   },
   {
     "id": "80dcf6bc-acf0-4dfc-99b1-60333f40e38e",
@@ -253,7 +253,7 @@
         "text": "Add cart UI with variant selection and API updates."
       }
     ],
-    "theme": "performance-quality"
+    "theme": "performance"
   },
   {
     "id": "f98f8065-38a5-43d0-94e3-0f5556446467",
@@ -387,7 +387,7 @@
         "text": "Refactor admin user management to use server components."
       }
     ],
-    "theme": "performance-quality"
+    "theme": "performance"
   },
   {
     "id": "a38b2a79-2f63-46d8-88c0-a6761bcda6e0",

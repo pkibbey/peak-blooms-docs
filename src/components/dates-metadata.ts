@@ -9,11 +9,7 @@ export interface DayMetadata {
   screenshot: string;
   tasks?: Task[];
   impact?: string;
-  theme?:
-    | "foundation"
-    | "core-features"
-    | "data-architecture"
-    | "performance-quality";
+  theme?: "foundation" | "core-features" | "data-architecture" | "performance";
 }
 
 export const daysMetadata: DayMetadata[] = [
@@ -154,7 +150,7 @@ export const daysMetadata: DayMetadata[] = [
     date: "2025-11-30",
     title: "DB Indexing",
     screenshot: "/screenshots/2025-11-30.png",
-    theme: "performance-quality",
+    theme: "performance",
     tasks: [
       {
         text: "Added targeted DB indexes to improve query performance and reduce load on critical paths.",
@@ -166,7 +162,7 @@ export const daysMetadata: DayMetadata[] = [
     date: "2025-11-30",
     title: "Auth Migration",
     screenshot: "/screenshots/2025-11-30.png",
-    theme: "performance-quality",
+    theme: "performance",
     tasks: [
       {
         text: "Migrated to JWT-based authentication to simplify scaling and reduce server-side session overhead.",
@@ -202,7 +198,7 @@ export const daysMetadata: DayMetadata[] = [
     date: "2025-12-05",
     title: "Local docker database",
     screenshot: "/screenshots/2025-12-05.png",
-    theme: "performance-quality",
+    theme: "performance",
     tasks: [
       {
         text: "Switched to a local development database to reduce latency and speed iteration, catching environment-specific issues earlier.",
@@ -250,7 +246,7 @@ export const daysMetadata: DayMetadata[] = [
     date: "2025-12-10",
     title: "Prefetching Optimization",
     screenshot: "/screenshots/2025-12-10.png",
-    theme: "performance-quality",
+    theme: "performance",
     tasks: [
       {
         text: "Disabled unnecessary link prefetching to reduce redundant network requests and improve perceived performance.",
@@ -286,7 +282,7 @@ export const daysMetadata: DayMetadata[] = [
     date: "2025-12-16",
     title: "Server Actions",
     screenshot: "/screenshots/2025-12-16.png",
-    theme: "performance-quality",
+    theme: "performance",
     tasks: [
       {
         text: "Migrated mutations to server actions and added soft-delete plus order snapshots to reduce network overhead and strengthen type safety.",
@@ -310,7 +306,7 @@ export const daysMetadata: DayMetadata[] = [
     date: "2025-12-18",
     title: "Achieved 80% Test Coverage",
     screenshot: "/screenshots/2025-12-18.png",
-    theme: "performance-quality",
+    theme: "performance",
     tasks: [
       {
         text: "Wrote unit tests to reach 80% coverage, simplified order-number logic, and cleaned docs to reduce bugs.",
@@ -321,11 +317,7 @@ export const daysMetadata: DayMetadata[] = [
 
 interface ThemeConfig {
   id: string;
-  key:
-    | "foundation"
-    | "core-features"
-    | "data-architecture"
-    | "performance-quality";
+  key: "foundation" | "core-features" | "data-architecture" | "performance";
   title: string;
   description: string;
   icon: React.ComponentType<{ className?: string }>;
@@ -361,9 +353,9 @@ export const themeConfigs: ThemeConfig[] = [
     accentColor: "from-purple-50 to-purple-50/30",
   },
   {
-    id: "theme-performance-quality",
-    key: "performance-quality",
-    title: "Performance Quality",
+    id: "theme-performance",
+    key: "performance",
+    title: "Performance",
     description:
       "Server actions migration, build optimization, type unification, and comprehensive testing (80% coverage)",
     icon: Zap,
