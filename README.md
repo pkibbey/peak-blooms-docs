@@ -7,7 +7,7 @@
 ![React](https://img.shields.io/badge/React-19-61dafb.svg)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178c6.svg)
 
-![Peak Blooms Homepage](public/homepage.png)
+![Peak Blooms Homepage](public/hero.png)
 
 ## 📖 Overview
 
