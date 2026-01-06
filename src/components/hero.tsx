@@ -22,8 +22,8 @@ export function Hero() {
         {/* Main heading */}
         <div className="flex flex-col justify-center items-center space-y-8">
           <h1 className="justify-center items-center flex flex-col text-5xl md:text-6xl lg:text-5xl font-bold tracking-tight">
-            <span className="leading-20 text-8xl bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent">
-              How I built
+            <span className="leading-24 text-8xl text-primary/60">
+              Architecting
             </span>
             <span className="text-gray-800 text-5xl font-bold">
               Peak Blooms
