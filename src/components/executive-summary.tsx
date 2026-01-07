@@ -112,7 +112,7 @@ export function ExecutiveSummary() {
                     <h4 className="font-semibold text-foreground">
                       {decision.title}
                     </h4>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-base text-muted-foreground">
                       {decision.description}
                     </p>
                   </div>
@@ -170,7 +170,7 @@ export function ExecutiveSummary() {
                     <h4 className="font-semibold text-foreground">
                       {decision.title}
                     </h4>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-base text-muted-foreground">
                       {decision.description}
                     </p>
                   </div>

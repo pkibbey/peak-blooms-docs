@@ -26,11 +26,6 @@ export default function ArchitecturalDecisionChart({
 
   if (baseline === null) return null; // hide entire graphic when both missing
 
-  const max = Math.max(baseline ?? 0, ai ?? 0, 2400);
-  const baselinePct =
-    baseline != null ? Math.min(100, Math.round((baseline / max) * 100)) : 0;
-  const aiPct = ai != null ? Math.min(100, Math.round((ai / max) * 100)) : 0;
-
   const timeSaved = baseline != null && ai != null ? baseline - ai : baseline;
   const percentSaved =
     baseline != null && ai != null && baseline > 0

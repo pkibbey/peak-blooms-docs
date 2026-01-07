@@ -38,16 +38,15 @@ export default function DatesPage() {
             adjusted conservatively to account for setup, debugging, and review
             overhead.
           </p>
-          <Link href="/dev-notes" className="underline text-primary">
-            Dev Notes
-          </Link>
-          <p className="text-base text-muted-foreground">
-            A comprehensive journey of building and launching a modern web
-            platform.
-          </p>
-          <small className="text-base text-muted-foreground">
-            Phineas Kibbey &copy; 2025
-          </small>
+          <div className="grid gap-1">
+            <small className="text-sm text-muted-foreground">
+              A comprehensive journey of building and launching a modern web
+              platform.
+            </small>
+            <small className="text-sm text-muted-foreground">
+              Phineas Kibbey &copy; 2025
+            </small>
+          </div>
         </div>
       </footer>
     </main>

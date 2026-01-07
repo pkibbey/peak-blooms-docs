@@ -13,13 +13,6 @@ interface Lesson {
 
 const lessons: Lesson[] = [
   {
-    title: "Database Fidelity",
-    description:
-      "Use local database for development and maintain a script that can seed the data to go along with the commits, so that the schema can always be recreated to match the git history.",
-    icon: <Database size={20} />,
-    tag: "Infrastructure",
-  },
-  {
     title: "The Balancing Act",
     description:
       "Lean on tools and automation to move faster, but retain human judgement — know when to guide the technology and when to let it lead.",
@@ -27,11 +20,18 @@ const lessons: Lesson[] = [
     tag: "Productivity",
   },
   {
-    title: "Strategic Sabbatical",
+    title: "MCP & Documentation",
     description:
-      "After 15 years in enterprise architecture, a sabbatical to explore Generative AI informed this project. Peak Blooms is the first production result of that research.",
+      "For long-running or context-heavy interactions, set up MCP servers and keep clear documentation to mitigate context-window issues and make results reproducible.",
     icon: <Users size={20} />,
-    tag: "Context",
+    tag: "Reliability",
+  },
+  {
+    title: "AI-assisted Mock Data",
+    description:
+      "Generative AI is excellent for creating realistic mock data and test cases quickly, but treat AI outputs as drafts — validate them and avoid relying on unverified AI-generated data in production.",
+    icon: <Database size={20} />,
+    tag: "AI",
   },
 ];
 

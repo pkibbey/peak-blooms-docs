@@ -1,12 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { Button, buttonVariants } from "./ui/button";
 
 type Props = {
-  imageSrc: string;
+  imageSrc?: string;
   imageAlt?: string;
   imageClassName?: string;
   buttonLabel: string;
@@ -20,7 +19,7 @@ type Props = {
 };
 
 function ImageBehindButton({
-  imageSrc,
+  imageSrc = "",
   imageAlt = "",
   imageClassName = "w-60",
   buttonLabel,
@@ -78,17 +77,19 @@ function ImageBehindButton({
             : onClick
         }
       >
-        <Image
-          width={2248}
-          height={1298}
-          src={imageSrc}
-          alt={imageAlt}
-          className={cn(
-            imageClassName,
-            borderRadius,
-            "relative top-0 group-hover:-top-2 transition-all",
-          )}
-        />
+        {imageAlt && imageSrc && (
+          <Image
+            width={2248}
+            height={1298}
+            src={imageSrc}
+            alt={imageAlt}
+            className={cn(
+              imageClassName,
+              borderRadius,
+              "relative top-0 group-hover:-top-2 transition-all",
+            )}
+          />
+        )}
         <div
           className={cn(
             "absolute inset-0 pointer-events-none bg-gradient-to-t from-background via-background/70 to-transparent",

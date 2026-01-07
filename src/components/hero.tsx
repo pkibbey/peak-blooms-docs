@@ -18,7 +18,7 @@ export function Hero() {
         <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl opacity-40" />
       </div>
 
-      <div className="max-w-4xl mx-auto text-center space-y-8">
+      <div className="max-w-4xl mx-auto text-center space-y-16">
         {/* Main heading */}
         <div className="flex flex-col justify-center items-center space-y-8">
           <h1 className="justify-center items-center flex flex-col text-5xl md:text-6xl lg:text-5xl font-bold tracking-tight">

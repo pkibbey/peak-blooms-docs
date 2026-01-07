@@ -51,7 +51,6 @@ async function generateMarkdown() {
     markdown += `## Table of Contents\n\n`;
     markdown += `- [Overview](#overview)\n`;
     markdown += `- [Architect's Note](#architects-note)\n`;
-    markdown += `- [Dev Notes](#dev-notes)\n`;
     markdown += `- [Design System](#design-system)\n`;
     markdown += `- [The Journey](#the-journey)\n`;
     markdown += `- [Weekly Summaries](#weekly-summaries)\n`;
@@ -116,10 +115,6 @@ async function generateMarkdown() {
     // Architect's Note
     markdown += `## Architect's Note\n\n`;
     markdown += `A 30-day architectural sprint applying React 19 Server Components, SSR/ISR, CI practices, and AI-assisted workflows to validate high-velocity, production-grade delivery.\n\n`;
-
-    // Dev Notes
-    markdown += `## Dev Notes\n\n`;
-    markdown += `This section summarizes how AI tools were used to accelerate work: boilerplate and component scaffolding, unit test generation, refactors, parsing CSV product data into mock datasets for the catalog, and generating asset prototypes for layouts and testing.\n\n`;
 
     // Design System
     markdown += `## Design System\n\n`;

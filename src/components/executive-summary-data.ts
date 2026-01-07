@@ -78,7 +78,7 @@ export const executiveSummaryData: ExecutiveSummaryData = {
         "Prefer schema-first, type-safe models so AI-generated data and tests surface contract issues early, not at runtime.",
     },
     {
-      title: "Use AI to bootstrap work",
+      title: "AI to bootstrap work",
       description:
         "Used project-scoped MCP servers to let AI scaffold deterministic mocks and tests, with humans curating changes; limited AI to scaffolding to avoid unreviewed autonomous changes.",
       baselineTimeMinutes: 60 * 24,
@@ -90,7 +90,7 @@ export const executiveSummaryData: ExecutiveSummaryData = {
         "Leveraged GitHub Actions and Vercel builds so tests and Lighthouse checks run on every PR before human approval.",
     },
     {
-      title: "Design for observability and validation",
+      title: "Design for observability",
       description:
         "Paired readable Jest patterns with Vitest's fast iteration to quickly verify AI-suggested tests while preserving maintainability.",
       baselineTimeMinutes: 60 * 40,
