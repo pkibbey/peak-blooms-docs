@@ -22,8 +22,9 @@ A compact, browsable case study of building a modern Next.js app. It documents d
 **Install & run**
 
 ```bash
-git clone https://github.com/pkibbey/peak-blooms.git
-cd peak-blooms
+git clone https://github.com/pkibbey/workflow-case-study.git
+cd workflow-case-study
+
 npm install
 npm run dev
 ```
