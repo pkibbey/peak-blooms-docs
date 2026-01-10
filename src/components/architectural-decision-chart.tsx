@@ -1,6 +1,6 @@
 "use client";
 
-export interface ArchitecturalDecisionChartProps {
+interface ArchitecturalDecisionChartProps {
   baselineTimeMinutes?: number;
   aiTimeMinutes?: number;
   title?: string;
