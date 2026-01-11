@@ -1,4 +1,8 @@
-# Architectural Case Study of Peak Blooms
+<p align="center">
+  <img src="./public/logo.png" alt="Architectural Case Study" width="400" />
+</p>
+
+<h1 align="center">Peak Blooms</h1>
 
 A compact, browsable case study of building a modern Next.js app. It documents daily progress, design decisions, and the small automation used to generate timeline metadata.
 
