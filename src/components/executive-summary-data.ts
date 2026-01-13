@@ -50,7 +50,7 @@ export const executiveSummaryData: ExecutiveSummaryData = {
   },
   scope: {
     platform:
-      "An indepedant wholesale flower startup needed a custom e-commerce platform to get their new business up and running. I promised that in 30 days, they would have a durable web app based on old-school architectural choices built with modern AI-assisted development practices.",
+      "An indepedant wholesale flower startup needed a custom e-commerce platform to get their new business up and running. I promised that in 30 days, they would have a durable web app based on old-school architectural choices built with AI-assisted development practices.",
     features: [
       "Product catalog with filtering, pagination, and global search",
       "Shopping cart and checkout workflow",

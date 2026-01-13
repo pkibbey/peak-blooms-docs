@@ -18,16 +18,16 @@ export function ExecutiveSummary() {
         id="executive-summary"
         className="w-full flex flex-col items-center justify-center min-h-screen py-20 bg-gradient-to-b from-white/80 to-white/60"
       >
-        <div className="max-w-6xl mx-auto px-4 space-y-16">
+        <div className="max-w-6xl mx-auto px-4 space-y-12">
           {/* Section Header */}
-          <div className="flex flex-col items-center text-center space-y-4">
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
+          <div className="flex flex-col items-center text-center space-y-4 overflow-hidden">
+            <h2 className="flex flex-col text-3xl md:text-4xl font-bold tracking-tight">
               Project Overview
+              <span className="text-xl md:text-3xl font-semibold text-muted-foreground">
+                Peak Blooms
+              </span>
             </h2>
-            <h3 className="text-xl md:text-3xl font-semibold text-muted-foreground">
-              Peak Blooms
-            </h3>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-normal">
               {executiveSummaryData.scope.platform}
             </p>
             <div className="relative mt-6">
@@ -57,9 +57,12 @@ export function ExecutiveSummary() {
 
           {/* Project Overview */}
           <div className="flex flex-col items-center gap-16 text-sm text-muted-foreground">
-            <div className="flex gap-8 text-base text-muted-foreground">
+            <div className="flex flex-col md:flex-row gap-1 md:gap-8 text-base text-muted-foreground">
               {executiveSummaryData.keyMetrics.map((metric, idx) => (
-                <div key={idx} className="flex gap-1.5 space-y-0.5">
+                <div
+                  key={idx}
+                  className="flex justify-center gap-1.5 space-y-0.5"
+                >
                   <p className="font-medium text-primary">{metric.value}</p>
                   <p className="text-muted-foreground">{metric.label}</p>
                 </div>
@@ -97,7 +100,7 @@ export function ExecutiveSummary() {
 
           <p className="text-lg text-muted-foreground max-w-5xl mx-auto">
             Each decision balances functionality, development velocity, and
-            long-term maintainability to deliver core value.
+            long-term maintainability to deliver core value
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -156,7 +159,7 @@ export function ExecutiveSummary() {
 
           <p className="text-xl text-muted-foreground max-w-5xl mx-auto">
             Strategic deferral of lower-priority features ensured laser focus on
-            core product stability and time to market.
+            core product stability and time to market
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -195,7 +198,7 @@ export function ExecutiveSummary() {
               },
               0,
             )}{" "}
-            hours to guarantee a stable MVP.
+            hours to guarantee a stable MVP
           </p>
         </div>
       </section>

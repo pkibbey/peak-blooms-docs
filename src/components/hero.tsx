@@ -22,15 +22,15 @@ export function Hero() {
         {/* Main heading */}
         <div className="flex flex-col justify-center items-center space-y-8">
           <h1 className="justify-center items-center flex flex-col text-5xl md:text-6xl lg:text-5xl font-bold tracking-tight">
-            <span className="leading-24 text-8xl text-primary/40">
+            <span className="leading-16 md:leading-24 text-6xl md:text-8xl text-primary/40">
               AI Workflows
             </span>
-            <span className="text-gray-800 text-5xl font-bold">
+            <span className="text-gray-800 text-3xl md:text-5xl font-bold">
               Architectural Case Study
             </span>
           </h1>
 
-          <p className="text-xl md:text-2xl leading-8 text-muted-foreground font-light max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl leading-normal text-muted-foreground font-light max-w-2xl mx-auto">
             Achieved enterprise-grade delivery speed by integrating AI
             workflows, resulting in a 90% test coverage, and 100% type-safe
             system, delivered within 27 days.

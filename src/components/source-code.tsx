@@ -4,7 +4,7 @@ import ImageBehindButton from "./image-behind-button";
 
 export function SourceCode() {
   return (
-    <section className="w-full bg-gradient-to-b from-background to-muted/30">
+    <section className="w-full bg-gradient-to-b from-background to-muted/30 overflow-hidden">
       <div className="bg-card p-8 md:p-12 text-center space-y-6">
         <div className="space-y-3">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
