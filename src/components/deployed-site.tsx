@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "./ui/button";
 
 export function DeployedSite() {
@@ -39,17 +40,15 @@ export function DeployedSite() {
             className="absolute -left-40 top-4 w-50 rounded-sm shadow-xl"
           />
         </div>{" "}
-        <Button
-          onClick={() => {
-            const element = document.getElementById("executive-summary");
-            element?.scrollIntoView({ behavior: "smooth" });
-          }}
-          variant="default"
-          size="lg"
-          className="outline-white outline-[0.5px] outline-solid group-hover:outline-1"
-        >
-          Visit Peak Blooms
-        </Button>
+        <Link href="http://peak-blooms.vercel.app" target="_blank">
+          <Button
+            variant="default"
+            size="lg"
+            className="outline-white outline-[0.5px] outline-solid group-hover:outline-1"
+          >
+            View the dev site
+          </Button>
+        </Link>
       </div>
     </section>
   );
